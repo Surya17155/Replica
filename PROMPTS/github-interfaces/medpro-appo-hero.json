@@ -1,0 +1,23 @@
+{
+  "id": "medpro-appo-hero",
+  "role": "landing",
+  "ownSections": [
+    "MedProAppoHero"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0 "
+      }
+    }
+  }
+}
