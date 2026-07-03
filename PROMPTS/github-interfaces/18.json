@@ -1,0 +1,51 @@
+{
+  "id": "18",
+  "role": "features",
+  "ownSections": [
+    "Features Section"
+  ],
+  "slots": [
+    {
+      "id": "feature-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Why Choose Us?",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "feature-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 3,
+      "items": [
+        {
+          "icon": "spark-glow",
+          "title": "Blizz-fast Speed",
+          "description": "Our infrastructure supports up to 100Gbps with zero latency",
+          "color": "#f0e640"
+        },
+        {
+          "icon": "shield-check",
+          "title": "Enterprise-Grade Security",
+          "description": "Soc 2 type aes-256 encryption for all data at rest",
+          "color": "#5865f2"
+        },
+        {
+          "icon": "cloud",
+          "title": "Global CDN Distribution",
+          "description": "30+regional edge locations with auto-failover",
+          "color": "#40a058"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS landing pages",
+    "vibe": "Professional, trustworthy, data-driven",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

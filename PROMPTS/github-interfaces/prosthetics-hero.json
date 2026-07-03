@@ -1,0 +1,57 @@
+{
+  "id": "prosthetics-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "background",
+      "card": 1,
+      "gradient": "bioenic-green",
+      "notes": "Full width bioenic blue-to-green gradient with micro-pattern overlay"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Restoring Mobility, Redefining Lives",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    },
+    {
+      "id": "hero-subheading",
+      "type": "text",
+      "card": 1,
+      "text": "Advanced prosthetics powered by AI for natural movement and enhanced quality of life",
+      "fontSize": "md",
+      "maxWidth": "500px"
+    },
+    {
+      "id": "hero-cta-buttons",
+      "type": "button-group",
+      "card": 1,
+      "buttons": [
+        {
+          "text": "Explore Solutions",
+          "variant": "primary",
+          "link": "/solutions"
+        },
+        {
+          "text": "See Demo",
+          "variant": "outline",
+          "link": "/demo"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Medical tech startups, healthcare landings",
+    "vibe": "Compassionate, hopeful, scientific",
+    "primaryColor": "#023f27",
+    "accentColor": "#00c853"
+  }
+}

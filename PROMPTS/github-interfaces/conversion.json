@@ -1,0 +1,39 @@
+{
+  "id": "conversion",
+  "role": "conversion",
+  "ownSections": [
+    "Conversion Section"
+  ],
+  "slots": [
+    {
+      "id": "conversion-container",
+      "type": "container",
+      "card": 1,
+      "layout": "split-left-right",
+      "notes": "Split container with copy on left and form on right"
+    },
+    {
+      "id": "conversion-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Get Ready to Convert",
+      "fontSize": "2rem",
+      "weight": "bold"
+    },
+    {
+      "id": "conversion-description",
+      "type": "text",
+      "card": 1,
+      "text": "Start your transformation journey today with our proven process",
+      "fontSize": "md",
+      "maxWidth": "400px"
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS conversion pages",
+    "vibe": "Clean, professional, action-oriented",
+    "primaryColor": "#f8fafc",
+    "accentColor": "#5865f2"
+  }
+}

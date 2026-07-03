@@ -1,0 +1,32 @@
+{
+  "id": "vaultshield",
+  "role": "landing",
+  "ownSections": [
+    "Landing Page"
+  ],
+  "slots": [
+    {
+      "id": "landing-hero-section",
+      "type": "container",
+      "card": 1,
+      "layout": "full-screen",
+      "notes": "Full screen dark container with grid overlay"
+    },
+    {
+      "id": "landing-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Protect What Matters",
+      "fontSize": "clamp(3.5rem, 6vw, 4.5rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern cybersecurity SaaS landings",
+    "vibe": "Secure, trustworthy, professional",
+    "primaryColor": "#0c1d24",
+    "accentColor": "#00c853"
+  }
+}

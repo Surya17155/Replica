@@ -1,0 +1,76 @@
+{
+  "id": "stark-minimal-footer",
+  "role": "footer",
+  "ownSections": [
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "footer-grid-layout",
+      "type": "grid",
+      "card": 1,
+      "columns": 4,
+      "items": [
+        {
+          "type": "column",
+          "content": {
+            "heading": "Product",
+            "links": [
+              {"label": "Features", "link": "/features"},
+              {"label": "Pricing", "link": "/pricing"},
+              {"label": "FA", "link": "/faq"}
+            ]
+          }
+        },
+        {
+          "type": "column",
+          "content": {
+            "heading": "Company",
+            "links": [
+              {"label": "About", "link": "/about"},
+              {"label": "Blog", "link": "/blog"},
+              {"label": "Careers", "link": "/careers"}
+            ]
+          }
+        },
+        {
+          "type": "column",
+          "content": {
+            "heading": "Legal",
+            "links": [
+              {"label": "Privacy", "link": "/privacy"},
+              {"label": "Terms", "link": "/terms"},
+              {"label": "Security", "link": "/security"}
+            ]
+          }
+        },
+        {
+          "type": "column",
+          "content": {
+            "heading": "Support",
+            "links": [
+              {"label": "Docs", "link": "/docs"},
+              {"label": "Contact", "link": "/contact"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "footer-bottom",
+      "type": "horizontal-rule",
+      "card": 1,
+      "copyright": "2024 Stark Sass. All rights reserved.",
+      "social": [
+        {"icon": "github", "link": "https://github.com/stark"},
+        {"icon": "twitter", "link": "https://twitter.com/stark"}
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS footers, clean minimal designs",
+    "vibe": "Minimal, clean, professional",
+    "primaryColor": "#1a1a2e",
+    "accentColor": "#ffffff"
+  }
+}

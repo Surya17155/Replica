@@ -1,0 +1,32 @@
+{
+  "id": "velorah-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-gradient",
+      "type": "background",
+      "card": 1,
+      "gradient": "luxury-dark",
+      "notes": "Full width luxury dark gradient with abstract geometric pattern"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Velorah - Luxury Redefined",
+      "fontSize": "clamp(3rem, 6vw, 5rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "High-end luxury brands, fashion weekly sites",
+    "vibe": "Luxurious, sophisticated, dark",
+    "primaryColor": "#1a1a1a",
+    "accentColor": "#d4af37"
+  }
+}
