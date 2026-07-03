@@ -1,0 +1,25 @@
+{
+  "id": "31",
+  "role": "benefits",
+  "ownSections": [
+    "Benefits Section"
+  ],
+  "slots": [
+    {
+      "id": "benefits-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Benefits 31",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS landing pages",
+    "vibe": "Modern, clean, professional",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}
