@@ -1,0 +1,46 @@
+{
+  "id": "browser-cards",
+  "role": "features",
+  "ownSections": [
+    "StatsCards"
+  ],
+  "slots": [
+    {
+      "id": "icons",
+      "type": "icon",
+      "card": 4,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "bg",
+      "notes": "Four icons corresponding to the four cards. They are fully black 🖓 icon glyphs. Each one is about 48px. They could be anything that’s related to the card title, preferably from a icon library (Heart, Star, Lightbulb, Smile – or how about four frequently used state/mood icons in one font). They are rendered via currentColor with no stroke—fill only. Safest to pick for inline SVG or a glyph from an icon library (Lucide React). Note: they are on a black background, so use firely contrasty designs."
+    },
+    {
+      "id": "modal-button",
+      "type": "text",
+      "card": 4,
+      "notes": "The label of the button that reads 'Demo', or something at the bottom of each card that lets the user know there’s more. It’s not necessarily a button – it could be a link, a prompt, an accent text snppet. But call it 'Demo' in the context. It is a text that invites the user to interact. Each card has a text at the bottom denoting the call-to-action/Explore/Demo for that card."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "\"Tribune\", ui-sans-serif, sans-serif",
+      "body": "Font Inter, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#111111",
+      "surface": "#1a1a1a",
+      "fg": "#fff",
+      "fgMuted": "#fff",
+      "accent": "#ffffff",
+      "border": "rgba(255, 255, 255, 0.15)"
+    },
+    "copySlots": [
+      "card-heading",
+      "card-body",
+      "card-demo-button"
+    ]
+  },
+  "mechanic": "A simple 4-card section. Each card has an icon on top, a heading, body, and a 'Demo' button at the bottom. The cards are in a responsive grid. Staggered on scroll (useInView opacity) with Framer Motion. Solid, dark theme.",
+  "techDelivery": "React 18 + TypeScript component. Tailwind CSS 3 using arbitrary values. Framer Motion v12 + for scroll-triggered animation. Icons from lucide-react.@@ Base Layer or simple default export.",
+  "reskinNotes": "This is a placeholder for benchmarks and case studies. The cards are hardcoded with dummy data - testimonials, benchmarks, and user cases. The icons are probably from Lucide React. Replace with real data when ready. All colors are inline literals - there are no CSS variables."
+}
