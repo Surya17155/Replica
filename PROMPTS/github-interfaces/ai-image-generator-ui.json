@@ -1,0 +1,56 @@
+{
+  "id": "ai-image-generator-ui",
+  "role": "app",
+  "ownSections": [
+    "Navbar",
+    "Input",
+     "Grid",
+    "Settings",
+    "History"
+  ],
+  "slots": [
+    {
+      "id": "logo",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "primary",
+      "notes": "Navbar logo: flat-inline svg default-to current-color, not a standalone image. Inline svg version is simple, three bar stacks / circles that looks bold at 24px and clean at 32px. It has no separate asset and must be wholly inline in the JSX."
+    },
+    {
+      "id": "avatar",
+      "type": "image",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": false,
+      "notes": "Navbar user avatar. Rounded-full, small, profile photo. Nothing fancy. Use a stock profile picture. The reference photo is of a woman at computer - this can be reused. If you use your own, keep it professional and not too distracting. Independent of the app's tone - simply a person using the app."
+    },
+    {
+      "id": "generated-image",
+      "type": "image",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": false,
+      "notes": "Main output area, displaying the most recent or selected generated image. The reference photo is of a dreamy blue space scene with a starship. This is the only image in the reference so it can be re-used for both the output area and as a history thumbnail. If you use your own source image, try to match the dreamy space theme. No filters or panels on top - should be the raw output."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "'Source Sans Pro', 'Arial', sans-serif",
+      "body": "'Source Sans Pro', 'Arial, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#111111",
+      "surface": "#1a1a1a",
+      "fg": "#FFFFFF",
+      "fgMuted": "#888888",
+      "accent": "#888888",
+      "border": "#333333"
+    }
+  },
+  "mechanic": "Pure CSS grid layout with a fixed navbar, left sidebar of settings / history, and main area showing the image input + output grid. Nothing moves or animates.",
+  "techDelivery": "React + CSS modules (loader config) + postcss. No Framer Motion.",
+  "reskingNotes": "All copy is hardcoded in JSX JavaScript markup. There are no repository or management screens in the spec - just a simple dashboard with an input, a grid of generated images, a sidebar with settings and another with history. There is no data interactivity such as typing or scrolling. No variables or tokens or tpanels - colors are all raw #FF / #888 / #333 / #1a1a / #111111 literals. Layout numbers are static 1fr/full width and not breaks. The grid is 2 or 3 columns statically with gap, 2rows or more. There is no save, export, or download functionality. This is a static demo of an image generator app."
+  }
+}

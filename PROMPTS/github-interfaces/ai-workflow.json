@@ -1,0 +1,78 @@
+{
+  "id": "ai-workflow",
+  "role": "hero",
+  "ownSections": [
+    "HowItWorks",
+    "Features",
+    "Testimonial",
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "hero-headline",
+      "type": "text",
+      "card": 1,
+      "notes": "HERO headline: 'Build your next gen I workflow' (literal, including the double quotes, appears inline, there's no separate styling)"
+    },
+    {
+      "id": "hero-cta-button",
+      "type": "text",
+      "card": 1,
+      "notes": "Hero primary CTA button label: 'Get Started' (literal)"
+    },
+    {
+      "id": "feature-card-icons",
+      "type": "image",
+      "card": 3,
+      "aspect": "1:3",
+      "alpha": true,
+      "notes": "Feature cards - 3x Square 1object-contain (64*64px ) icon images that go into each of the three feature cards/how-it-works steps . Nothing fussy ,  inset simple icons. No border no background . Flat  style."
+    },
+    {
+      "id": "testimonial-photo",
+      "type": "image",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "notes": "Testimonial section background image. This reference photo is a generic stock photo of an office - something you could find on Unsplash. There's nothing special about it, so you can replace it with any generic office stock photo."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "'Brooks', sans-serif",
+      "body": "'Source Sans 3', sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#FFFFFF",
+      "surface": "rgba(0,0,0,0.05)",
+      "fg": "#000000",
+      "fgMuted": "#666666",
+      "accent": "#0A72BB",
+      "border": "#e0e0e0"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "nav-cta",
+      "hero-headline",
+      "hero-body",
+      "hero-cta-button",
+      "how-it-works-heading",
+      "how-it-works-step-headings",
+      "how-it-works-step-body",
+      "features-heading",
+      "feature-card-titles",
+      "feature-card-bodies",
+      "testimonial-heading",
+      "testimonial-body",
+      "testimonial-testimonier",
+      "footer-cols2-title",
+      "footer-col1_copy",
+      "footer-col1_link-labels",
+      "footer-col2_link_labels"
+    ]
+  },
+  "mechanic": "A simple one-page scroll page, sections are regular blocks, nothing moves or animates, standard static layout",
+  "techDelivery": "React + Tailwind CSS with postcss for variable colors and spacing.",
+  "reskingNotes": "All copy is hardcoded in JSX. Nav links  ['Solutions', 'Pricing', 'About'] + 'Get Started' CTA. How It Works section with three steps (cards) and a subheading / step heading / step body. Features section (subheading / three cards with icon + title + body). Testimonial section with a background image, 10)x rounded card overlay, there is a 'John Doe' string as testimonier, and 'See about us' text right. Footer with 2 columns and an orange CTA on the right Side. The color palette uses an off-white ground (#FFFFFF), accent (*0A72BB), black ink, grey muted (#666) and border (#e0e, e). Fonts are 'Brooks', sans-serif for display and 'Source Sans 3', sans-serif fos body. No media queries (no breakpoints at horizontal layout)."
+}
