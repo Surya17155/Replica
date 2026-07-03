@@ -1,0 +1,23 @@
+{
+  "id": "dashboard",
+  "role": "features",
+  "ownSections": [
+    "FeatureCarousel"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Sepoi, sans-serif, sans-serif",
+        "body": "Sepoi, sans-serif, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#fff",
+        "fg": "#111",
+        "fgMuted": "#999",
+        "accent": "#6366f1",
+        "border": "#e0e0e0 "
+      }
+    }
+  }
+}
