@@ -1,0 +1,71 @@
+{
+  "id": "audio-showcase",
+  "role": "hero",
+  "ownSections": [
+    "BoomerangVideoBg",
+    "Header",
+    "HeroContent",
+    "NowPlayingWidget"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen ambient background film for the non-scrolling 100vh hero, mounted by the BoomerangVideoBg component as absolute inset-0 z-0, scale-[1.08] origin-center overflow-hidden (slightly zoomed to hide edges). Plays once muted/playsInline/crossOrigin=anonymous while every frame is captured into off-screen canvases (max-width 960px, proportional), then the <video> is hidden and a <canvas> ping-pongs the frames forward-then-backward at 30fps endlessly. So the brand asset is a short ambient loop; the boomerang/ping-pong is a render effect, not a property of the file. Native source is a CloudFront-hosted MP4. All header, hero, and now-playing UI overlays it in white, so supply dark/atmospheric footage so white text and the white glass cards stay legible. crossOrigin=anonymous means the asset host must send permissive CORS headers (frames are read pixel-by-pixel into canvas)."
+    },
+    {
+      "id": "brand-logo-mark",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Brand glyph in the absolute top header, left of the 'quietpress' wordmark, rendered 20x20px white-fill. Native is a hand-authored inline SVG path (a quarter-circle shape with a centered dot, viewBox 0 0 256 256) — supply a transparent (alpha) square logo/mark; tints to the foreground/white color over the dark video."
+    },
+    {
+      "id": "ui-glyphs",
+      "type": "icon",
+      "card": 4,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "Functional UI chrome from lucide-react (a key dependency), not brand assets: ShoppingCart (size 14, inside the white-on-blue-700 cart pill square), Menu / X (size 18, the liquid-glass mobile menu toggle), BarChart3 (size 20, strokeWidth 2.5, the blue-700 now-playing track-icon square), and Heart (size 16, in the now-playing like button — strokeWidth-only when unliked, fill-blue-700 when toggled on). BarChart3 and Heart render in the accent blue-700; ShoppingCart sits white on a blue-700 square; Menu/X are white. Optional socket: only swap if the brand ships an equivalent line-icon set; otherwise the lucide defaults stand."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "body": "'Helvetica Regular', Helvetica, Arial, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#000000",
+      "surface": "#FFFFFF",
+      "fg": "#FFFFFF",
+      "fgMuted": "rgba(255, 255, 255, 0.9)",
+      "accent": "#1D4ED8",
+      "border": "rgba(255, 255, 255, 0.1)"
+    },
+    "copySlots": [
+      "logo-wordmark",
+      "nav-labels",
+      "cart-label",
+      "hero-tag-badge",
+      "hero-headline",
+      "hero-subtext",
+      "hero-primary-cta-label",
+      "hero-secondary-cta-label",
+      "now-playing-track-title",
+      "now-playing-elapsed-time",
+      "now-playing-remaining-time",
+      "now-playing-prev-label",
+      "now-playing-next-label"
+    ]
+  },
+  "mechanic": "A non-scrolling 100vh overflow-hidden hero where a CloudFront MP4 is frame-captured to canvas and ping-pong (boomerang) looped at 30fps behind a z-10 centered stack (tag badge, two-line headline, subtext, dual CTAs) plus an absolute top header and a bottom-right now-playing widget, all entering on a staggered fade-up cascade (translateY(20px)+opacity, cubic-bezier(0.22,1,0.36,1), delay-1..delay-5) and reading through frosted .liquid-glass surfaces (backdrop-blur 4px + a mask-composite white gradient-border pseudo-element).",
+  "techDelivery": "React + TypeScript + Tailwind CSS + Vite, with lucide-react for icons (no other UI libraries). The 'Helvetica Regular' face is loaded via an onlinewebfonts.com CDN stylesheet in index.html and set as the html base font-family; the .liquid-glass / .animate-fade-up utilities and @keyframes fade-up live in custom CSS.",
+  "reskinNotes": "The logo is a hand-authored inline SVG path (quarter-circle + centered dot, viewBox 0 0 256 256) with white fill baked in markup, so rebranding the mark means swapping the path/component, not retinting an asset, and the 'quietpress' wordmark beside it is hardcoded text. The whole palette is expressed as Tailwind utility classes hardcoded in JSX (bg-white, text-white, text-white/90, text-gray-900, text-gray-500, bg-gray-200, and the accent bg-blue-700 / text-blue-700 / fill-blue-700) rather than design tokens — there is no light/dark switch and no :root variables, so reskinning is a class find-replace; the accent is Tailwind blue-700 (#1D4ED8) repeated across the cart square, now-playing icon square, progress-bar fill, and heart. The .liquid-glass effect is the load-bearing visual identity and is fully hardcoded CSS: an rgba(255,255,255,0.01) fill with background-blend-mode:luminosity, fixed backdrop-filter:blur(4px), an inset white highlight shadow, and a ::before gradient-border built from a white linear-gradient (rgba(255,255,255,0.45/0.15/0)) plus the -webkit-mask-composite:xor / mask-composite:exclude trick — retinting the glass means editing these encoded gradients and rgba stops, and the tag badge additionally overrides the fill with an inline style background:rgba(255,255,255,0.16). CRITICAL motion constraint: .animate-fade-up MUST use animation-fill-mode:backwards (not both/forwards) or a residual transform breaks backdrop-filter on any .liquid-glass child. The 'Helvetica Regular' font is pulled from a third-party onlinewebfonts.com CDN URL (single point of failure / licensing concern) and the responsive headline (leading-[1.1], text-4xl up to lg:text-7xl) is tuned to its metrics, so a wider/taller replacement face may rewrap the two headline lines. All copy is hardcoded inline: the wordmark 'quietpress'; nav 'Anthology / Talents / Sound diary / Playback salon'; 'Cart (0)'; the tag badge 'Press 04 . Vernal woods'; the two-line headline 'records cut for the / calm listener.'; the subtext 'Drone, roots, and nature-captured sound on wax LPs. Every disc cut just once, snag it or miss.'; the CTAs 'Browse the shelves' / 'Newest arrivals'; and the now-playing 'Helia Marsh -- Fern Light', '0:33', '-1:21', 'Prev', 'Next'. The bg color is implicit (no explicit page background hex is declared; the video fills it and #000000 only shows through scale edges / pre-load), and there is no muted-foreground-on-dark token — fgMuted is the text-white/90 utility."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "axion-about",
+  "role": "about",
+  "ownSections": [
+    "About"
+  ],
+  "slots": [
+    {
+      "id": "about-images",
+      "type": "image",
+      "card": 2,
+      "aspect": "auto",
+      "alpha": false,
+      "notes": "The two editorial photos in the About section, both rounded-xl sm:rounded-2xl object-cover. Image 1 is the small frame locked to aspect-[438/346] (~5:4 portrait-ish), shown sm:w-[45%] in the mobile/tablet row and in the desktop left column (self-end). Image 2 is the large frame locked to aspect-[900/600] / aspect-[3/2] (3:2 landscape), shown sm:w-[55%] and in the desktop right column (self-end). Supply two full-bleed studio/work photos cropped to those two fixed ratios; framing must survive object-cover. These are sockets to fill with brand assets, not the placeholder higgs.ai/cloudfront URLs declared in the spec."
+    },
+    {
+      "id": "cta-arrow-icon",
+      "type": "icon",
+      "card": 1,
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "The lucide-react ArrowRight glyph (size 14) inside the CTA's white circle, tinted text-[#F26522] (currentColor). Starts at -rotate-45 and rotates to rotate-0 on group-hover with duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)]. Supply as a currentColor-driven icon so the orange tint and the hover rotation transition still apply; the same button appears in both the mobile and desktop layouts but is one logical icon socket."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+      "body": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "fg": "#111827",
+      "accent": "#F26522"
+    },
+    "copySlots": [
+      "badge-number",
+      "badge-pill-label",
+      "heading-line-1",
+      "heading-line-2",
+      "body",
+      "cta-label"
+    ]
+  },
+  "mechanic": "A single white About section with a numbered badge row over a clamp()-sized two-line heading, splitting into a stacked mobile/tablet layout and a hidden lg:grid grid-cols-[26%_1fr_48%] desktop layout (small image / centered copy + CTA / large image), whose only motion is the orange pill CTA's text-roll on group-hover (a duplicated label inside an overflow-hidden h-[20px] flex-col translating -translate-y-1/2) paired with a white-circle ArrowRight rotating -45deg->0, both at duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)].",
+  "techDelivery": "Single React 18 + TypeScript component spec using Tailwind CSS 3.4 (default config, no theme extensions) and lucide-react for the ArrowRight icon; system-default font (no webfont loaded), no state/effects/scroll logic — purely CSS group-hover transitions.",
+  "reskinNotes": "The brand orange is baked as inline Tailwind arbitrary classes (bg-[#F26522] hover:bg-[#e05a1a] on the CTA, text-[#F26522] on the arrow) with no :root token, so a recolor is a markup edit and must change the base and hover shades together. All neutrals are default Tailwind utilities (bg-white, text-gray-900, bg-gray-900 + text-white on the numbered circle), again not tokens. All copy is hardcoded in JSX: the '1' badge number, the 'Introducing Axion' pill, the two heading lines, the body paragraph, and the 'About our studio' CTA label. The heading uses a fluid clamp(1.5rem,4vw,3.2rem) with tracking-[-0.02em] leading-[1.12] tuned to the system-font metric, and the copy carries hardcoded line breaks (<br className=\"hidden sm:block\"> in the heading; explicit <br/> tags in the desktop paragraph, which is also whitespace-nowrap), so a brand font or longer copy can break the intended line composition or overflow the nowrap center column. The two images are hard-locked to aspect-[438/346] and aspect-[900/600]/[3/2], so off-ratio brand art will be cropped by object-cover. The desktop layout assumes a fixed grid-cols-[26%_1fr_48%] split sized to the current asset ratios."
+}

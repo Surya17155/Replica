@@ -1,0 +1,83 @@
+{
+  "id": "auramail",
+  "role": "hero",
+  "ownSections": [
+    "Nav",
+    "Hero",
+    "MenuBar",
+    "MobileDrawer"
+  ],
+  "slots": [
+    {
+      "id": "hero-bg-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen looping hero background video, fixed inset-0 z-0 pointer-events-none with w-full h-full object-cover, sitting directly behind all foreground content with NO darkening overlay; autoplay, muted, loop, playsInline."
+    },
+    {
+      "id": "brand-logomark",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Aura brand logomark (four-sparkle / concave-square mark) on a 256x256 viewBox, fill set to solid white; rendered at w-8 h-8 beside the 'Aura' wordmark in the top nav and again in the mobile drawer header."
+    },
+    {
+      "id": "platform-glyph",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Apple platform glyph on a 384x512 viewBox, fill=currentColor so it inherits text color; appears inside the white download CTA (w-4 h-4, black via on-white text) and at the left of the Mac menu bar (w-3.5 h-3.5, white)."
+    },
+    {
+      "id": "ui-icons",
+      "type": "icon",
+      "card": 4,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "lucide-react UI glyphs tinted via currentColor: Menu (mobile hamburger trigger, w-5 h-5), X (drawer close, w-5 h-5), ChevronRight (trailing the download CTA, w-4 h-4, nudges +1px on hover), Search (menu-bar search, w-3.5 h-3.5)."
+    },
+    {
+      "id": "body-font",
+      "type": "font",
+      "card": 1,
+      "notes": "Single UI/display sans (Inter, weights 400-900 loaded from Google Fonts) wired via tailwind fontFamily.sans and the html/body font-family as the document default; carries the wordmark, nav links, headline, body copy, CTA labels, and menu-bar text. Weights actually used: 500/600/700; headline is font-semibold (600), tracking-tight, leading-[0.9]."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "'Inter', system-ui, sans-serif",
+      "body": "'Inter', system-ui, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0c0c0c",
+      "fg": "#ffffff",
+      "fgMuted": "rgba(255, 255, 255, 0.6)",
+      "accent": "#3D81E3",
+      "border": "rgba(255, 255, 255, 0.1)"
+    },
+    "copySlots": [
+      "brand-wordmark",
+      "nav-labels",
+      "headline-line-1",
+      "headline-line-2-gradient",
+      "hero-body",
+      "cta-label",
+      "cta-subnote",
+      "menubar-app-name",
+      "menubar-items",
+      "menubar-clock"
+    ]
+  },
+  "mechanic": "A single dark hero pins a fullscreen object-cover background video under overlay-free content, staggering the nav, headline, body, CTA, and a translucent Mac menu bar up into place on a [0.22,1,0.36,1] ease while the second headline line runs a 110deg blue-to-cream gradient panned across clipped text by a 6s shiny keyframe; a tween-in mobile drawer slides from the right on hamburger tap.",
+  "techDelivery": "React 18 + TypeScript + Vite + Tailwind CSS with motion/react (Framer Motion) and lucide-react; Inter via Google Fonts, brand accent + font-family in tailwind.config.js, shiny keyframe + font in src/index.css.",
+  "reskinNotes": "Both inline SVGs hardcode fill (logomark fill=white, Apple glyph fill=currentColor) inside the JSX, so retinting the logomark requires editing markup rather than a token. The animated 'Rezitalized' headline gradient is a hardcoded 5-stop inline linear-gradient (#3D81E3 -> #AE9AE6 -> #F8D8D5 -> #FEEFDB -> #3D81E3) in a gradientStyle CSSProperties object, independent of the colorRoles, so reskinning the brand requires rewriting those stops; the lilac/blush/cream stops are intentional transients the design rules say must not appear elsewhere. All copy (wordmark, nav links, two-line headline, body paragraph, CTA label + subnote, menu-bar app name/items/dated clock string 'Wed May 6 1:09 PM') is hardcoded in JSX. The white CTA forces black text + white bg regardless of theme. White-opacity utilities (/10, /40, /60, /70) for borders, muted text, and guide lines are scattered as literal Tailwind classes rather than reading the border/fgMuted tokens. Layout uses two fixed vertical guide lines at +/-36rem from center (md+ only)."
+}
