@@ -1,0 +1,50 @@
+{
+  "id": "cybersecurity-hero",
+  "role": "landing",
+  "ownSections": [
+    "CyberSecurityHero"
+  ],
+  "slots": [
+    {
+      "id": "background-gradient",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Full-width background for the entire section. A rich, dark gradient that goes from #0c0c0c to #1a1a2a. Not an image - just an avatar/background. Don't use a photo or pattern. It's a pure, solid gradient - from darker top to lighter bottom."},
+    {
+      "id": "hero-icon",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "accent",
+      "notes": "A large, bold icon at the center of the hero. It's a shield/lock icon, a bold defense-related symbol. About 80px. This is one prominent icon. Rendered via currentColor (no stroke). It takes the accent color, not the foreground. Singular, strong, dedicated. Native placeholder is a Lucide react Shield icon. Supply a strong defense-like icon. Note: this icon takes the accent color rather than the foreground. This is a dedicated icon."},
+    {
+      "id": "hero-stats",
+      "type": "text",
+      "card": 3,
+      "notes": "Three stats that float above their captions with icons. They are display values like '10k', '99.9%', '24h7' and their meaning comes from the next words - real-time threats blocked, detection rate, security monitoring. Each one has an icon above the number. The numbers are font-bold, clamp sized to ~rem, while the captions are font-medium, smaller, sitting below. These are running text, so they need to read naturally without data backends; they are hardcoded in JSX. Single icon on top - shield. The shield is the icon for all three."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Sepoi, ui-sans-serif, sans-serif",
+      "body": "Sepoi, ui-sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0c0c0c",
+      "fg": "#fff",
+      "fgMuted": "#bbc",
+      "accent": "#00ff7f",
+      "border": "#333"
+    },
+    "copySlots": []
+  },
+  "mechanic": "A dark theme hero section w/a gradient bg, a single large icon, and three stats below it. Framer Motion useInView for entry. All centered horizontally in the section.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3 as arbitrary values. Framer Motion v12 + for scroll-triggered animation. Icons from lucide-react.",
+  "reskinNotes": "This is a blank, dark theme hero section for a cybersecurity brand. Every text blob is hardcoded as dummy copy - Icon, Stats - there is no CSL/backend. The fonts and color scheme are not tokens or variables - you are responsible for changing them. The icon is for you to replace - accent-colored, not fg-colored. The icon is prominent-sized (about 80px). The stats have icons above them. The gradient is solid-color from darker top to lighter bottom - not an image/pattern."},
+  "iconRoles": {
+    "primary": "hero-icon"
+  }
+}

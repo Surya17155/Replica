@@ -1,0 +1,23 @@
+{
+  "id": "daisy-sweet",
+  "role": "features",
+  "ownSections": [
+    "StatsCards"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, 'Playfair Display', serif",
+        "body": "Playfair Display, Playfair Display, serif"
+      },
+      "colorRoles": {
+        "bg": "#fff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#e85d75",
+        "border": "#e0e0e0"
+      }
+    }
+  }
+}
