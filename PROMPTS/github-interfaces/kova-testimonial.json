@@ -1,0 +1,35 @@
+{
+  "id": "kova-testimonial",
+  "role": "testimonials",
+  "ownSections": [
+    "Testimonials Section"
+  ],
+  "slots": [
+    {
+      "id": "testimonial-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "What Our Clients Say",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "testimonial-cards",
+      "type": "grid",
+      "card": 1,
+      "columns": 2,
+      "items": [
+        { "quote": "This product transformed our team", "author": "Sarah J" },
+        { "quote": "Incredible support and fast delivery", "author": "Michael S" }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS testimonial sections",
+    "vibe": "Professional, trustworthy, clean",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "cinematic-brand",
+  "role": "branding",
+  "ownSections": [
+    "Branding Section"
+  ],
+  "slots": [
+    {
+      "id": "brand-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Cinematic Branding",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "brand-description",
+      "type": "text",
+      "card": 1,
+      "text": "We create brands that keep audiences on the edge of their seats",
+      "fontSize": "md",
+      "maxWidth": "500px"
+    }
+  ],
+  "meta": {
+    "inspiration": "Branding agencies, Creative agencies",
+    "vibe": "Creative, professional, bold",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "15",
+  "role": "contact",
+  "ownSections": [
+    "Contact Section"
+  ],
+  "slots": [
+    {
+      "id": "contact-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Get In Touch",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "contact-fields",
+      "type": "form",
+      "card": 1,
+      "fields": [
+        { "name": "Name", "type": "text", "placeholder": "Your Name" },
+        { "name": "Message", "type": "textarea", "placeholder": "Your Message" }
+      ],
+      "button": {
+        "text": "Send",
+        "variant": "primary"
+      }
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS contact pages",
+    "vibe": "Clean, professional",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

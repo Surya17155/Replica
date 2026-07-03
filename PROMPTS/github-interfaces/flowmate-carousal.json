@@ -1,0 +1,34 @@
+{
+  "id": "flowmate-carousal",
+  "role": "carousal",
+  "ownSections": [
+    "Carousal Section"
+  ],
+  "slots": [
+    {
+      "id": "carousal-container",
+      "type": "container",
+      "card": 1,
+      "layout": "full-width",
+      "notes": "Horizontal carousel with navigation arrows"
+    },
+    {
+      "id": "carousal-slides",
+      "type": "list",
+      "card": 1,
+      "direction": "horizontal",
+      "animation": "slide-left",
+      "items": [
+        { "text": "Slide 1" },
+        { "text": "Slide 2" },
+        { "text": "Slide 3" }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS landing pages",
+    "vibe": "Modern, dynamic, engaging",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

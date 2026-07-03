@@ -1,0 +1,35 @@
+{
+  "id": "beauty-products",
+  "role": "features",
+  "ownSections": [
+    "Features Section"
+  ],
+  "slots": [
+    {
+      "id": "feature-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Our Products",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "feature-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 3,
+      "items": [
+        { "title": "Face Serum", "description": "Advanced skincare essents" },
+        { "title": "Body Lotion", "description": "Natural body care products" }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Ecommerce, beauty SaaS products",
+    "vibe": "Clean, modern, elegant",
+    "primaryColor": "#ffffff",
+    "accentColor": "#dc43f5"
+  }
+}
