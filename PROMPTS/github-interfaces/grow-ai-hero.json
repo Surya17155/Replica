@@ -1,0 +1,57 @@
+{
+  "id": "grow-ai-hero",
+  "role": "landing",
+  "ownSections": [
+    "GrowAiHero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Full-screen hero background. A warm, growth-themed background with a soft gradient. Native placeholder is an abstract growth/charts background; replace with brand-specifi c visual asset. Fills the entire page - full-width, full-vheight. No people, no text."},
+    {
+      "id": "brand-logo",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The brand logo at the top-left of the hero. About 48px. Native placeholder is a stylized circular shape or an abstract logo mark."},
+    {
+      "id": "cta-button",
+      "type": "text",
+      "card": 1,
+      "notes": "The primary CTA button - it reads something like 'Get Started' or 'Grow Your Business.' Rounded button with bg and text-accent. Border-radius: 8px. Note: text-accent-color."},
+    {
+      "id": "hero-text",
+      "type": "text",
+      "card": 3,
+      "notes": "Heading, body, and subtext. Heading is large, font-bold, tracking-tight. Body is smaller, more contrast. Subtext is smallest. Supply dummy text - brand will replace."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Montserrat, sans-serif, sans-serif",
+      "body": "Montserrat, sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#fff",
+      "fg": "#111111",
+      "fgMuted": "#666",
+      "accent": "#2e779e",
+      "border": "#e0e0e0 "
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "hero-heading",
+      "hero-body",
+      "hero-subtext"
+    ]
+  },
+  "mechanic": "A full-page hero with light bg, logo, headline, body, subtext, and CTA button. Left-text, right-image layout. Framer Motion useInView.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3. Framer Motion v12.",
+  "reskinNotes": "Blank slate. Text is hardcoded dummy copy."}

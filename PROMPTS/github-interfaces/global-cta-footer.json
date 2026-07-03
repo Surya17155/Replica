@@ -1,0 +1,70 @@
+{
+  "id": "global-cta-footer",
+  "role": "landing",
+  "ownSections": [
+    "GlobalCtaFooter"
+  ],
+  "slots": [
+    {
+      "id": "cta-section-bg",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "A full-width CTA press section above the footer. Solid dark color background as the parent section bg. Fills the entire section."},
+    {
+      "id": "cta-heading",
+      "type": "text",
+      "card": 1,
+      "notes": "A large heading for the CTA section. Running text - no data backend."},
+    {
+      "id": "cta-button",
+      "type": "text",
+      "card": 1,
+      "notes": "The primary CTA button for the press section. Rounded, bold. Running text - no data backend."},
+    {
+      "id": "footer-logo",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Brand logo in the footer. Inline SVG icon."},
+    {
+      "id": "footer-so-icons",
+      "type": "icon",
+      "card": 4,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fgMuted",
+      "notes": "Social media icons (Facebook, Twitter, LinkedIn, GitHub). Lucide-react icons."},
+    {
+      "id": "footer-link-block",
+      "type": "text",
+      "card": 3,
+      "notes": "3 columns of text links in the footer. Navigation, Services, Contact. Running text - no data backend."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Playfair Display, sans-serif, sans-serif",
+      "body": "Playfair Display, sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0e0e14",
+      "fg": "#ffffff",
+      "fgMuted": "#999",
+      "accent": "#4285f4",
+      "border": "#2c2c3c"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "hero-heading",
+      "hero-body",
+      "hero-subtext"
+    ]
+  },
+  "mechanic": "A CTA and footer section. Dark bg, clean layout. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind CSS. Framer Motion v12. Lucide-react icons.",
+  "reskinNotes": "Blank slate. Everything is hardcoded dummy copy."}
