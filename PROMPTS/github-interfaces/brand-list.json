@@ -1,0 +1,51 @@
+{
+  "id": "brand-list",
+  "role": "features",
+  "ownSections": [
+    "BrandListPast"
+  ],
+  "slots": [
+    {
+      "id": "header-symbol-mark",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The small decorative glyph inside the section header — a stylized inline SVG (24x24 viewBox) of a bold 'G' letter at the left of 'Built for the long haul'. Filled to solid 'currentColor', drop shadow to give a subtle depth, — single-color, must be replaceable by editing inline SVG path stroke/fill attrs.– At about 38px to sit at the header size."},
+    {
+      "id": "company-logos",
+      "type": "image",
+      "card": 8,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Aight company logo assets that form a fluid grid of brand marks, all in svg format. Varying heights (20px-60px) but all sitting on a single horizontal baseline. They are filtered grayscale and/have no background. These are not images — they are logo files in svg format. Provide 'company-logo-1', 'company-logo-2', ... until 8."},
+    {
+      "id": "slogan",
+      "type": "text",
+      "card": 1,
+      "notes": "A heavy, emphatic sentence that sums up the value of the brand list. Probably something bold and imaginative - 'Join 10+ brands trusting our technology' - it's a placeholder for the sales pitch. Not necessarily a copyright strip - don't use a legal copyright notice. Make it read natural: one or two sentences, sub to a fresh caption. Or may be a caption itself - the 'they trust us' reasoning for the brand list."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Font Ostrich Sans, sans-serif",
+      "body": "Font Inter, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#fff",
+      "surface": "#f7f7f7",
+      "fg": "#1a1A1F",
+      "fgMuted": "#6E6E73",
+      "border": "#e6e6e6"
+    },
+    "copySlots": [
+      "section-subheading",
+      "section-heading",
+      "slogan"
+    ]
+  },
+  "mechanic": "A scroll-triggered fluid, full-width brand list. The header includes a small decorative glyph + 'Built for the long haul' subheading + section heading + slogan. Below, a fluid grid of 8 logos in svg. Transitions Framer Motion fadeInView : opacity 0->1 y 25->0 (0.3s, ease-yout), staggered per-logo. Still fixed on scroll.",
+  "techDelivery": "React 18 + TypeScript component using Tailwind CSS 3 as arbitrary values (`tarbitrary values`); Framer Motion v12 + (useRef, useInView, motion from 'framer-motion') for scroll-in animation. Svg for the glyph and company logos.",
+  "reskinNotes": "Your logos are the heart of this section. The grid is fluid - logos resize with the screen. Placeholder logos are monochrome svg stripes of popular tech brands - Radix UI, Dice, Streamlit, Airbtn, Gathur. Replace them with real client logos when available. The logos are filtered #6e6e73 (text-filter: brightness(0) grayscale(1) / #222 grayscale) - if you change the color scheme's fguted cyan value, you need to update this filter. The header symbol is hardcoded as an inline path, so replacing it with another glyph requires manual SVG editing. No data backend or logo api."
+}

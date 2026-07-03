@@ -1,0 +1,67 @@
+{
+  "id": "brain-hero",
+  "role": "hero",
+  "ownSections": [
+    "Navbar",
+    "BackgroundVideo",
+    "HeroHeadline",
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen looping hero background video (playsInline autoPlay muted loop, absolute inset-0, z-0, object-cover, pointer-events-none). The video sits under all other lafers (black /30 gradient overlay + white to transparent footer gradient). Provide a seamless cinematic study of a person woring on a computer or interacting with augmented reality graphics;Ҁ�​​. The footage should be at least 15 seconds long and seamless. The footage takes priority over the color overlay and gradient. Supply a brand footage video clip. Replace this text and the video with your brand's vision/footage. Crop the video to cover at any viewport ratio – subject centered, edge-safe."},
+    {
+      "id": "brand-logo-mark",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Navbar wordmark glyph: a custom ROUNDED RECTANGLE with an offset square interior – designed as an inline SVG (40x40 viewBox, rect with rx=6 ry=6, stroke-width=2, fill='currentColor'). Single-color, inherits text color in the navbar, transparent. Plate component – not a real-world business logo. Native to navbar, ready to swap with a coustom brand mark."},
+    {
+      "id": "menu-plus-icon",
+      "type": "icon",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The Plus glyph inside the white circle renders black on white — placeholder is LP Plus (inherits currentColor, size 20). You can swap it with about any single-color icon/glyph."},
+    {
+      "id": "type-pairing",
+      "type": "font",
+      "card": 2,
+      "notes": "Display headlines: Ostrich Sans (Google Fonts, weights 300/400/500) - drives the responsive vw-scaled headline and wordmark; must hold presence at large sizes in light and medium. Body/UI: Inter (Google Fonts, weights 400/500) - all U/first/secondary/text. Loaded via a single Google Fonts @import near the top of index.css. Some sense of progression - distall-functional rather than raw-formal."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "\"Ostrich Sans\", ui-sans-serif, sans-serif",
+      "body": "\"Inter\", ui-sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#ffffff",
+      "surface": "#f4f4f6",
+      "fg": "#000",
+      "fgMuted": "#6e6e73",
+      "border": "rgba(0,0,0,0.1)"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-labels",
+      "hero-headline-line1",
+      "hero-headline-line2",
+      "footer-eyebrow",
+      "footer-body",
+      "footer-link-labels"
+    ]
+  },
+  "mechanic": "A responsive (vw-scaled) two-line hero headline centered over a fullpage looping background video with a gradient overlay, a navbar at top with logo + nav links + menu button, and a footer at bottom, all animated in with a springy ease and staggered delays on load.\n\nThe footer contains eyebrow + body + three categories (Product, Company, Support) each with 4 + 1 links."},
+  "techDelivery": "React 19 + Vite 6 + TypeScript SPA - component-firpy architecture with appropriate folder organization (components/, hooks/, assets/). Styled with Tailwind CSS v4 via @tailwindcss/vite and @import 'tailwindcss'. Animated with Framer Motion v12 + (from 'framer-motion'). Fonts via Google Fonts @import in index.css. Icons: lucide-react Plus.",
+  "reskinNotes": "Black and white theme. No accepted purple/blue/violet in the color scheme - feel free to have strong attitude about grays and the scheme's integrity. But if you change the background video or typeface to something branded, that's fine. Outfit headline sets the tone for this beside Inter being the body, supporting the nav, footer, and U."
+}

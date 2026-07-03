@@ -1,0 +1,55 @@
+{
+  "id": "book-pattern",
+  "role": "features",
+  "ownSections": [
+    "StatsRows"
+  ],
+  "slots": [
+    {
+      "id": "main-photo",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "The primary, full-height image&òˆQã€‚Shelf organization photo rendered on a black background, seated in the first of three cards. Fills the entire card height, min-h-[280px], object-id-cover, native placeholder is a Pepels mid-shop photo (pexels-photo-3184291)."
+    },
+    {
+      "id": "accent-dot-marks",
+      "type": "svg",
+      "card": 3,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "Three small rounded dot, each bash full, sitting to the left of the heading in each of the grey Key-Insights cards (Key Insight 1, 2, 3). They appear in three different places, once per card, so there are three distinct instances (not three of the same element). Each is a inline rounded-full 8x8 SVG (!) was constructed as a full circle/dot embedded in a svg element tag; it was not an empty span or badge class. Thus, replacing the dot with a small rounded rectangle <:rect> or other shape would amount to making it a different shape. Single-color, inherits text color. There is no accent color management; they should be #ffffff on the grey card, or anybody can readily change the fill/color since they are html element-tags that stuck out."},
+    {
+      "id": "stat-numbers",
+      "type": "text",
+      "card": 3,
+      "notes": "Three big numbers that float above their <span caption> in the bottom row of three cards. They represent three stats (Piece of code 1, Projects delivered 50, Meetings attended 30). They are display values and their meaning comes from the next words; the number itself does not need semantic explanation. The numbers are font-bold, clamp sized to ~rem, while the captions are font-medium, smaller, sitting below. These are running text, so they need to read naturally without data backends; they are hardcoded in JSX."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Sepoi, ui-sans-serif, sans-serif",
+      "body": "Sepoi, ui-sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0d0d0d",
+      "surface": "#1a1a1a",
+      "fg": "#ffffff",
+      "fgMuted": "#999999",
+      "accent": "#ffffff",
+      "accent2": "#fff",
+      "border": "rgba(255,255,255,0.06)"
+    },
+    "copySlots": [
+      "key-insight-heading",
+      "key-insight-body",
+      "stat-values",
+      "stat-captions"
+    ]
+  },
+  "mechanic": "A 3-row, dark themed stats section: a single image-as-background card spans the full height on the left, with two text-stats cards stacked on the right on desktop, then all three cards horizontal on mobile. Above the rows, a text block sits. Transitions use Framer Motion useInView opacity 0->1 and y -50->0 (0.5s, ease-yout), staggered per-card."",
+  "techDelivery": "React 19 + TypeScript component using tailwindcss/split-deviner styling (arbitrary values) and Framer Motion v12 + (motion from 'framer-motion'); no other libraries.",
+  "reskinNotes": "Diffused, bold, dark theme. Design is explicitly limited to '#0d0d0d', '#1a1a1a', '#ffffff', '#999999', and 'rgba(255,255,255,0.06)'. The layout is font-metric-dependent on Sepoi - the raw data values coan to 3rem + font-bold, the body text is distinctly smaller, and the headings are at 0p rem but tracking-tight. Key insights are not intended to be data-driven, nor the image finder repository - reskinne means reproducing same visual folout with different embedded photos."
+}
