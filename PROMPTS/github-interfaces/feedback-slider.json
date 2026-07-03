@@ -1,0 +1,49 @@
+{
+  "id": "feedback-slider",
+  "role": "features",
+  "ownSections": [
+    "FeedbackCarousel"
+  ],
+  "slots": [
+    {
+      "id": "author-avatars",
+      "type": "image",
+      "card": 3,
+      "aspect": "1:1",
+      "alpha": false,
+      "notes": "Circular author/testimonial portraits, one per feedback entry. Rendered w-14 h-14 rounded-full object-cover with referrerPolicy=\"no-referrer\", swapped on slide change. Native prompt fills these with picsum.photos placeholder portraits; resking supplies real headshots of the quoted people (or brand-appropriate stand-ins). Card count tracks the feedbacks array length (3 here)."},
+    {
+      "id": "nav-arrow-glyphs",
+      "type": "icon",
+      "card": 2,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Functional carousel chrome (not brand assets): previous/next arrows inside the two circular #D9D9D9 buttons (w-6 h-6 text-black, strokeWidth 1.5). Native source is lucide-react ArrowLeft / ArrowRight. Only swap if the brand has its own icon system; transparent so the grey button shows through."},
+    {
+      "id": "body-font",
+      "type": "font",
+      "card": 1,
+      "notes": "Primary UI typeface for every visible string in this section: the section title, the large guillemet quote (font-light, tracking-tight, size 2rem), the name and title pair and card headings and text. Native placeholder is Google Sans. Supply the brand's preferred typeface."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Heading: display-font, Fracitur variable, sans-serif",
+      "body": "Font Inter, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#f5f5f5",
+      "fg": "#111111",
+      "fgMuted": "#667",
+      "accent": "#3b82f6",
+      "border": "#e0e0e0"
+    },
+    "copySlots": [
+      "feature-card-heading",
+      "feature-card-body"
+    ]
+  },
+  "mechanic": "A carousel of testimonial cards. A guillemet quote (font-light) with name/--title below and circular avatar, indicator dots, arrows, and a section title. Framer Motion useInView fary-InView with staggered delays (2s between cards). No data backend / swipe functionality. Static placeholder copy.",
+  "techDelivery": "React 19 + TypeScript (Next.js) with tailwindcss/split-deviner styling (arbitrary values) and Framer Motion v12 + for carousel and entry animations. Icons from lucide-react.",
+  "reskinNotes": "This is a carousel of testimonial-cards. It is a piece of static placeholder copy. The cards are static - there is no data backend or swipe functionality. The nav arrows are functional carousel chrome - copy them from lucide-react and turn them grey. The background is #f5f5f5 - it is not white. The accent color is recorded as inline: #3b82f6 (blue)."}
+}

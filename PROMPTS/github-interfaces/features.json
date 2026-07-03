@@ -1,0 +1,25 @@
+{
+  "id": "features",
+  "role": "features",
+  "ownSections": [
+    "FeatureCarousel"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, 'Playfair Display', serif",
+        "body": "Playfair Display, Playfair Display, serif"
+      },
+      "colorRoles": {
+        "bg": "#fff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0"
+      }
+    }
+  },
+  "mechanic": "A simple feature carousel. Individual feature cards with icon, title, body. Framer Motion carousel. No data backend.",
+  "techDelivery": "React + Tailwind",
+  "reskinNotes": "This is a blank slate."}
