@@ -1,0 +1,32 @@
+{
+  "id": "orbit-web3-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-gradient",
+      "type": "background",
+      "card": 1,
+      "gradient": "dark-tech",
+      "notes": "Full-width dark gradient with grid pattern"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Orbit - Decentralized Future",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Web3, crypto SaaS landings",
+    "vibe": "Modern, dark, technological",
+    "primaryColor": "#0a121f",
+    "accentColor": "#00c853"
+  }
+}

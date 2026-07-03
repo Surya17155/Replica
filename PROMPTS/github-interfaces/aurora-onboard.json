@@ -1,0 +1,28 @@
+{
+  "id": "aurora-onboard",
+  "role": "auth",
+  "ownSections": [
+    "Auth Page"
+  ],
+  "slots": [
+    {
+      "id": "onboarding-form",
+      "type": "form",
+      "card": 1,
+      "fields": [
+        { "name": "Full Name", "type": "text", "placeholder": "John Doe" },
+        { "name": "Email", "type": "email", "placeholder": "john@example.com" }
+      ],
+      "button": {
+        "text": "Create Account",
+        "variant": "primary"
+      }
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS onboarding pages",
+    "vibe": "Modern, clean, professional",
+    "primaryColor": "#ffffff",
+    "accentColor": "#00c853"
+  }
+}

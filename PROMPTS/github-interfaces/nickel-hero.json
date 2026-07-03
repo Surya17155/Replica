@@ -1,0 +1,32 @@
+{
+  "id": "nickel-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-gradient",
+      "type": "background",
+      "card": 1,
+      "gradient": "metalloc-dark",
+      "notes": "Full-width metallic dark dark gradient"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Nickel - Reinventing Storage",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Cloud storage SaaS products",
+    "vibe": "Modern, industrial, trustworthy",
+    "primaryColor": "#0c1d24",
+    "accentColor": "#865fff"
+  }
+}

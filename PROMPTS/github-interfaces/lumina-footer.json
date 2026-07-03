@@ -1,0 +1,43 @@
+{
+  "id": "lumina-footer",
+  "role": "footer",
+  "ownSections": [
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "footer-grid-layout",
+      "type": "grid",
+      "card": 1,
+      "columns": 4,
+      "items": [
+        {
+          "type": "column",
+          "content": {
+            "heading": "Product",
+            "links": [
+              {"label": "Features", "link": "/features"},
+              {"label": "Pricing", "link": "/pricing"}
+            ]
+          }
+        },
+        {
+          "type": "column",
+          "content": {
+            "heading": "Company",
+            "links": [
+              {"label": "About", "link": "/about"},
+              {"label": "Blog", "link": "/blog"}
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS footers",
+    "vibe": "Modern, clean, minimal",
+    "primaryColor": "#1a1a2e",
+    "accentColor": "#ffffff"
+  }
+}
