@@ -1,0 +1,96 @@
+{
+  "id": "celestia-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen looping muted autoplay hero background video, absolute position behind content"
+    },
+    {
+      "id": "hero-overlay-gradient",
+      "type": "overlay",
+      "card": 1,
+      "gradient": "black-to-transparent",
+      "opacity": 0.6,
+      "notes": "Dark gradient overlay over video for text readability"
+    },
+    {
+      "id": "hero-badge",
+      "type": "badge",
+      "card": 1,
+      "text": "NEW - Version 2.0",
+      "palette": "accent1",
+      "variant": "pill",
+      "notes": "Small announcement badge above heading"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Explore the Cosmos",
+      "fontSize": "clamp(2.5rem, 6vw, 5rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    },
+    {
+      "id": "hero-subheading",
+      "type": "text",
+      "card": 1,
+      "text": "Embark on a journey through the stars with our cutting-edge space exploration platform",
+      "fontSize": "lg",
+      "maxWidth": "600px"
+    },
+    {
+      "id": "hero-cta-group",
+      "type": "button-group",
+      "card": 1,
+      "buttons": [
+        {
+          "text": "Launch Mission",
+          "variant": "primary",
+          "icon": "rocket",
+          "link": "/launch"
+        },
+        {
+          "text": "Watch Trailer",
+          "variant": "outline",
+          "icon": "play",
+          "link": "/trailer"
+        }
+      ]
+    },
+    {
+      "id": "hero-stats",
+      "type": "stats-group",
+      "card": 1,
+      "items": [
+        { "value": "12K+", "label": "Missions" },
+        { "value": "300+", "label": "Galaxies" },
+        { "value": "98%", "label": "Success Rate" }
+      ]
+    },
+    {
+      "id": "hero-scroll-indicator",
+      "type": "scroll-indicator",
+      "card": 1,
+      "variant": "mouse-animated",
+      "notes": "Animated mouse scroll indicator at bottom center"
+    }
+  ],
+  "meta": {
+    "inspiration": "SpaceX / NASA launch pages",
+    "vibe": "Cosmic, majestic, infinite",
+    "primaryColor": "#0a0a2e",
+    "accentColor": "#4facfe"
+  }
+}
