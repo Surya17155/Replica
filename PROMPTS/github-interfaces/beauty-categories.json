@@ -1,0 +1,36 @@
+{
+  "id": "beauty-categories",
+  "role": "categories",
+  "ownSections": [
+    "Explore More"
+  ],
+  "slots": [
+    {
+      "id": "categories-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Explore By Category",
+      "fontSize": "2rem",
+      "weight": "bold"
+    },
+    {
+      "id": "category-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 4,
+      "items": [
+        { "icon": "face", "label": "Skincare", count": "8 Products", "color": "#ffe4e8" },
+        { "icon": "eye", "label": "Eye Makeup", count": "12 Products", "color": "#e0e8ff" },
+        { "icon": "lips", "label": "Lip Care", count": "6 Products", "color": "#ffe0e0" },
+        { "icon": "spa-water", "label": "Body Care", count": "10 Products", "color": "#e0ffe8" }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration* : "Sephora, Gloscier, Korean skincare brands",
+    "vibe": "Clean, minimal, delicate",
+    "primaryColor": "#fffaf0",
+    "accentColor": "#e85d75"
+  }
+}

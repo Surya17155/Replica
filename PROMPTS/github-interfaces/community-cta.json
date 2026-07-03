@@ -1,0 +1,66 @@
+{
+  "id": "community-cta",
+  "role": "cta",
+  "ownSections": [
+    "Community CTA"
+  ],
+  "slots": [
+    {
+      "id": "cta-background-gradient",
+      "type": "background",
+      "card": 1,
+      "gradient": "dark-to-accent",
+      "notes": "Full-width background gradient with geometric pattern overlay"
+    },
+    {
+      "id": "cta-badge",
+      "type": "badge",
+      "card": 1,
+      "text": "Join 6,000+ Members",
+      "variant": "outline"
+    },
+    {
+      "id": "cta-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Become Part of Our Growing Community",
+      "fontSize": "clamp(2.5rem, 5vw, 3rem)",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "cta-description",
+      "type": "text",
+      "card": 1,
+      "text": "Connect with like-minded innovators and contribute to the next wave of technology",
+      "fontSize": "md",
+      "maxWidth": "600px",
+      "align": "center"
+    },
+    {
+      "id": "cta-button-group",
+      "type": "button-group",
+      "card": 1,
+      "buttons": [
+        {
+          "text": "Join Now - It's Free",
+          "variant": "primary",
+          "icon": "user-plus",
+          "link": "/signup"
+        },
+        {
+          "text": "Explore Forum",
+          "variant": "secondary",
+          "link": "/community"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Discord, Slack community cta panels",
+    "vibe": "Welcoming, active, community-focused",
+    "primaryColor": "#1a1a2e",
+    "accentColor": "#5865f2"
+  }
+}

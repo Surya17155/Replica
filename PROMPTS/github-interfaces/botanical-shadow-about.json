@@ -1,0 +1,44 @@
+{
+  "id": "botanical-shadow-about",
+  "role": "about",
+  "ownSections": [
+    "About"
+  ],
+  "slots": [
+    {
+      "id": "about-grid-layout",
+      "type": "grid",
+      "card": 1,
+      "columns": 2,
+      "items": [
+        {
+          "type": "content",
+          "content": {
+            "badge": "About Us",
+            "heading": "Crafted with Nature and Science",
+            "body": "At the intersection of botany and biotech, we develop sustainable solutions that harness the power of nature through technology. Our team of scientists and engineers works relentlessly to bring you the most innovative and environmentally friendly products."
+          },
+          "gridSpan": "span-5",
+          "color": "dark"
+        },
+        {
+          "type": "image",
+          "content": {
+            "src": "/about-jungle.jpg",
+            "alt": "Verdant joungle garden",
+            "aspect": "4:5",
+            "filter": "sepia-tone"
+          },
+          "gridSpan": "span-7",
+          "color": "dark"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Plant-based brands, Herbal supplement companies",
+    "vibe": "Earthy, peaceful, nature-loving",
+    "primaryColor": "#2d502c",
+    "accentColor": "#7cc359"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "radial-diagram",
+  "role": "diagram",
+  "ownSections": [
+    "Features"
+  ],
+  "slots": [
+    {
+      "id": "diagram-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "How It Works",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "diagram-radial",
+      "type": "chart",
+      "card": 1,
+      "chartType": "radial",
+      "sections": [
+        {"label": "Data Collection", "value": 30, "color": "#6366f1"},
+        {"label": "Analysis", "value": 25, "color": "#8b5cf6"},
+        {"label": "AI Processing", "value": 20, "color": "#eb489b"},
+        {"label": "Reporting", "value": 15, "color": "#f92c60"},
+        {"label": "Automation", "value": 10, "color": "#34a273"}
+      ],
+      "notes": "Center circle #1a1a2e, animated segments on hover"
+    }
+  ],
+  "meta": {
+    "inspiration": "Analytics dashboards, Strawberry pie charts",
+    "vibe": "Data-driven, modern, clean",
+    "primaryColor": "#1a1a2e",
+    "accentColor": "#6366f1"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "aethera-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-animation",
+      "type": "animation",
+      "card": 1,
+      "animation": "film_grain",
+      "duration": "10s",
+      "notes": "Subtle aurora-inspired particle background animation, repeat indefinitely"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Aethera - Where Nature Meets Technology",
+      "fontSize": "clamp(2.5rem, 5vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight",
+      "gradient": "text-gradient"
+    },
+    {
+      "id": "hero-subheading",
+      "type": "text",
+      "card": 1,
+      "text": "Discover the future of sustainable living with our AI-powered ecosystem analysis platform",
+      "fontSize": "lg",
+      "maxWidth": "600px",
+      "opacity": 0.8
+    },
+    {
+      "id": "hero-cta-buttons",
+      "type": "button-group",
+      "card": 1,
+      "buttons": [
+        {
+          "text": "Explore Now",
+          "variant": "primary",
+          "icon": "arrow-forward",
+          "link": "/explore"
+        },
+        {
+          "text": "See How It Works",
+          "variant": "outline",
+          "link": "/demo"
+        }
+      ]
+    },
+    {
+      "id": "hero-animated-stat",
+      "type": "stat-and-progress",
+      "card": 1,
+      "value": "10K",
+      "label": "Active Users",
+      "icon": "user",
+      "animated": true
+    }
+  ],
+  "meta": {
+    "inspiration": "Aurora, organic technology, sustainable brands",
+    "vibe": "Earthy, organic, futuristic",
+    "primaryColor": "#2d502c",
+    "accentColor": "#50c578"
+  }
+}
