@@ -1,0 +1,74 @@
+[
+    {
+        "id": "script-architect",
+        "description": "Generates architecture overviews - component trees, data flow, routing designs",
+        "family": "architecture",
+        "usage_count": 17,
+        "last_used": "2025-03-25T14:22:00Z",
+        "performance": {
+            "average_quality": 8.5,
+            "average_speed": 3.2
+        },
+        "success_rate": 0.92
+    },
+    {
+        "id": "adaptive-grid",
+        "description": "Generates responsive grid systems with breakpoints and container queries",
+        "family": "layout",
+        "usage_count": 23,
+        "last_used": "2025-03-25T13:55:00Z",
+        "performance": {
+            "average_quality": 9.1,
+            "average_speed": 2.8
+        },
+        "success_rate": 0.95
+    },
+    {
+        "id": "data-table",
+        "description": "Designs tabular data tables with sort, filter, pagination, mobile scroll",
+        "family": "components",
+        "usage_count": 9,
+        "last_used": "2025-03-24T15:30:00Z",
+        "performance": {
+            "average_quality": 7.8,
+            "average_speed": 4.1
+        },
+        "success_rate": 0.88
+    },
+    {
+        "id": "motion-story",
+        "description": "Generates page-level motion performances with GSAP/Framer Motion/Spring",
+        "family": "animation",
+        "usage_count": 12,
+        "last_used": "2025-03-25T10:45:00Z",
+        "performance": {
+            "average_quality": 9.3,
+            "average_speed": 5.2
+        },
+        "success_rate": 0.91
+    },
+    {
+        "id": "color-system",
+        "description": "Proposes color palettes, accessibility-aware token systems",
+        "family": "design-systems",
+        "usage_count": 8,
+        "last_used": "2025-03-24T12:00:00Z",
+        "performance": {
+            "average_quality": 8.6,
+            "average_speed": 3.7
+        },
+        "success_rate": 0.90
+    },
+    {
+        "id": "type-scale",
+        "description": "Generates typography scales with modular scale, base size, responsive breaks",
+        "family": "design-systems",
+        "usage_count": 6,
+        "last_used": "2025-03-25T09:15:00Z",
+        "performance": {
+            "average_quality": 8.2,
+            "average_speed": 2.5
+        },
+        "success_rate": 0.93
+    }
+]
