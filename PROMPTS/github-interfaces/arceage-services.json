@@ -1,0 +1,32 @@
+{
+  "id": "arceage-services",
+  "role": "section",
+  "ownSections": [
+    "Header",
+    "Service Cards",
+    "Footer"
+  ],
+  "components": {
+    "Header": {
+      "type": "code",
+      "filename": "Header",
+      "promptPurpose": "Design a services page header with a title (Our Services), a subheading, and a short description. Clean and professional. Header should be centered. Soft background.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Service Cards": {
+      "type": "code",
+      "filename": "ServiceCards",
+      "promptPurpose": "Design a services section with 3-6 service cards. Each card should have an icon, title , description, and a "Learn More" link. Use a grid layout, 3-4 columns. Cards should have a subtle shadow, border-radius, and hover effect. Include a small animation on hover. Section header should be bold and centered.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Footer": {
+      "type": "code",
+      "filename": "Footer",
+      "promptPurpose": "Design a simple footer with copyright notice, quick links, and social media icons. Soft background, dark text.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    }
+  }
+}

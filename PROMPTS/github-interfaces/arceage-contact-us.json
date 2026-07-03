@@ -1,0 +1,32 @@
+{
+  "id": "arceage-contact-us",
+  "role": "section",
+  "ownSections": [
+    "Header",
+    "Contact Form",
+    "Footer"
+  ],
+  "components": {
+    "Header": {
+      "type": "code",
+      "filename": "Header",
+      "promptPurpose": "Design a contact page header with a title (Contact Us), a subheading, and possibly an image or icon. The header should be simple and professional. Soft background with clear typography. It should be centered.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Contact Form": {
+      "type": "code",
+      "filename": "ContactForm",
+      "promptPurpose": "Design a contact form section with fields: name, email, subject, message. Use a clean, well-spaced layout. Each field should have a label and input field. The submit button should be prominent. On the right side, display contact information (email, phone, address). Use a card-like container for the form. Add hover effects on inputs.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Footer": {
+      "type": "code",
+      "filename": "Footer",
+      "promptPurpose": "Design a simple footer with copyright notice and quick links. Soft background, dark text, minimal.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    }
+  }
+}

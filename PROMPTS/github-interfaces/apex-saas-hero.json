@@ -1,0 +1,48 @@
+{
+  "id": "apex-saas-hero",
+  "role": "hero",
+  "ownSections": [
+    "Navbar",
+    "Hero",
+    "Features",
+    "Cta",
+    "Footer"
+  ],
+  "components": {
+    "Navbar": {
+      "type": "code",
+      "filename": "Navbar",
+      "promptPurpose": "Design a minimalist navbar for a SaaS landing page. It should have a company logo on the left, navigation links (Features, Pricing, About), and a "Get Started" button on the right. Use a white or transparent background with dark text. The navbar should be fixed at the top. Include a mobile hamburger.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Hero": {
+      "type": "code",
+      "filename": "Hero",
+      "promptPurpose": "Design a compelling hero section for a SaaS product. It should have a bold headline about the product, a subheading, and a primary CTA button. This is not a saas landing page for software, this is a landing page for a SaaS product youre building. The background should be dark with a gradient, and include visual elements like product mockups or dashboards. There should be a small social proof or stat bar below the hero (like "Joined 10000 Users").",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Features": {
+      "type": "code",
+      "filename": "Features",
+      "promptPurpose": "Design a features section with 3-4 key features of the SaaS product. Each feature should have an icon, title, description, and a demo or screenshot. Use a layout with alternating rows (image/left, text/right). The section should be visually rich with screenshots and mockups. It should be headed with "All-in-One Solution" or similar.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Cta": {
+      "type": "code",
+      "filename": "Cta",
+      "promptPurpose": "Design a conversion-focused CTA section. It should have a bold headline, subheading, and a primary button. The background should have a soft gradient or pattern. Include a secondary action like "View Demo". Add social proof logos below the button.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Footer": {
+      "type": "code",
+      "filename": "Footer",
+      "promptPurpose": "Design a full footer with multiple columns: logo/description, product links, resources, company info, and social media icons. Include newsletter signup and copyright notice. Clean dark background with light text. Stacks on mobile.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    }
+  }
+}
