@@ -1,0 +1,32 @@
+{
+  "id": "apex-program-accordion",
+  "role": "section",
+  "ownSections": [
+    "Header",
+    "Accordion",
+    "Footer"
+  ],
+  "components": {
+    "Header": {
+      "type": "code",
+      "filename": "Header",
+      "promptPurpose": "Design a clean header section for an accordion/frequently asked questions page. It should have a title (FAQ or Similar), a subheading, and a search bar to filter questions. The header should be bold and centered. Use a light background with a soft gradient. Include an icon or illustration above the title.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Accordion": {
+      "type": "code",
+      "filename": "Accordion",
+      "promptPurpose": "Design an accordion/faq section with 5-8 expandable items. Each item should have a question and an answer that appears when clicked. Use plus/minus icons or down/arrow to indicate expandable state. Smooth animation for open/close. Use a clean and minimal style. Include a dark mode variant.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Footer": {
+      "type": "code",
+      "filename": "Footer",
+      "promptPurpose": "Design a simple footer with multiple columns: logo/description, quick links, contact info, and social media icons. Include a copyright notice. Light background with dark text. Stacks on mobile.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    }
+  }
+}

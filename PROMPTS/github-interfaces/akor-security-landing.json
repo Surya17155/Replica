@@ -1,0 +1,56 @@
+{
+  "id": "akor-security-landing",
+  "role": "hero",
+  "ownSections": [
+    "Navbar",
+    "Hero",
+    "Features",
+    "Testimonials",
+    "Cta",
+    "Footer"
+  ],
+  "components": {
+    "Navbar": {
+      "type": "code",
+      "filename": "Navbar",
+      "promptPurpose": "Provide a stylish, professional navigation bar for a security services landing page. It should have a company logo on the left, navigation links in the center (Home, Services, About Us, Contact), and a "Get A Quote" button on the right. Use a dark theme with a black background, white text, and an accent color (like cyan or blue) for hover effects. The navbar should be sticky (fixed to top). Include a mobile hamburger icon for responsiveness.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Hero": {
+      "type": "code",
+      "filename": "Hero",
+      "promptPurpose": "Create a compelling hero section for a security services company. It should have a bold heading like "Your Security, Our Priority" with a subheading explaining the service. Below that, a paragraph describing the company’s mission. There should be two CTA buttons: "Get Started" and "Learn More". The background should be dark with an image or gradient, and there should be a subtle annotation about trust or security. Include visual elements like security badges or icons to reinforce the theme.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Features": {
+      "type": "code",
+      "filename": "Features",
+      "promptPurpose": "Design a features/services section that displays 3-4 key services offered by the security company. Each feature should have an icon, title, and brief description. Use a grid layout with cards. The background should be dark, with accent-colored icons or borders. The section should be headed with "Why Choose Us?" or "Our Services".",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Testimonials": {
+      "type": "code",
+      "filename": "Testimonials",
+      "promptPurpose": "Create a testimonials/social proof section with cards showing customer quotes, ratings, and logos. Each card should have a quote, customer name, title, and possibly a star rating. Use carousel or slider functionality for desktop. Background should be dark with accent quote marks.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Cta": {
+      "type": "code",
+      "filename": "Cta",
+      "promptPurpose": "Design a call-to-action section encouraging visitors to sign up or contact the company. It should have a bold headline, subheading, and a prominent button. The background should be dark with a gradient or pattern. Include a small text below the button for privacy or no-spam guarantee.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Footer": {
+      "type": "code",
+      "filename": "Footer",
+      "promptPurpose": "Design a dark-themed footer with multiple columns: company info, quick links, services, and contact info. Include social media icons, newsletter signup, and copyright notice. Background should be dark with light text. Include a divider line between sections.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    }
+  }
+}

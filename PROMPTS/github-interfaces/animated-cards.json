@@ -1,0 +1,48 @@
+{
+  "id": "animated-cards",
+  "role": "section",
+  "ownSections": [
+    "Hero",
+    "Features",
+    "Testimonials",
+    "Cta",
+    "Footer"
+  ],
+  "components": {
+    "Hero": {
+      "type": "code",
+      "filename": "Hero",
+      "promptPurpose": "Create a dynamic hero section for a saas landing page. It should have a strong headline, a subheading, and a primary CTA button. The hero should have an animated background or gradient that moves. Include a paragraph of text. Incorporate floating elements like badges or icons that are animated. Style: modern, clean, and professional.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Features": {
+      "type": "code",
+      "filename": "Features",
+      "promptPurpose": "Design a features section with animated cards. Each card should have an icon, title, description, and a hover effect that makes it raise or expand. Create 3-6 cards. Use a grid layout. Cards should have a subtle shadow and border-radius. Add a small animation on scroll entry (fade-in or slide-up).",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Testimonials": {
+      "type": "code",
+      "filename": "Testimonials",
+      "promptPurpose": "Create a testimonials section with animated cards. Each card should have a quote, customer name, title, and rating. Use a carousel or grid layout. Cards should have a hover effect that scales up slightly. Include animated quote marks.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Cta": {
+      "type": "code",
+      "filename": "Cta",
+      "promptPurpose": "Design a call-to-action section with an animated background. It should have a bold headline, subheading, and a primary CTA button. The background should have a gradient that moves or changes. Include small animations on button hover.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Footer": {
+      "type": "code",
+      "filename": "Footer",
+      "promptPurpose": "Design a clean footer with multiple columns: company logo, description, quick links, social media areas, newsletter signup, and copyright notice. Use a light background with dark text. Add subtle hover effects on links. Responsive layout that stacks on mobile.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    }
+  }
+}
