@@ -1,0 +1,55 @@
+{
+  "id": "card-with-background-pattern",
+  "role": "features",
+  "ownSections": [
+    "StatsRows"
+  ],
+  "slots": [
+    {
+      "id": "main-photo",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "The primary, full-height image in the first card. Image of a single person or a product on a soft brand background. Object-id-cover, min-h[350px]. Native placeholder is a Pepels style-shoot photo (peŕls-photo-3184291)."
+    },
+    {
+      "id": "accent-quote-marks",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "A rounded, filled quotation or decorative icon that's prominent in the background pattern. This is a stylish, decorative element, not a functional one. Example: a rounded quote, a star, a circle, or a singular icon that stands out as the accent. It's as if the background pattern has a 'missing' piece that fills with color. Native placeholder is a decorative rounded element (drop shadow at bottom for depth)."
+    },
+    {
+      "id": "stat-numbers",
+      "type": "text",
+      "card": 3,
+      "notes": "Three big numbers that float above their <span caption> in the bottom row of three cards. They represent three stats (Piece of code 1, Projects delivered 50, Meetings attended 30). They are display values and their meaning comes from the next words; the number itself does not need semantic explanation. The numbers are font-bold, clamp sized to ~rem, while the captions are font-medium, smaller, sitting below. These are running text, so they need to read naturally without data backends; they are hardcoded in JSX."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Sepoi, ui-sans-serif, sans-serif",
+      "body": "Sepoi, ui-sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#fff",
+      "surface": "#fff",
+      "fg": "#111111",
+      "fgMuted": "#666666",
+      "accent": "#1d4fed",
+      "border": "#e6e6e6"
+    },
+    "copySlots": [
+      "key-insight-heading",
+      "key-insight-body",
+      "stat-values",
+      "stat-captions"
+    ]
+  },
+  "mechanic": "A 3-row section: a image-as-background card spans the full height on the left, with two text-stats cards stacked on the right on desktop, then all three cards horizontal on mobile. Above the rows, a text block sits. Transitions use Framer Motion useInView opacity 0->1 and y -50->0 (0.5s, ease-yout), staggered per-card.",
+  "techDelivery": "React 19 + TypeScript component using tailwindcss/split-deviner styling (arbitrary values) and Framer Motion v12 + (motion from 'framer-motion'); no other libraries.",
+  "reskinNotes": "Diffused, bold, dark theme. Design is explicitely limited to '#fff', '#fff', '#111111', '#666666', '#1d4fed', and '#e6e6e6'. The layout is font-metric-dependent on Sepoi - the raw data values coan to 3rem + font-bold, the body text is distinctly smaller, and the headings are at 0p\u00a0rem but tracking-tight. Key insights are not intended to be data-driven, nor the image finder repository - reskinne means reproducing same visual fomlow with different embedded photos. The accent color is recorded as #inline: #1d4fed (blue) - the accent quote marks and other accents will be this color. Note: this is a version 1-3 evolution with a single accent."
+}

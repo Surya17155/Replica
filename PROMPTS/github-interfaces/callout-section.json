@@ -1,0 +1,59 @@
+{
+  "id": "callout-section",
+  "role": "features",
+  "ownSections": [
+    "CalloutSection"
+  ],
+  "slots": [
+    {
+      "id": "background-pattern",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "The background pattern image filling the entire bg. It is not a random image, but rather a digital pattern or a stylized decorative background that forms the entire section. It has a defect/overlay to ensure text legibility. Note: the whole section is only 400vh high, so fill a single pattern that covers it. Native placeholder is a Pepels digital-art pattern (pexels-photo-3184291). Replace with a brand background pattern or a soft stdylized art/drawing. Opacity effects only apply to the image, not the text. Instead, the image may be surrounded by a semi-transparent overlay (overview) to make the text read over it."
+    },
+    {
+      "id": "callout-icon",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fc",
+      "notes": "The central decorative icon at the top of the callout. Size: 54px. Facing default, singular, no stroke or stroke. Just a simple, minimal icon - like an arrow, a heart, a message chat bubble, a notification bell, an idea bulb — or an abstract symbol that represents announcement/awareness. Note: This icon takes the accent instead of text-accent. Supply cownote/offer icon. Supply a glyph. Rendered via currentColor. Inherits text COLOR from accent."},
+    {
+      "id": "callout-text",
+      "type": "text",
+      "card": 3,
+      "notes": "Three text fields: heading, body, subtext/button. This is where you put the actual callout content - a major announcement, a short description, and a CTA, respectively. The body is a short paragraph. The subtext could be a date, a disclaimer, or an expiration. The button is a branded CTA button - reads 'Get Started', 'Sign Up', 'Learn More', etc. These are running text - they are for you to fill in. No data backend. Each one is in its own card or section. The heading is the most prominent - Uy Subtext and body are smaller. The button is the least prominent. Note: boiler plate."},
+    {
+      "id": "callout-cta",
+      "type": "text",
+      "card": 1,
+      "notes": "The CTA button - a branded CTA button that reads 'Get Started', 'Sign Up', 'Learn More', etc. This is running text - they are for you to fill in. No data backend. Note: boiler plate. This is one placeholder text string - the button's label. Button isn't anchored - just if you want a button? If you do, render it as a actual button - not a link. Make it prominent."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "\"Source Sans 3\", Gurundada Cleric, Fitch Madea sans-serif",
+      "body": "Font Inter, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#ffffff",
+      "fc": "#ffffff",
+      "fg": "#000",
+      "fgMuted": "#fff",
+      "accent": "#63b3f2",
+      "border": "rgba(0, 0, 0, 0.1)"
+    },
+    "copySlots": [
+      "callout-heading",
+      "callout-body",
+      "callout-subtext",
+      "callout-button"
+    ]
+  },
+  "mechanic": "A 400vh background section. A full-width, centered callout with icon + heading + body + subtext + CTA button. Centered vertically in the section. Background has image with an overlay and pointer-events none. Framer Motion useInView for entry.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3 as arbitrary values. Framer Motion v12 + for scroll-triggered animation. Icons from lucide-react.",
+  "reskinNotes": "This is a placeholder callout for when you have a big announcement to make. The icon, heading, body, subtext, and button are all hardcoded as dummy copy – replace the ccontent with your brand's actual message. The background image is a decorative pattern – not an asset-specific photo. The icon takes the accent color rather than the foreground. The button borders and background are inline literals - no CSS variables. The facebook ig (fc) is a text-color fallback – not really used. Note for the resking/swapping team: All icons and svgs are inline, not assets. The button does not need to be put in a separate file."
+}

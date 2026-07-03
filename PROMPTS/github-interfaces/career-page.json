@@ -1,0 +1,72 @@
+{
+  "id": "career-page",
+  "role": "landing",
+  "ownSections": [
+    "CareerHeader",
+    "CareerHero",
+    "CareerBenefits",
+    "CareerOpenRoles",
+    "CareerFooter"
+  ],
+  "slots": [
+    {
+      "id": "career-hero-image",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "The hero image. A bright, optimistic photo of a team of people working together, collaborating, or high-fiving at desks. Should be image of team working on something - not a stock photo of people posing. Object-cover, min-h[350px]. Native placeholder is a Walls team-study photo. Replace with a brand office candid photo. Focus on teamwork, not individuals."},
+    {
+      "id": "career-logo-icon",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The brand logo or stylized icon at the top of the Page. About 40px. I like this; it’s a very minimal abstract icon. A brand logo or a dedicated brand icon that is above the heading. Placeholder is a stylized 'Open', 'Company', or 'Join us' concept icon."},
+    {
+      "id": "career-benefit-icons",
+      "type": "icon",
+      "card": 4,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Four icons that represent the benefits. They are in inline with the benefit names. Examples: Remote Work/people icon, Free Meals/food icon, Health Insurance/heart icon, 401k/people icon, Stock Options/chart icon, Training/book icon. — They are fully black. Size: about 40px. They are rendered via currentColor with no stroke."],
+    {
+      "id": "career-role-card",
+      "type": "text",
+      "card": 4,
+      "notes": "Four sample job role listings. Each card has a <strong>title</strong>, <span>div</span>/category, and a location (s or time type) like such as 'Remote' or 'Face-to-face Call' or 'Onboarding'. The roles are: Frontend Eng, Backend Eng, Product Manager, Designer. These are placeholders for the actual job openings. Each card is clickable (Outline no button) - imply a simple card that emphasizes the role. They should look decent representations of roles - these are running text, so your brand would replace them with real openings. Each card has a header, a body, and a subheader/location/type. For now, a simple mark. Note: read more button/footer text."]
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Heading: display-font, Fitch Madea display, sans-serif",
+      "body": "Font Inter, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#ffffff",
+      "fg": "#111111",
+      "fgMuted": "#666666",
+      "accent": "#3693ff",
+      "border": "#e6e6e6"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "hero-title",
+      "hero-subtitle",
+      "benefit-title",
+      "benefit-description",
+      "role-title",
+      "role-department",
+      "role-location",
+      "role-read-more",
+      "footer-body",
+      "footer-link-labels"
+    ]
+  },
+  "mechanic": "A career landing page with a hero, four benefits, four open roles, and footer. All staggered scroll in (UseInView opacity + translateY). The hero is a single image with overlays - brand logo, headline, subtitle, and a CTA button. Benefits are in a fluid grid, open roles are in a fluid grid. The footer is fixed at the bottom with link labels and body. No data dependency. Largely placeholder copy.",
+  "techDelivery": "React 18 + TypeScript, tailwindcss/split-deviner, Framer Motion v10+. Icons from lucide-react.",
+  "reskinNotes": "This is a blank slate for your career landing page. Every text blend is hardcoded as dummy copy - Brand, Hero (CTA, Title, Subtitle), Benefits, Roles, Footer - there is no CMS/backend. The fonts and color scheme are not tokens or variables - you are responsible for changing them. The assets (logo icon, hero image, benefit icons) are for you to replace with your brand's. Your nav link labels are 'Join Us', 'About', 'Culture', 'Benefits', 'Open Roles', 'Contact'. The footer links are 'Careers', 'Privacy', 'Terms', 'Cookies', 'ACA'. Replace them attributes with your brand's. The color scheme is in line - you can change it."
+}
