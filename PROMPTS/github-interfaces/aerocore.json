@@ -1,0 +1,51 @@
+{
+  "id": "aerocore",
+  "role": "page",
+  "ownSections": [
+    "Navbar",
+    "Hero",
+    "GridCards",
+    "CaseStudies",
+    "Contact",
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "logo",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "primary",
+      "notes": "Navbar logo, flat in-line svg, 32x32 bounding box, vertically centered. The svg appears at Lg and higher screen sizes.\r\nLogo is defined by two major stroke paths (an 'A-' shape and a rectangular element) on a dark background. It should be rendered as a clean, modern brand mark."
+    },
+    {
+      "id": "hero-bg-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen autoplaying muted looping hero background video, absolute inset-0 object-cover behind the HX2/CTA stack. A modern office/space looking footage of an air port with people, planes, baggage, and movement."
+    },
+    {
+      "id": "profile-photo",
+      "type": "image",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "notes": "Profile photo for the Case Study card (face/outfit-style photo of a real person). Warm and organic colors recommended. Required: one profile photo of an individual. This reference no longer exists; the photo supplied in the repo is a came of a woman with baggage in the background. Internal acceptable. The design reference does not go further, so any professional photo of an executive threads matching the site's tone would work.
+    },
+    {
+      "id": "case-study-image",
+      "type": "image",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "notes": "Case Study card background image (dark gradient overlay). The dashboard analytics image supplied in the repo should be used. Image cropped 16:9 with even dark tint on the bottom half. The screenshot image from an in-depth production dashboard is running in the background. This image can be re-used from other sections that show a darker version of the same dashboard."
+    }
+  ],
+  "tags": ["branding", "corporate", "aero", "productivity", "drone-real"],
+  "createdAt": "2024-07-18T00:00:00.000Z"
+}

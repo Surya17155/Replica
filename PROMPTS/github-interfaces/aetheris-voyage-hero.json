@@ -1,0 +1,50 @@
+{
+  "id": "aetheris-voyage-hero",
+  "role": "hero",
+  "ownSections": [
+    "Navbar",
+    "Hero",
+    "Testimonial",
+    "Gallery",
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "logo",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "white",
+      "notes": "Navbar logo as an inline svg graphic, default to current-color, sitting inside a 32x32 bounding box. Vertically centered. No background."
+    },
+    {
+      "id": "hero-bg-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen autoplaying muted looping hero background video, absolute inset-0 object-cover behind the HX1/CTA stack. Required: space/spacecraft or artistic space loop."
+    },
+    {
+      "id": "hero-image",
+      "type": "image",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "notes": "Testimonial section background image (galaxy scene with a soft dark gradient overlay for optional text overlay). Use the reference image from the repo or a similar space scene. Repeatable across other hero sections. The reference image supplied in the repo should be used as is as possible. If the reference image is not available, a similar space scene can be substituted."
+    },
+    {
+      "id": "gallery-photos",
+      "type": "image",
+      "card": 4,
+      "aspect": "auto",
+      "alpha": false,
+      "notes": "Content imagery for the Gallery section (cover-cropped, responsive) - product, location, or concept photos depending on subject. Reference repo does not have gallery images, so your own stock picks are fine. Try to stay consistent with the dark space theme."
+    }
+  ],
+  "tags": ["space", "galaxy", "adventure", "sci-fi", "travel"],
+  "createdAt": "2024-06-01T00:00:00.000Z"
+}
