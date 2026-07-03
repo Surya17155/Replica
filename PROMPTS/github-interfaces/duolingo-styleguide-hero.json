@@ -1,0 +1,66 @@
+{
+  "id": "duolingo-styleguide-hero",
+  "role": "landing",
+  "ownSections": [
+    "DuolingoStyleguideHero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Full-screen hero background. A fun, vibrant background with a solid color along with some playful, abstract shapes. A youthful, modern background. No people, no screenshots. Native placeholder is a fun/colorful background with abstract graphics. Fills the entire page - full-width, full-vheight."},
+    {
+      "id": "brand-logo",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The brand logo at the top-left of the hero. About 48px. It is an inline SVG icon or group-ic. Note: your brand logo gets the 'fg' text color - not a separate brand color. Native placeholder is a stylized circular shape or abstract logo mark."},
+    {
+      "id": "cta-button",
+      "type": "text",
+      "card": 1,
+      "notes": "The primary CTA button - it reads something like 'Get Started' or 'Trash the Guide.' It's a rounded button with bg and text-accent in the same forest green. This is running text - no data backend needed. A simple button with hover: opacity 0.9. Border-radius: 8px. Note: text-accent-color."},
+    {
+      "id": "hero-text",
+      "type": "text",
+      "card": 3,
+      "notes": "Three text fields: a <h1>heading</h1>, <p>body</p>, and a subtext/disclaimer. Each one is in its own card or section. The heading is the most prominent - something like 'Learn a New Language.' The body is a short paragraph. The subtext could be a date, a disclaimer, an expiration. These are running text - they are for you to fill in. No data backend. The heading is the most prominent - large, font-bold, tracking-tight. The body is smaller, more contrast. The subtext is the smallest. Note: bolder plate. Supply dummy text that reads well - brand will replace."},
+    {
+      "id": "hero-image-right",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "The secondary hero image. A fun, colorful icon or mascot that represents the platform. Something like a mascot, a cartoon character, an abstract illustration. Native placeholder is a fun/colorful mascot or icon. Note: this is an additional image - the background of the hero is the main image."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Font Inter, sans-serif, sans-serif",
+      "body": "Font Inter, sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#58a700",
+      "fg": "#fff",
+      "fgMuted": "#e5e5e5",
+      "accent": "#ffffff",
+      "border": "#fff"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "hero-heading",
+      "hero-body",
+      "hero-subtext"
+    ]
+  },
+  "mechanic": "A full-page hero with fun background, icon/mascot, logo, headline, body, subtext, and CTA button. A left-text, right-image layout with full-width bg. Framer Motion useInView for entry.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3 as arbitrary values. Framer Motion v12 + for scroll-triggered animation. Icons from lucide-react.",
+  "reskinNotes": "This is a blank slate for a language/education app. Every text blend is hardcoded as dummy copy - Brand, Hero (CTA, Title, Subtitle, Body) - there is no CS/backend. The fonts and color scheme are not tokens or variables - you are responsible for changing them. The assets (logo, background, hero image) are for you to replace with your brand's. The color scheme is in - you can change."}
+}
