@@ -1,0 +1,23 @@
+{
+  "id": "minimalist-cta-footer",
+  "role": "landing",
+  "ownSections": [
+    "MinimalistCtaFooter"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#111111",
+        "fg": "#ffffff",
+        "fgMuted": "#999",
+        "accent": "#f0f0f0",
+        "border": "#2c2c3c"
+      }
+    }
+  }
+}
