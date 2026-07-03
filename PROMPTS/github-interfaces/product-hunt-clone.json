@@ -1,0 +1,25 @@
+{
+  "id": "product-hunt-clone",
+  "role": "landing",
+  "ownSections": [
+    "ProductHuntCloneSection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0"
+      }
+    }
+  },
+  "mechanic": "A clone of Product Hunt-style landing section. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind",
+  "reskinNotes": "Blank slate"}
