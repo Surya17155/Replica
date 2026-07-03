@@ -1,0 +1,79 @@
+{
+  "id": "benefits-features",
+  "role": "features",
+  "ownSections": [
+    "Benefits"
+  ],
+  "slots": [
+    {
+      "id": "card-hero-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "The single media layer of the right-hand white feature card: an absolute inset-0 w-full h-full object-cover video (z-0) filling a tall portrait-ish panel (w-full / xl:w-[320px] / 2xl:w-[410px], h-[360px] md:h-[450px] xl:h-auto, rounded-[2.5rem], overflow-hidden). Plays autoPlay loop muted playsInline. Two white floating badges (the 'February Sale' pill top-right and the 'Tenis Outdor' counter card bottom-left) sit over it at z-10, so the clip should read clearly behind white chips in both top-right and bottom-left corners; gets cropped to a narrow vertical aspect on desktop and a shorter landscape-ish box on mobile. Native placeholder is a cloudfront hf_*.mp4."
+    },
+    {
+      "id": "heading-inline-pill-image",
+      "type": "image",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "notes": "A single transparent (removebg) PNG embedded mid-sentence inside the main heading between the words 'Explore' and 'our', rendered as an inline-block circular chip: w-[1.2em] h-[0.8em] scale-[1.15] object-contain rounded-full align-middle mx-[-0.1em] -translate-y-[0.1em]. Sized in em units so it scales with the clamp() heading and must sit visually on the text baseline; needs alpha and a subject that crops cleanly to a rounded pill. Native placeholder is a Cloudinary removebg-preview PNG."
+    },
+    {
+      "id": "ui-icons",
+      "type": "icon",
+      "card": 8,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Eight distinct lucide-react glyphs used as monochrome inline icons, tinted by the surrounding text/fill color rather than a fill prop (except Zap which is fill-white): Soup (18px, first pill), Shirt (18px, second pill), Plus and Minus (cross-faded + rotated accordion toggle per tab), Target (20px, orange #ea580c 'EST 1997' label), ArrowRight (inside the black 'Join Now!' button, white), Gift (20px, 'February Sale' top-right pill), Zap (20px, fill-white, in the blue 'Boost' footer of the counter card). A reskin can swap the equivalent set from any icon library."
+    },
+    {
+      "id": "primary-font",
+      "type": "font",
+      "card": 1,
+      "notes": "The single Inter typeface used for every string in the section (imported via Google Fonts), set globally. Carries the clamp()-sized medium-weight main heading (text-[clamp(1.7rem,5.5vw,4.5rem)], leading-[1.05], tracking-tight), the wide-tracked 15px eyebrow tag, the white pill labels, the 22px accordion tab titles, the 18px gray body copy, the bold 15px EST/button/badge labels, the stacked card heading (clamp(1.7rem,5vw,46px)) and the very large 42px tracking-tight count-up metric figure. Heavy use of tracking-tight on headings and tracking-wide on micro labels, so pick a clean grotesque that holds tight tracking and renders the large 42px/clamp figures cleanly (font-metric-sensitive)."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "\"Inter\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "body": "\"Inter\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#F4F6FA",
+      "surface": "#ffffff",
+      "fg": "#111111",
+      "fgMuted": "#6b7280",
+      "accent": "#3b82f6",
+      "accent2": "#3585A5"
+    },
+    "copySlots": [
+      "eyebrow",
+      "headline-line-1",
+      "headline-line-2",
+      "pill-1-label",
+      "pill-2-label",
+      "tab-1-title",
+      "tab-1-body",
+      "tab-2-title",
+      "tab-2-body",
+      "card-est-label",
+      "card-body",
+      "card-heading-line-1",
+      "card-heading-line-2",
+      "cta-label",
+      "badge-pill-label",
+      "counter-card-label",
+      "counter-value-suffix",
+      "counter-boost-label"
+    ]
+  },
+  "mechanic": "A static two-column Benefits section on a 12-col grid (lg:col-span-5 text column + lg:col-span-7 white card) where the left column scroll-reveals staggered motion.div elements (eyebrow, inline-image heading, pills, and a single-open accordion whose Plus/Minus toggle cross-fades+rotates over an AnimatePresence expand/collapse) and the right card fades in from the right wrapping an autoplay looping video with two pop-in floating badges, the bottom-left one running a 0 to 86 requestAnimationFrame ease-out count-up on viewport enter.",
+  "techDelivery": "Plain React component + Tailwind CSS (utility classes only, no theme tokens) + motion/react for animation + lucide-react for icons; Inter loaded via Google Fonts.",
+  "reskinNotes": "Every color is baked literally into inline Tailwind arbitrary-value classes, not tokenized: the section bg #F4F6FA, #111 base text, the blue eyebrow dot and accent #3b82f6, the counter-card bottom-half blue #3585A5, the orange Target/EST accent #ea580c (a third accent with no role slot), plus the white surfaces and gray text via raw text-gray-500/600/700 utilities and shadow-only borders (shadow-[0_2px_8px_rgba(0,0,0,0.04)], shadow-[0_4px_24px_rgba(0,0,0,0.03)], shadow-[0_8px_30px_rgba(0,0,0,0.04)]) rather than a border color, so each must be hand-edited. All copy is hardcoded in the JSX markup with intentional placeholder typos that must be preserved verbatim for a 1:1 port: 'Sport Pacakge', 'Tenis Outdor', 'Tenis Outdor', 'EST 1997'. The count-up target (86), its 2000ms rAF duration and ease-out curve, the default activeTab ('connections'), and the EST/badge/Boost labels are literals in component code, not data props. Layout is font-metric-dependent: the main heading and the stacked 'Visionary / Precision Play' card heading use clamp() sizing at medium weight so a wider substitute font reflows them, and the inline heading image is sized in em units (w-[1.2em] h-[0.8em], negative margins and a -translate-y nudge) tuned to Inter's metrics so swapping the font shifts the chip off the baseline; the card-body paragraph is pinned to max-w-[280px], so longer reskin strings overflow."
+}
