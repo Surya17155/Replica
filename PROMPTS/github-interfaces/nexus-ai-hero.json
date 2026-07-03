@@ -1,0 +1,25 @@
+{
+  "id": "nexus-ai-hero",
+  "role": "landing",
+  "ownSections": [
+    "NexusAIHero"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#7c3cff",
+        "border": "#e0e0e0 "
+      }
+    }
+  },
+  "mechanic": "A full-page hero for a AI-focused product. Left-text, right-image layout.",
+  "techDelivery": "React + Tailwind",
+  "reskinNotes": "Blank slate"}
