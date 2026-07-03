@@ -1,0 +1,23 @@
+{
+  "id": "magic-mind",
+  "role": "features",
+  "ownSections": [
+    "MagicMindSection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#e94656",
+        "border": "#e0e0e0 "
+      }
+    }
+  }
+}

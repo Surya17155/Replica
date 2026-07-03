@@ -1,0 +1,25 @@
+{
+  "id": "medi-assist",
+  "role": "features",
+  "ownSections": [
+    "MediAssistSection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#59b34f",
+        "border": "#e0e0e0"
+      }
+    }
+  },
+  "mechanic": "A features section with grid layout, cards, icons. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind",
+  "reskinNotes": "Blank slate"}
