@@ -1,0 +1,51 @@
+{
+  "id": "nexora-features",
+  "role": "features",
+  "ownSections": [
+    "Features Section"
+  ],
+  "slots": [
+    {
+      "id": "features-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Powerful Features",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "features-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 3,
+      "items": [
+        {
+          "icon": "cloud",
+          "title": "Cloud-Based Platform",
+          "description": "Access your data from anywhere with seamless syncing",
+          "color": "#5865f2"
+        },
+        {
+          "icon": "shield-check",
+          "title": "Advanced Security",
+          "description": "End-to-end encryption with real-time threat detection",
+          "color": "#40a058"
+        },
+        {
+          "icon": "analytics",
+          "title": "Advanced Analytics",
+          "description": "Get deep insights with our powerful analytics engine",
+          "color": "#f0e640"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS feature sections",
+    "vibe": "Clean, modern, professional",
+    "primaryColor": "#f8fafc",
+    "accentColor": "#5865f2"
+  }
+}

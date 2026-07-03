@@ -1,0 +1,68 @@
+{
+  "id": "railroad-ai-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-image",
+      "type": "image",
+      "card": 1,
+      "src": "/images/railroad-ai-bg.jpg",
+      "aspect": "16:10",
+      "filter": "darken",
+      "notes": "Full-screen railroad themed background with overlay"
+    },
+    {
+      "id": "hero-logo",
+      "type": "logo",
+      "card": 1,
+      "src": "/logos/railroad-ai.svg",
+      "notes": "Company logo in top left" 
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "AI that Understands Your Railroad",
+      "fontSize": "clamp(2rem, 5vw, 3.5rem)",
+      "weight": "bold",
+      "gradient": "text-gradient"
+    },
+    {
+      "id": "hero-subheading",
+      "type": "text",
+      "card": 1,
+      "text": "Optimize your railway operations with predictive AI that anticipates issues before they happen",
+      "fontSize": "md",
+      "maxWidth": "600px",
+      "opacity": 0.8
+    },
+    {
+      "id": "hero-cta-group",
+      "type": "button-group",
+      "card": 1,
+      "buttons": [
+        {
+          "text": "Get Started",
+          "variant": "primary",
+          "icon": "arrow-forward",
+          "link": "/start"
+        },
+        {
+          "text": "See Demo",
+          "variant": "outline",
+          "link": "/demo"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Industrial AI platforms, railroad tech startups",
+    "vibe": "Industrial, rugged, reliable",
+    "primaryColor": "#1c292e",
+    "accentColor": "#f0993b"
+  }
+}

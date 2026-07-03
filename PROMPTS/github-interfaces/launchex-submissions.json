@@ -1,0 +1,41 @@
+{
+  "id": "launchex-submissions",
+  "role": "submissions",
+  "ownSections": [
+    "Submissions Page"
+  ],
+  "slots": [
+    {
+      "id": "submissions-header",
+      "type": "header",
+      "card": 1,
+      "title": "Submissions",
+      "description": "Manage your launch submissions",
+      "actions": {
+        "primary": {"label": "New Submission", "link": "/new-submission"}
+      }
+    },
+    {
+      "id": "submissions-table",
+      "type": "table",
+      "card": 1,
+      "columns": [
+        { "label": "Startup Name", "key": "name" },
+        {"label": "Date Submitted", "key": "date"},
+        {"label": "Status", "key": "status"},
+        {"label": "Action", "key": "action"}
+      ],
+      "rows": [
+        {"name": "AquaStart", "date": "Oct 15, 2024", "status": "Reviewed", "action": "View"},
+        {"name": "EcoFeed", "date": "Oct 12, 2024", "status": "Pending", "action": "Edit"},
+        {"name": "TechPulse", "date": "Oct 10, 2024", "status": "Aproved", "action": "Publish"}
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Product-hunt platforms, Startup Sass Dashboards",
+    "vibe": "Clean, professional, task-oriented",
+    "primaryColor": "#f8fafc",
+    "accentColor": "#5865f2"
+  }
+}

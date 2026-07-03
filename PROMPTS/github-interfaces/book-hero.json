@@ -1,0 +1,68 @@
+{
+  "id": "book-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-gradient",
+      "type": "background",
+      "card": 1,
+      "gradient": "warm-neutral",
+      "notes": "Warm versus cool diagonal gradient with gentle particle noise overlay"
+    },
+    {
+      "id": "hero-badge",
+      "type": "badge",
+      "card": 1,
+      "text": "Best-seller on Amazon",
+      "variant": "outline"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "The Art of Storytelling",
+      "fontSize": "clamp(3rem, 6vw, 5rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    },
+    {
+      "id": "hero-author",
+      "type": "author",
+      "card": 1,
+      "name": "Jane Austen",
+      "role": "Bestselling Author",
+      "avatar": "JA",
+      "rating": 5,
+      "reviews": "2,000"
+    },
+    {
+      "id": "hero-cta",
+      "type": "button-group",
+      "card": 1,
+      "buttons": [
+        {
+          "text": "Buy Now",
+          "variant": "primary",
+          "icon": "shopping-bag",
+          "link": "/buy-now"
+        },
+        {
+          "text": "Read Sample",
+          "variant": "outline",
+          "icon": "book-open",
+          "link": "/sample"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Author landing pages, book marketing sites",
+    "vibe": "Warm, inviting, literary",
+    "primaryColor": "#fff8f0",
+    "accentColor": "#e85d75"
+  }
+}

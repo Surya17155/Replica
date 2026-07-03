@@ -1,0 +1,44 @@
+{
+  "id": "velorix-iic",
+  "role": "interactive-icon-card",
+  "ownSections": [
+    "Interactive Icon Cards"
+  ],
+  "slots": [
+    {
+      "id": "icon-cards-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Interactive Icon Cards",
+      "fontSize": "2rem",
+      "weight": "bold"
+    },
+    {
+      "id": "icon-cards-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 3,
+      "items": [
+        {
+          "icon": "bolt",
+          "title": "Quick Response",
+          "description": "Average response time of 20ms—200% improvement",
+          "color": "#e0e8ff"
+        },
+        {
+          "icon": "lock",
+          "title": "Enterprise-Grade Security",
+          "description": "Soc 2 compliant with full audit trail",
+          "color": "#ffe0e0"
+        },
+        {
+          "icon": "arrow-path-progress",
+          "title": "Advanced Analytics",
+          "description": "Real-time insights with predictive modeling",
+          "color": "#e0ffe8"
+        }
+      ]
+    }
+  ]
+}

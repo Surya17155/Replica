@@ -1,0 +1,50 @@
+{
+  "id": "technical-specifications",
+  "role": "specifications",
+  "ownSections": [
+    "Technical Spec Page"
+  ],
+  "slots": [
+    {
+      "id": "specs-header",
+      "type": "header",
+      "card": 1,
+      "title": "Technical Specifications",
+      "description": "Detailed specifications for every component"
+    },
+    {
+      "id": "specs-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 2,
+      "items": [
+        {
+          "icon": "processor",
+          "title": "Processor",
+          "values": {
+            "Base Model": "Apple M2 / Qualcom",
+            "Cores": "8-Core",
+            "Threads": "8-Processor with HT Threading"
+          },
+          "color": "#e0e8ff"
+        },
+        {
+          "icon": "memory",
+          "title": "Memory",
+          "values": {
+            "Ram": "8GB MDDQ4",
+            "Storage": "256GB SSD",
+            "Expansion": "Up to 2TB Storage"
+          },
+          "color": "#ffe0e0"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS product pages, tech specs pages",
+    "vibe": "Clean, professional, tech-focused",
+    "primaryColor": "#f8fafc",
+    "accentColor": "#5865f2"
+  }
+}

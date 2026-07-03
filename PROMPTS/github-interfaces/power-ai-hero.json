@@ -1,0 +1,40 @@
+{
+  "id": "power-ai-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-gradient",
+      "type": "background",
+      "card": 1,
+      "gradient": "dark-to-deep-purple",
+      "notes": "Full-width dark to deep purple gradient with floating spark particles"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Power AI Assistant",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    },
+    {
+      "id": "hero-subheading",
+      "type": "text",
+      "card": 1,
+      "text": "Automate your workflows and increase productivity with our advanced AI solution",
+      "fontSize": "md",
+      "maxWidth": "500px"
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern AI saas landing pages",
+    "vibe": "Professional, trustworthy, data-driven",
+    "primaryColor": "#1a1a2e",
+    "accentColor": "#8b5cf6"
+  }
+}
