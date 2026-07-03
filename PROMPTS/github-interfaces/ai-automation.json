@@ -1,0 +1,85 @@
+{
+  "id": "ai-automation",
+  "role": "hero",
+  "ownSections": [
+    "Navbar",
+    "Hero",
+    "Statement",
+    "Services",
+    "ScrollIndicator",
+    "RepostButton"
+  ],
+  "slots": [
+    {
+      "id": "backgroui4-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fixed fullscreen looping hero background film sitting behind ALL content at position:fixed, top/left 0, width 100%, height 100vh, objectFit cover, zIndex 0. Rendered <video autoPlay muted loop playsInline>. Sections 1 (Hero) and 2 (Statement) sit transparently over it; the Hero only masks the top 48% with a #C5C5C5 overlay panel, so the lower portion and the entire Statement section read directly on this footage. Section 2 puts white uppercase text (h2 + body) straight over the video with no gradient scrim declared, so legibility depends on the footage being dark/calm in the center-left band. Native source is a CloudFront placeholder mp4."
+    },
+    {
+      "id": "service-card-video",
+      "type": "video",
+      "card": 3,
+      "aspect": "::3",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Three looping videos, one per service card in the Section 3 cards-grid (3 columns 1fr on desktop, collapsing to 1 column under 900px). Each fills the card's media area: a width:100% aspectRatio 4/3 relative overflow-hidden box, video absolute inset 0 objectFit cover, inside a rounded-20px bordered (rgba(0,0,0,0.18)) transparent card with paddingTop 16px. Card-cropped (rounded corners clip it), not fullscreen. The three are distinct clips paired with the 'Process Streamlining', 'Strategic advisory' and 'Assistant engineering' copy. Native sources are CloudFront placeholder mp4s."
+    },
+    {
+      "id": "display-font",
+      "type": "font",
+      "card": 1,
+      "notes": "Single typeface used GLOBALLY for both display and body: 'Helvetica Now Var', imported via CSS @import from db.onlinewebfonts.com and applied as font-family: 'Helvetica Now Var', 'Helvetica Neue', Helvetica, Arial, sans-serif. Drives the COGNITRA wordmark, all nav links, both clamp(26px,3vw,42px) uppercase section headlines (Hero h1, Statement h2, Services h2), body paragraphs, slide counters, button labels and the REPOST label. Layout leans on a tight, wide grotesque (uppercase headings at letterSpacing -0.01em / lineHeight ~1.05; labels at letterSpacing 0.06-0.12em), so any replacement should be a variable/neo-grotesque sans with similar metrics. Supply the brand sans for this one role; there is no separate body or accent face."
+    },
+    {
+      "id": "repost-share-icon",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Inline share/repost glyph in the fixed bottom-right REPOST button. Hand-authored inline <svg> 14x14, viewBox 0 0 24 24, fill none, stroke currentColor, strokeWidth 2, round caps/joins (three connected circles + two connecting lines). Monochrome, tinted via currentColor from the button's rgba(0,0,0,0.8) foreground (so it follows the dark-on-light fg role). Not a Lucide glyph — the markup hardcodes the path. Replace with the brand's share/repost mark; keep it single-stroke and alpha so it overlays the fixed video/gray backdrop."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "'Helvetica Now Var', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "body": "'Helvetica Now Var', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#C5C5C5",
+      "surface": "transparent",
+      "fg": "#1a1a1a",
+      "fgMuted": "#5a5a5a",
+      "accent": "#1a1a1a",
+      "border": "rgba(0,0,0,0.18)"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-center-labels",
+      "nav-right-labels",
+      "hero-headline",
+      "hero-slide-counter",
+      "hero-body",
+      "hero-primary-cta-label",
+      "hero-secondary-cta-label",
+      "hero-bottom-text",
+      "statement-headline",
+      "statement-body",
+      "services-counter",
+      "services-headline",
+      "services-intro-body",
+      "service-card-titles",
+      "service-card-bodies",
+      "repost-label"
+    ]
+  },
+  "mechanic": "A fixed fullscreen looping background video with a transparent navbar over three stacked 100vh/auto sections (a Hero whose top 48% is a gray overlay panel, a transparent white-text Statement, and a gray Services grid of three video cards), where every heading/paragraph/button enters on a scroll-triggered fade-rise (opacity 0 + translateY -> 0, ease [0.22,1,0.36,1]) with headings word-split into per-word staggered spans, plus a CSS-keyframe bouncing scroll-indicator pill and a fixed repost button.",
+  "techDelivery": "React + Vite + Tailwind CSS component spec (multi-file: packages react, react-dom, framer-motion, lucide-react, tailwindcss, postcss, autoprefixer, vite, @vitejs/plugin-react). Motion is a single reusable FadeUp wrapper over framer-motion (whileInView + viewport once). Font loads via a CSS @import; section/card geometry, the scrollBounce keyframe and the two max-width 900px/600px breakpoints are author-defined CSS, not a UI library.",
+  "reskingNotes": "All copy is hardcoded in JSX markup and must be edited there: brand 'COGNITRA', nav arrays ['MAIN','OFFERING','CASE','RATES'] and ['CREW','CONNECT'], the Hero headline 'SCALING\nFASTER USING AI' (literal newline-split), '001 / 005' / '003 / 005' slide counters, the hero body + bottom paragraph, 'BOOK A CALL!' / 'OUR PRODUCTS' buttons, the Statement headline 'WE BUILD AT END-TO-END AI AUTOMATION SYSTEMS.' (space-split into per-word FadeUp spans), the Services headline 'EXPLORE WHAT WE OFFER' (also word-split) and intro, and the three card title/body pairs (Process Streamlining / Strategic advisory / Assistant engineering). Headline layout is font-metric dependent: uppercase at clamp(26px,3vw,42px), lineHeight ~1.05, letterSpacing -0.01em, with the word-split spans relying on flexWrap + gap 0.25em, so a wider/taller display face or longer words will rewrap the headings. The share icon is hardcoded inline SVG (stroke currentColor) rather than a tokenized asset. Color is split between an inline-style palette and the responsive CSS: #C5C5C5 gray panels, #1a1a1a near-black ink/buttons, muted greys (#666/#5a5a5a/#3a3a3a) and rgba(0,0,0,0.18) borders are scattered as literals across both the JSX inline styles AND the media-query block, and the over-video text uses rgba(255,255,255,0.85-0.9) white that assumes dark footage — there is no single accent token, so retinting means find-replace ’s hex/rgba literals in both places. lucide-react is a declared dependency but no Lucide glyph is actually placed in the spec (the only icon is the inline share SVG)."
+}

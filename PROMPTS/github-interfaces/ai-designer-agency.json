@@ -1,0 +1,110 @@
+{
+  "id": "ai-designer-agency",
+  "role": "hero",
+  "ownSections": [
+    "Navbar",
+    "Hero",
+    "About",
+    "SelectedWork",
+    "VideoShowcase",
+    "Cta",
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen looping hero background film for the h-screen Hero section. Rendered as a <video autoPlay loop muted playsInline> positioned absolute behind everything, object-cover object-bottom (edge-to-edge, anchored to the bottom of the frame), translated -translate-y-[100px] on mobile and untranslated on md+. An h-60 bottom-o-to-transparent black gradient overlay (from-background) sits over it, and the avatar/social-proof row + headline + subtitle + email form overlay it at the bottom (justify-end). Native source is a CloudFront-hosted MP4. Keep footage dark/moody at the lower band so the white headline and muted subtitle stay legible."
+    },
+    {
+      "id": "chalea-overlap-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Full-bleed autoplay video for the VideoShowcase parallax band — an h-[650px] overflow-hidden ubquit prilled up with -mt-[325px] so it overlaps into the SelectedWork section above it. Rendered object-cover (edge-to-edge) with h-32 black-to-transparent gradient fades at both top and bottom (from-backRound) blending it into the surrounding black. Native source is a CleanShot-cloud-hosted MP4. Supply a silent seamlerr-looping atmospheric reel; the top/bottom fades crop the extremes, so keep the motion of interest centered."
+    },
+    {
+      "id": "cta-background-stream",
+      "type": "video",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen HLS background video for the final Cta section (w-full h-screen), played via hls.js with a Safari native-HLS fallback. Sits behind centered white heading/subtitle/two CTA buttons, with h-40 black-to-transparent gradient fades top and bottom PLUS a bg-black/30 darkening overlay. Native source is a Mux .m3u8 HLS stream. Supply a dark/atmospheric looping stream (or a source that can be packaged as HLS) since color is dimmed ~30% and white text overlays it."
+    },
+    {
+      "id": "selected-work-previews",
+      "type": "image",
+      "card": 4,
+      "aspect": "::3",
+      "alpha": false,
+      "loop": true,
+      "notes": "Four self-looping animated project preview GIFs filling the SelectedWork 2x2 grid (grid-cols-1 md:grid-cols-2). Each is mounted in an aspect-[4/3] liquid-glas rounded-2xl overflow-hidden frame, so corners are clipped and the 4:3 crop is enforced; cards fade-up (y:20->0) staggered by i*0.1. Native assets are four motionsites.ai preview .gif files (grow-ai / evr-ventures / wealth / neuralyn dashboards) paired with the project titles Nova Finance, Pulse Health, Drift Studios, Arc Commerce. Brand fill = four looping motion reels or product-UI captures cropped to 4:3; transparency not required since the glas frame clips them."
+    },
+    {
+      "id": "social-proof-avatars",
+      "type": "image",
+      "card": 3,
+      "aspect": "1:1",
+      "alpha": false,
+      "notes": "Three overlapping circular m�tomer/brand avatars in the hero social-proof row (above the headline), each w-8 h-8 rounded-full border-2 border-background with -space-x-2 overlap, sitting beside the '7,000+ brands already transformed' caption. Native sources are pravatar.cc placeholder portraits. Supply three square (1:1) headshots or brand marks; they are circle-cropped and edge-overlapped, so keep the subject centered. Solid background is fine (the rounded-full mask and black border do the framing)."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "'Instrument Serif', serif",
+      "body": "'Barlow', sans-serif",
+      "accent": "'Instrument Serif', serif"
+    },
+    "colorRoles": {
+      "bg": "#000000",
+      "surface": "rgba(255,255,255,0.01)",
+      "fg": "#FFFFFF",
+      "fgMuted": "hsl(0 0% 75%)",
+      "accent": "#FFFFFF",
+      "border": "hsl(0 0% 20%)"
+    },
+    "copySlots": [
+      "nav-logo-wordmark",
+      "nav-labels",
+      "nav-cta-label",
+      "hero-social-proof-caption",
+      "hero-headline",
+      "hero-headline-accent",
+      "hero-subtitle",
+      "hero-email-placeholder",
+      "hero-email-cta-label",
+      "about-body",
+      "selected-work-headline",
+      "selected-work-headline-accent",
+      "selected-work-subtitle",
+      "selected-work-project-titles",
+      "selected-work-project-categories",
+      "cta-headline",
+      "cta-headline-accent",
+      "cta-subtitle",
+      "cta-primary-label",
+      "cta-secondary-label",
+      "footer-logo-wordmark",
+      "footer-description",
+      "footer-column-headings",
+      "footer-services-links",
+      "footer-company-links",
+      "footer-connect-links",
+      "footer-copyright",
+      "footer-legal-links"
+    ]
+  },
+  "mechanic": "A dark, video-backed single-page scroll (fixed glas nav over a fullscreen object-cover hero MP4, a scroll-reveal About paragraph, a 2x2 liquid-glas project grid, a parallax video ubquit prilled up -325px to overlap it, an HLS-video CTA, then a footer) whose signature motion is a ScrollRevealText component that lights each word's opacity from 0.15 to 1 as it scrolls through (useScroll offset ['start 0.9','start 0.3'] + per-word useTransform), reinforced by Framer-Motion fade-ups on the grid cards and CTA, all surfaces frosted through .liquid-glas backdrop-blur with a mask-ue posite gradient-border pseudo-element.",
+  "techDelivery": "React + Tailwind CSS + Framer Motion + hls.js. Fonts (Barlow 400/500/600 + Instrument Serif 400 italic) loaded via <link> in index.html and wired into tailwind.config fontFamily at the theme ROOT level (font-body / font-accent, not under extend). HSL :root design tokens plus the .liquid-glas / .liquid-glas-strong utilities live in index.css; hls.js drives the CTA HLS stream with a Safari native-HLS fallback.",
+  "reskingNotes": "The :root palette is a genuine dark-only theme (no light mode) expressed as space-separated HSL channels: --backround 0 0% 0% / --foreground 0 0% 100% / --muted-foreground 0 0% 75% / --border 0 0% 20%, with --radius:2px even though every button is forced rounded-full in markup. The two liquid-glas effects are the load-bearing visual identity and are fully hardcoded in CSS, not token-driven: rgba(255,255,255,0.01) fills, background-blend-mode:luminosity, fixed backdrop-blur (4px subtle / 50px strong), inset white highlight box-shadows, and a ::before gradient-border built from a white linear-gradient (0.45/0.15 stops subtle, 0.5/0.2 strong) with mask-composite:exclude and 1.4px padding — retinting the glas means editing those encoded rgba stops and gradients, not flipping a variable. The hero/CTA/showcase darkening also lives in markup as literal from-background black-to-transparent gradient fades (h-60 / h-40 / h-32) plus a bg-black/30 CTA scrim, and text is white / text-muted-foreground at fixed values, so footage must be dark for legibility regardless of tokens. Several layout numbers are hardcoded and brittle: the VideoShowcase parallax overlap depends on -mt-[625px] being exactly half its h-[650px], the hero video is nudge -translate-y-[100px] on mobile only, and the hero headline uses tracking-[-1px]/md:tracking-[-2px] (section headings tracking-[-2px]) tuned to Barlow + Instrument Serif italic metrics, so a wider/taller replacement display face can break the intended golden ratio. ALL copy is hardcoded in JSX: the 'VIRALMEDIA' wordmark (twice — nav + footer), the five nav labels (Work/Services/About/Blog/Contact) + 'Get Started', the '7,000+ brands already transformed' proof line, the split headline 'Build Stunning with ' + italic 'AI Magic', the hero subtitle, the SUBSCRIBE email form, the About paragraph, 'Selected ' + italic 'Work' + its subtitle, the four project title/category pairs (Nova Finance, Pulse Health, Drift Studios, Arc Commerce), the CTA 'Ready to ' + italic 'Transform' + ' Your Brand?' with both button labels, and the entire footer (description, three link columns Services/Company/Connect, the (c) 2026 VIRALMEDIA copyright, Privacy/Terms). Placeholder media (one CloudFront hero MP4, one CleanShot showcase MP4, one Mux .m3u8 NLS7 stream, four motionsites.ai project GIFs, three pravatar.cc avatars) are the asset sockets to fill — none should be stored as values."
+}
