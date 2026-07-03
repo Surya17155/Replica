@@ -1,0 +1,40 @@
+{
+  "id": "crypto-wealth-hero",
+  "role": "landing",
+  "ownSections": [
+    "CryptoWealthHero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Full-screen hero background. High-contrast, modern, abstract or geometric pattern. Gradient overlay on top for text readability. No people, no screenshots. Native placeholder is a geometric abstract shapes or a dark forex background with overlay; replace with brand-specific visual asset. Fills the entire page - full-width, full-vheight."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Sepoi, sans-serif, sans-serif",
+      "body": "Sepoi, sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0a0a0a",
+      "fg": "#fff",
+      "fgMuuted": "#99",
+      "accent": "#5893ff",
+      "border": "#333"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "hero-heading",
+      "hero-body",
+      "hero-subtext"
+    ]
+  },
+  "mechanic": "A full-page dark theme hero with background image, subtile image, logo, headline, body, subtext, and CTA button. A left-text, right-image layout with full-width background. Framer Motion useInView for entry.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3 as arbitrary values. Framer Motion v12 + for scroll-triggered animation. Icons from lucide-react.",
+  "reskinNotes": "This is a blank slate for a crypto/lending/fintech brand. Every text blend is hardcoded as dummy copy - Brand, Hero (CTA, Title, Subtitle, Body) - there is no CS/backend. The fonts and color scheme are not tokens or variables - you are responsible for changing them. The assets (background image, subtile image, logo) are for you to replace with your brand's. The color scheme is in - you can change. Note: brand-name and nav-links are copySlots - they share data with the other hero pages. Your brand logo is in the top-left. Your hero image is on the right. Your CTA button reads Start Free Trial - it's a simple button with hover: background scale 0.98. Note: text-accent-color. Note: bolder plate."}
+"}
