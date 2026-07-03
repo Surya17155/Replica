@@ -1,0 +1,23 @@
+{
+  "id": "halo-use-case",
+  "role": "features",
+  "ownSections": [
+    "HaloUseCaseSection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, 'Playfair Display', serif",
+        "body": "Playfair Display, Playfair Display, serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0 "
+      }
+    }
+  }
+}

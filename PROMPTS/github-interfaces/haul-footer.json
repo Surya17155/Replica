@@ -1,0 +1,25 @@
+{
+  "id": "haul-footer",
+  "role": "landing",
+  "ownSections": [
+    "HaulFooterSection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, Playfair Display, serif",
+        "body": "Playfair Display, Playfair Display, serif"
+      },
+      "colorRoles": {
+        "bg": "#1a1a1a",
+        "fg": "#ffffff",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#2c2c3c"
+      }
+    }
+  },
+  "mechanic": "A full-page footer with logo, link columns, social icons. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind"
+}

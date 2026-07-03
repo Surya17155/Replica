@@ -1,0 +1,57 @@
+{
+  "id": "impressive-hero",
+  "role": "landing",
+  "ownSections": [
+    "ImpressiveHero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Full-screen hero background. A dark, moody, impressive background. Native placeholder is a dark, textured or gradient background; replace with brand-specific asset. Fills the entire page."},
+    {
+      "id": "brand-logo",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Brand logo at top-left, about 48px. Native placeholder is a stylized circular shape."},
+    {
+      "id": "cta-button",
+      "type": "text",
+      "card": 1,
+      "notes": "Primary CTA ('Get Started', 'Explore Now'). Rounded, border-radius 8px. Text-accent-color. Running text."},
+    {
+      "id": "hero-text",
+      "type": "text",
+      "card": 3,
+      "notes": "Heading, body, subtext. Heading large, font-bold, tracking-tight. Supply dummy text. No data backend."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Playfair Display, sans-serif, sans-serif",
+      "body": "Playfair Display, sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0c0c14",
+      "fg": "#ffffff",
+      "fgMuted": "#999",
+      "accent": "#ffd700",
+      "border": "#2c2c3c"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "hero-heading",
+      "hero-body",
+      "hero-subtext"
+    ]
+  },
+  "mechanic": "A full-page hero with dark bg, logo, headline, body, subtext, CTA button. Left-text, right-image layout. Framer Motion useInView.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3. Framer Motion v12.",
+  "reskinNotes": "Blank slate - dummy text, no backend."}
