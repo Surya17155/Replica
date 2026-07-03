@@ -1,0 +1,25 @@
+{
+  "id": "13",
+  "role": "features",
+  "ownSections": [
+    "Features Section"
+  ],
+  "slots": [
+    {
+      "id": "feature-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Features",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS landing pages",
+    "vibe": "Modern, clean, professional",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

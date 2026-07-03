@@ -1,0 +1,25 @@
+{
+  "id": "19",
+  "role": "landing",
+  "ownSections": [
+    "Landing Page"
+  ],
+  "slots": [
+    {
+      "id": "landing-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Landing Page 19",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS landing pages",
+    "vibe": "Modern, clean, professional",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}
