@@ -1,0 +1,23 @@
+{
+  "id": "future-state",
+  "role": "features",
+  "ownSections": [
+    "FutureEventList"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Helvetica Neue, 'Helvetica Neue', sans-serif",
+        "body": "Helvetica Neue, Helvetica Neue, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0"
+      }
+    }
+  }
+}
