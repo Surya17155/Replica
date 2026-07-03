@@ -1,0 +1,25 @@
+{
+  "id": "kova-features",
+  "role": "features",
+  "ownSections": [
+    "KovaFeaturesSection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, 'Playfair Display', serif",
+        "body": "Playfair Display, Playfair Display, serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0"
+      }
+    }
+  },
+  "mechanic": "A simple features section with grid layout. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind"
+}

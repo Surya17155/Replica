@@ -1,0 +1,23 @@
+{
+  "id": "kresna-footer",
+  "role": "landing",
+  "ownSections": [
+    "KresnaFooterSection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, Playfair Display, serif",
+        "body": "Playfair Display, Playfair Display, serif"
+      },
+      "colorRoles": {
+        "bg": "#111111",
+        "fg": "#ffffff",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#2c2c3c"
+      }
+    }
+  }
+}
