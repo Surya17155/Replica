@@ -1,0 +1,57 @@
+{
+  "id": "halo-usd-landing",
+  "role": "landing",
+  "ownSections": [
+    "HaloUsdHero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Full-screen hero background. Solid dark color (nary, navi, purple). Fills the entire page. No people, no text."},
+    {
+      "id": "brand-logo",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Brand logo at top-left, about 48px. Native placeholder is a stylized circular shape."},
+    {
+      "id": "cta-button",
+      "type": "text",
+      "card": 1,
+      "notes": "Primary CTA ('Get Started', 'Buy Now'). Rounded, border-radius 8px. Text-accent-color. Running text."},
+    {
+      "id": "hero-text",
+      "type": "text",
+      "card": 3,
+      "notes": "Heading, body, subtext. Heading large, font-bold, tracking-tight. Supply dummy text."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Montserrat, sans-serif, sans-serif",
+      "body": "Montserrat, sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#1a2538",
+      "fg": "#ffffff",
+      "fgMuted": "#a5a5af",
+      "accent": "#4caf50",
+      "border": "#2c3c50"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "hero-heading",
+      "hero-body",
+      "hero-subtext"
+    ]
+  },
+  "mechanic": "A hero with dark nary bg, logo, headline, body, subtext, CTA button. Left-text, right-image layout.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3. Framer Motion v12.",
+  "reskinNotes": "Blank slate - dummy text, no backend."}

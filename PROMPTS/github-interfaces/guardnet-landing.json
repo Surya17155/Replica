@@ -1,0 +1,57 @@
+{
+  "id": "guardnet-landing",
+  "role": "landing",
+  "ownSections": [
+    "GuardnetLandingHero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Full-screen hero background. A dark, cyber-security style background. Native placeholder is an abstract security/dashboard background; replace with brand-specific visual asset. Fills the entire page. No people, no text."},
+    {
+      "id": "brand-logo",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The brand logo at top-left. About 48px. Native placeholder is a stylized circular shape or abstract logo mark."},
+    {
+      "id": "cta-button",
+      "type": "text",
+      "card": 1,
+      "notes": "Primary CTA button ('Get Started', 'Book a Demo'). Rounded button, border-radius 8px. Running text - no data backend."},
+    {
+      "id": "hero-text",
+      "type": "text",
+      "card": 3,
+      "notes": "Heading, body, subtext. Heading large, font-bold, tracking-tight. Supply dummy text. No data backend."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Montserrat, sans-serif, sans-serif",
+      "body": "Montserrat, sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0a0e1a",
+      "fg": "#ffffff",
+      "fgMuted": "#a5a5a5",
+      "accent": "#00cc88",
+      "border": "#2c2c3c"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-links",
+      "hero-heading",
+      "hero-body",
+      "hero-subtext"
+    ]
+  },
+  "mechanic": "A professional hero with dark bg, logo, headline, body, subtext, and CTA button. Left-text, right-image layout. Framer Motion useInView.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3. Framer Motion v12.",
+  "reskinNotes": "Blank slate - dummy text, no backend."}
