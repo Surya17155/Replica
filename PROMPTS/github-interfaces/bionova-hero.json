@@ -1,0 +1,32 @@
+{
+  "id": "bionova-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "background",
+      "card": 1,
+      "gradient": "biotech-green",
+      "notes": "Full-width green to dark biotech gradient"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Bionova - Life Sciences",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Biotech startups, healthcare tech",
+    "vibe": "Clean, scientific, hopeful",
+    "primaryColor": "#0c1d24",
+    "accentColor": "#00c853"
+  }
+}

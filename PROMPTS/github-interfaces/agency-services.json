@@ -1,0 +1,36 @@
+{
+  "id": "agency-services",
+  "role": "services",
+  "ownSections": [
+    "Services Section"
+  ],
+  "slots": [
+    {
+      "id": "service-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Our Services",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "service-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 3,
+      "items": [
+        { "title": "Web Development", "description": "Fast, responsive websites" },
+        { "title": "App Development", "description": "Native mobile apps for iOS and Android" },
+        { "title": "Cloud Infra", "description": "Scalable AWS/Gzere infrastructure" }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Digital agency landings, SaaS services",
+    "vibe": "Modern, clean, professional",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

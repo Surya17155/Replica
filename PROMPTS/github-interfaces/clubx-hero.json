@@ -1,0 +1,32 @@
+{
+  "id": "clubx-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-dark",
+      "type": "background",
+      "card": 1,
+      "gradient": "night-club",
+      "notes": "Full-width dark nightclub gradient with neon accents"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "ClubX - Where Nights Come Alive",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Nightclub, event platforms, entertainment",
+    "vibe": "Dark, vibrant, energetic",
+    "primaryColor": "#0e141c",
+    "accentColor": "#ff6b35"
+  }
+}

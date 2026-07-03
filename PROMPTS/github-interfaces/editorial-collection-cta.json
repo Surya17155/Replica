@@ -1,0 +1,33 @@
+{
+  "id": "editorial-collection-cta",
+  "role": "cta",
+  "ownSections": [
+    "CTA Section"
+  ],
+  "slots": [
+    {
+      "id": "cta-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Explore Our Collection",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "cta-button",
+      "type": "button",
+      "card": 1,
+      "text": "Shop Now",
+      "variant": "primary",
+      "link": "/collection"
+    }
+  ],
+  "meta": {
+    "inspiration": "Ecommerce, fashion brand landings",
+    "vibe": "Clean, professional, minimal",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}
