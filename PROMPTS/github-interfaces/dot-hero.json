@@ -1,0 +1,31 @@
+{
+  "id": "dot-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-canvasresize",
+      "type": "canvas",
+      "card": 1,
+      "notes": "Full screen resize empty canvas for particle animation overlay"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Dot - A New Perspective",
+      "fontSize": "clamp(3rem, 7vw, 5rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern tech startup sites, creative agencies",
+    "vibe": "Minimal, creative, bold",
+    "primaryColor": "#ffffff",
+    "accentColor": "#000000"
+  }
+}

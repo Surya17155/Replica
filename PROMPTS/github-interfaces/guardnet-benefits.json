@@ -1,0 +1,51 @@
+{
+  "id": "guardnet-benefits",
+  "role": "benefits",
+  "ownSections": [
+    "Benefits"
+  ],
+  "slots": [
+    {
+      "id": "benefits-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Why GuardNet?",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "benefits-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 3,
+      "items": [
+        {
+          "icon": "shield-check",
+          "title": "Real-Time Protection",
+          "description": "AI-powered threat detection responds in milliseconds",
+          "color": "#40a058"
+        },
+        {
+          "icon": "cloud",
+          "title": "Cloud-Native Architecture",
+          "description": "No appliance to manage. Seamless integration with your stack",
+          "color": "#5865f2"
+        },
+        {
+          "icon": "chart-bar-increase",
+          "title": "Cost Efficiency",
+          "description": "Up to 60% savings compared to traditional security suites",
+          "color": "#f0ce40"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern cybersecurity SaaS pages",
+    "vibe": "Secure, trustworthy, professional",
+    "primaryColor": "#0c1d24",
+    "accentColor": "#40a058"
+  }
+}

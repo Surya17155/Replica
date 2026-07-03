@@ -1,0 +1,50 @@
+{
+  "id": "veloce-cards",
+  "role": "cards",
+  "ownSections": [
+    "Vertical Scroll Cards"
+  ],
+  "slots": [
+    {
+      "id": "cards-container",
+      "type": "container",
+      "card": 1,
+      "layout": "vertical-scroll",
+      "items": [
+        {
+          "id": "card-1",
+          "type": "card",
+          "title": "Debt Management",
+          "description": "Consolidate and manage all debt in one place",
+          "icon": "dollar-sign",
+          "trend": "-12% on avg. interest",
+          "trendDirection": "down"
+        },
+        {
+          "id": "card-2",
+          "type": "card",
+          "title": "Investment Portfolio",
+          "description": "Real-time tracking of your investments",
+          "icon": "growth",
+          "trend": "+23% returns",
+          "trendDirection": "up"
+        },
+        {
+          "id": "card-3",
+          "type": "card",
+          "title": "Savings Goals",
+          "description": "Automatically save for future goals",
+          "icon": "piggy-bank",
+          "trend": "$12K saved",
+          "trendDirection": "up"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    inspiration(: "Modern fintech dashboards, velocity stacking",
+    "vibe": "Fast, modern, financial",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

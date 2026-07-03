@@ -1,0 +1,24 @@
+{
+  "id": "14",
+  "role": "testimonial",
+  "ownSections": [
+    "Testimonials Section"
+  ],
+  "slots": [
+    {
+      "id": "testimonial-card",
+      "type": "testimonial-card",
+      "card": 1,
+      "quote": "This platform transformed how we operate. The results were immediate and measurable.",
+      "author": "Sarah R": "CTO at Streamline",
+      "avatar": "SA",
+      "rating": 5
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS testimonial sections",
+    "vibe": "Authentic, so professional, result-oriented",
+    "primaryColor": "#f8fafc",
+    "accentColor": "#5865f2"
+  }
+}
