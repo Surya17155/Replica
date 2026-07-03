@@ -1,0 +1,53 @@
+{
+  "id": "arceage-testimonial",
+  "role": "testimonials",
+  "ownSections": [
+    "FeedbackCarousel"
+  ],
+  "slots": [
+    {
+      "id": "author-avatars",
+      "type": "image",
+      "card": 3,
+      "aspect": ":1",
+      "alpha": false,
+      "notes": "Circular author/testimonial portraits, one per feedback entry. Rendered w-14 h-14 rounded-full object-cover with referrerPolicy=\"no-referrer\", swapped on slide change. Native prompt fills these with picsum.photos placeholder portraits; reskin supplies real headshots of the quoted people (or brand-appropriate stand-ins). Card count tracks the feedbacks array length (3 here)."
+    },
+    {
+      "id": "nav-arrow-glyphs",
+      "type": "icon",
+      "card": 2,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Functional carousel chrome (not brand assets): previous/next arrows inside the two circular #D9D9D9 buttons (w-6 h-6 text-black, strokeWidth 1.5). Native source is lucide-react ArrowLeft / ArrowRight. Only swap if the brand has its own icon system; transparent so the grey button shows through."
+    },
+    {
+      "id": "body-font",
+      "type": "font",
+      "card": 1,
+      "notes": "Primary UI typeface for every visible string in this section: the section title, the large guillemet quote (font-light, tracking-tight, size"
+    }
+  ],
+  "stream": [],
+  "appendContent": [],
+  "appendStyle": [],
+  "appendBehavior": [],
+  "enabledAt": [],
+  "conditions": [],
+  "nestedInstances": [],
+  "static": true,
+  "isIndex": false,
+  "isDescription": false,
+  "appendSmartSimpleLayout": false,
+  "enabled": true,
+  "order": 8,
+  "gridColumns": null,
+  "defaultVisibility": true,
+  "global": false,
+  "instanceID": "00000000-0000-0000-0000-000000000001",
+  "isBody": false,
+  "isBlock": false,
+  "isUnlinked": false,
+  "combinedAt": 0
+}

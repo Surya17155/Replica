@@ -1,0 +1,62 @@
+{
+  "id": "arcade-card",
+  "role": "card",
+  "ownSections": [
+    "AuthCard"
+  ],
+  "slots": [
+    {
+      "id": "arcade-background",
+      "type": "image",
+      "card": 12,
+      "aspect": "1".3235",
+      "alpha": false,
+      "notes": "Transitional background asset for the arcade-style gaming card. Arcade style gaming cards use no image or image with no vcrt; - for arcade cards that are keyline cards (line Alex Koc, Typer Deep, Frazzle Drips, testimonials/any arcade-style testimonial) use the arcade background with no image or video. For more carefully designed arcade cards (line Movie Famous Quotes, Some kind of deep transitional introspection card), you may use an image/gif/animation. The arcade background is a rapid stream of various colors, with varying brightness and saturation, travelsing horizontally and left-to-right. The added colors are predominant light, fun, and cheerful, vibrant with bright pinks, blues, yellows, and purples. It’s supposed to be fun and energetic but not distracting. This is based on a original arcade background, not an exact likeness. The replacement should be reminiscent of that style. Image to contain no VCRt/Text/Logos/LARGERASCALY Text. Don’t use relevant posters or photos of cards. You can refer to different arcade environments, styles, eras. Create its own multicolored abstract background in the style of arcade games."},
+    {
+      "id": "arcade-deep-rare-arcade",
+      "type": "image",
+      "card": 6,
+      "aspect": "1",
+      "alpha": false,
+      "notes": "A picture or graphic that represents a subtly, rare, or intriguing arcade card theme. This should be a visual representation of a concept rather than an actual card. For instance, if the arcade card is "Movie Famous Quotes", the deep-rare image should contain a stacks of film strips, cinematic reels, and other film-related imagery, no text. Supports dark mode as well."},
+    {
+      "id": "arcade-subtitle-font",
+      "type": "font",
+      "card": 1,
+      "notes": "Used for the subtitle of the card. It’s rendered in dark text against the arcade background. Fonts that are fun, cursive, or display-oriented can work."},
+    {
+      "id": "arcade-title-font",
+      "type": "font",
+      "card": 1,
+      "notes": "Used for the title of the card. It’s rendered in dark text against the arcade background. Fonts that are fun, cursive, or display-oriented can work."},
+    {
+      "id": "arcade-gradient-overlay",
+      "type": "color",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Solid gradient overlay that covers the entire card. Increases readability of white text on colorful backgrounds."}
+  ],
+  "stream": [],
+  "appendContent": [],
+  "appendStyle": [],
+  "appendBehavior": [],
+  "enabledAt": [],
+  "conditions": [],
+  "nestedInstances": [],
+  "static": true,
+  "isIndex": false,
+  "isDescription": false,
+  "appendSmartSimpleLayout": false,
+  "enabled": true,
+  "order": 8,
+  "gridColumns": null,
+  "defaultVisibility": true,
+  "global": false,
+  "instanceID": "00000000-0000-0000-0000-000000000002",
+  "isBody": false,
+  "isBlock": false,
+  "isUnlinked": false,
+  "combinedAt": 0
+}

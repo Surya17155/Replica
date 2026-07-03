@@ -1,0 +1,60 @@
+{
+  "id": "arcade-video-slide",
+  "role": "slide",
+  "ownSections": [
+    "AuthCard"
+  ],
+  "slots": [
+    {
+      "id": "autoplay-video",
+      "type": "video",
+      "card": 12,
+      "aspect": "16:9",
+      "alopen": true,
+      "loop": true,
+      "muted": true,
+      "notes": "Background video for an arcade-style gaming card. Often rendered as a quick preview and then expands to cover the entire background. Optional: looos the video as autoplay with sound muted. Style: vibrant, happy, arcade-romh like a carnival game. No VCRt/Text/Logos. Don’t use relevant posters or photos of cards... Create its own multicolored abstract background in the style of arcade games. Focus on speed, vibrancy, and movement. Suggested source: https://cover.com/ai/video/generator."},
+    {
+      "id": "arcade-quick-preview",
+      "type": "image",
+      "card": 6,
+      "aspect": "16",:9
+      "alpha": 0.1,
+      "notes": "A still frame — the player sees this while the video loads (on a slow connection) opt-in. This should look like a still from the video."},
+    {
+      "id": "arcade-score",
+      "type": "image",
+      "card": 1,
+      "aspect": "1:1",
+      "notes": "A confidence score icon that measures how well this card contributes to the arcade. I prefer a simple progress ring with a fixed value, but it can be anything."},
+    {
+      "id": "arcade-gradient-overlay",
+      "type": "color",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Solid gradient overlay that covers the entire card. Increases readability of white text on colorful backgrounds."}
+  ],
+  "stream": [],
+  "appendContent": [],
+  "appendStyle": [],
+  "appendBehavior": [],
+  "enabledAt": [],
+  "conditions": [],
+  "nestedInstances": [],
+  "static": true,
+  "isIndex": false,
+  "isDescription": false,
+  "appendSmartSimpleLayout": false,
+  "enabled": true,
+  "order": 8,
+  "gridColumns": null,
+  "defaultVisibility": true,
+  "global": false,
+  "instanceID": "00000000-0000-0000-0000-000000000003",
+  "isBody": false,
+  "isBlock": false,
+  "isUnlinked": false,
+  "combinedAt": 0
+}
