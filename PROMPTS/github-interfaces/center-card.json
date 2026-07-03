@@ -1,0 +1,75 @@
+{
+  "id": "center-card",
+  "role": "features",
+  "ownSections": [
+    "StatsCards"
+  ],
+  "slots": [
+    {
+      "id": "icon",
+      "type": "icon",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "The central icon in the Modal/。。It is the center piece of the card, bold, striking large icon. Example: A circle or lucide-react Plus icon. It's about 80px. Supply a strong, dedicated icon (phone, mail, chat, notification, alert, trust, etc). Rendered via currentColor (preferred) or as stroke. Fill, stroke, or outline - it’s up to you. It is on the surface color, which is white. So the icon takes the accent color rather than white."
+    },
+    {
+      "id": "button-text",
+      "type": "text",
+      "card": 1,
+      "notes": "The CTA button at the bottom of the card. It reads 'Get Started', 'Sign Up', etc. This is running text - you do not have to worry about backend or CMS. Simple - this only needs placeholder copy. Don't make it a footer or prominent - abundant but prominent. It is the main call to action. Note: text-accent color. Note: if you do not have an icon, try the text below. If you want a button, you can make it a button instead of just text."],
+    {
+      "id": "card-text",
+      "type": "text",
+      "card": 3,
+      "notes": "Three text fields: a heading, a body, and a subtext (like optional badge or disclaimer). Each one is in its own canary or section. The heading is the most prominent - something like 'Welcome to the Next Generation'. The body is a short paragraph. The subtext could be a date, a disclaimer, or an expiration. These are running text - they are for you to fill in. No data backend. Each one is in its own card or section. The heading is the most prominent - something like 'Welcome to the Next Generation'. The body is a short paragraph. The subtext could be a date, a disclaimer, or an expiration. If you want a button, you can make it a button instead of just text. But it's optional."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Headline: display-font, Fracitur variable, sans-serif",
+      "body": "Font Inter, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0e0e0e",
+      "surface": "#ffffff",
+      "fg": "#ffffff",
+      "fgMuted": "#999999",
+      "accent": "#3693ff",
+      "accent2": "#ffffff",
+      "border": "rgba(0, 0, 0, 0.1)"
+    },
+    "copySlots": [
+      "card-heading",
+      "card-body",
+      "card-subtext",
+      "card-button"
+    ]
+  },
+  "mechanic": "A centered card with icon + heading + body + subtext + CTA button. It's a card in the center of the section. all centered horizontally with max-w-400px or so. Solid, dark theme. It's a card - not a section. Framer Motion useInView for entry. A simple button at the bottom - clickable.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3 as arbitrary values. Framer Motion v12 + for scroll-triggered animation. Icons from lucide-react.",
+  "reskinNotes": "This is a placeholder card for when you want to display a central offer or message. The icon, heading, body, subtext, and button are all hardcoded as dummy copy. Replace with your brand's message. The button does not need to be put in a separate file. Your subtext can be a date, disclaimer, or expiration. Your card colors are all inline literals - no CSS variables. The button is text avoid but it's a button tag - if you want to be precise, use 'Button' not <a or <span>. Note: the icon takes the accent color rather than the foreground. - center-card.json."}
+],
+  "skin": {
+    "fontRoles": {
+      "display": "Headline: display-font, Fracitur variable, sans-serif",
+      "body": "Font Inter, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0e0e0e",
+      "surface": "#ffffff",
+      "fg": "#ffffff",
+      "fgMuted": "#999999",
+      "accent": "#3693ff",
+      "accent2": "#ffffff",
+      "border": "rgba(0, 0, 0, 0.1)"
+    },
+    "copySlots": [
+      "card-heading",
+      "card-body",
+      "card-subtext",
+      "card-button"
+    ]
+  },
+  "mechanic": "A centered card with icon + heading + body + subtext + CTA button. It's a card in the center of the section. all centered horizontally with max-w-400px or so. Solid, dark theme. It's a card - not a section. Framer Motion useInView for entry. A simple button at the bottom - clickable."
+}

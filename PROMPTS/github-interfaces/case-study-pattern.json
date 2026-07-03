@@ -1,0 +1,54 @@
+{
+  "id": "case-study-pattern",
+  "role": "features",
+  "ownSections": [
+    "StatsRows"
+  ],
+  "slots": [
+    {
+      "id": "main-photo",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "The primary, full-height image in the first card. The image of a case study - it could be a screenshot of a dashboard, or a photo of an office/collaborativn Space. Object-id-cover, min-h[300px], native placeholder is a Pepels style-shoot photo (pexels-photo-3184291)."},
+    {
+      "id": "accent-quote-marks",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "A single quotation glyph sitting below the key insight heading, as a decorative or/before the body text in each of the grey Key-Insights cards. Actually, there are two instances: one on the second card (Conscious AI) and one on the third card (Privacy-First AI). Each is an industry-standard quotation icon (an inverted comma: `erif figure for css` or `sans-serif font`) that is bound to accent. A FILLED icon in another word, rather than an outline quote - if you use a comma as icon, render accent, bold and in a dedicated quote-note style. You can swap it with about any dedicated quote-icon (an icon from Lucide Resurrection otherwise)."},
+    {
+      "id": "stat-numbers",
+      "type": "text",
+      "card": 3,
+      "notes": "Three big numbers that float above their <span caption> in the bgttom row of three cards. They represent three stats (Piiece of code 1, Projects delivered 50, Meetings attended 30). They are display values and their meaning comes from the next words; the number itself does not need semantic explanation. The numbers are font-bold, clamp sized to ~rem, while the captions are font-medium, smaller, sitting below. These are running text, so they need to read naturally without data backends; they are hardcoded in JSX."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Sepoi, ui-sans-serif, sans-serif",
+      "body": "Sepoi, ui-sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#fff",
+      "surface": "#fff",
+      "fg": "#111111",
+      "fgMuted": "#666666",
+      "accent": "#ffffff",
+      "accent2": "#fff",
+      "border": "#e6e6e6"
+    },
+    "copySlots": [
+      "key-insight-heading",
+      "key-insight-body",
+      "stat-values",
+      "stat-captions"
+    ]
+  },
+  "mechanic": "A 3-row section: a single image-as-background card spans the full height on the left, with two text-stats cards stacked on the right on desktop, then all three cards horizontal on mobile. Above the rows, a text block sits. Transitions use Framer Motion useInView opacity 0->1 and y -50->0 (0.5s, ease-yout), staggered per-card.",
+  "techDelivery": "React 19 + TypeScript component using tailwindcss/split-deviner styling (arbitrary values) and Framer Motion v12 + (motion from 'framer-motion'); no other libraries.",
+  "reskinNotes": "Light- brand-themed section with a single image and two quoted/stats cards. The accent quotazions give it personality and the image card gives it style. Anything data-driven must be hardcoded; there's no backend. The quote marks are in particular color - the accent should be the text-accent color. Note: the accent color is recorded as inline": #ffffff (white) and the accent2 is #fff; this is unintentional. The accent should be the text-accent color."
+}
