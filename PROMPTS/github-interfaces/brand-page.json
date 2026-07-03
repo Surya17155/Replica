@@ -1,0 +1,85 @@
+{
+  "id": "brand-page",
+  "role": "landing",
+  "ownSections": [
+    "NavBar",
+    "HeroHeadline",
+    "FeatureSpotlight",
+    "FeatureCards",
+    "FeatureStats",
+    "FeedbackForm",
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "primary-photo",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "The full-height hero image, rendered on the dark bg, next to the heading and CTA. A stylish product shoot or a dramatic studio photo of a product on a plain background — no assets/products are integral, it's the principal photo of the section. Object-id-cover, min-h-[280px], border radius-2-sm. Native placeholder is a Pepels mid-shop photo (pexels-photo-3184291). Foces on the product, not the person."
+    },
+    {
+      "id": "brand-logo-spotlight",
+      "type": "svg",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The brand logo as a single-color inline SVG asset, sitting next to the Hero heading. This is the same image used in the Navbar but a different instance - larger version located in the Hero section. A stroke or pure icon-phonic logo that fits on any color. Placeholder is a stylized plain geometric SVG sizzor. Single-color, transparent, inherits text color."},
+    {
+      "id": "feature-card-icons",
+      "type": "icon",
+      "card": 3,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "Three decorative line-icons placed at the top of three feature cards. These are native (Navigation - Bulbseye, Star, Heart). They are all singular almost, only only one is stroke-only. They could be stylish or simple. The preference is for a minimal icon. They are stroke-inheriting the accent color - Nova - Cards – Rendered via currentColor (inherits text color). They are about 50px each. These are not stock assets - they are for interface design. You can swap them with about any glyph."
+    },
+    {
+      "id": "footer-link-icons",
+      "type": "icon",
+      "card": 5,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Five social media glyphs sitting as footer links. Placeholders, these are instagram, twitter, github, linkedin, youtube – all inline SVG glyphs. They are about 40px and fully white, single-color icons. They are rendered via currentColor with no stroke. This means you need to find icons that are only fill (default color) and not stroke."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Headline: display-font, sans-serif",
+      "body": "Body: sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#111111",
+      "surface": "#1a1a1a",
+      "fg": "#ffffff",
+      "fgMuted": "#999",
+      "accent": "#8278ff",
+      "accent2": "#8c77ff",
+      "border": "rgba(255,255,255,0.10)"
+    },
+    "copySlots": [
+      "nav-brand-label",
+      "nav-links",
+      "hero-headline1",
+      "hero-headline2",
+      "cta-label",
+      "feature-card-heading",
+      "feature-card-description",
+      "stats-heading",
+      "stats-body",
+      "form-heading",
+      "form-body",
+      "form-email-placeholder",
+      "form-button",
+      "form-success-message",
+      "footer-body",
+      "footer-link-labels"
+    ]
+  },
+  "mechanic": "A dark themed landing page with a hero (full-height image + headline + CTA), three feature cards, a stats section with four stats, a feedback form, and a footer. Animated (useInView opacity + translateY) with Framer Motion, staggered per-card. No data dependencies. Largely placeholder copy and assets.",
+  "techDelivery": "React 18 + TypeScript, tailwindcss/split-deviner, Framer Motion v10+. Icons from lucide-react.",
+  "reskinNotes": "This is a blank slate for your brand's landing page. Every text blend is hardcoded as dummy copy – Brand, Nav, Hero (CTA, Title, Subtitle), Features, Stats, Form (placeholder, button, success), Footer – there is no CMS/backend. The fonts and color scheme are not tokens or variables - you are responsible for changing them. The assets (brand logo, feature icons, footer icons, hero photo) are for you to replace with your brand's. The brand logo is an inline SVG – it's not a file. Replace the primary photo with an image that fits your brand."
+}

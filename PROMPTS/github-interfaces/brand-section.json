@@ -1,0 +1,55 @@
+{
+  "id": "brand-section",
+  "role": "features",
+  "ownSections": [
+    "StatsRows"
+  ],
+  "slots": [
+    {
+      "id": "header-symbol-mark",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "The rounded, filled inline SVG symbol at the center of the page - some type of decorative, but related to the section. Single-color, important, visually dominant. Not necessarily a lettermark – This one is probably a double-helix boolean or a pair of abstract unicorn daggers. Native placeholder is a stylized geometric SVG (preferably two overlapping scales or a double circle). Inherits text color. 30-40px. If you use an icon, make sure it renders properly at this size."},
+    {
+      "id": "primary-photo",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "The full-height primary image on the left, like a Card containing a single studio styled product photo on a soft brand background with the accent color as the background. Fills the entire card height, min-h[300px], object-id-cover, border radius-2xl on the first card, native placeholder is a Pepels style-shoot photo (pexels-photo-3184291). Focus on the product/service, not the person."},
+    {
+      "id": "stat-numbers",
+      "type": "text",
+      "card": 3,
+      "notes": "Three big numbers that float above their <span caption> in the bottom row of three cards. They represent three stats (Piece of code 1, Projects delivered 50, Meetings attended 30). They are display values and their meaning comes from the next words; the number itself does not need semantic explanation. The numbers are font-bold, clamp sized to ~rem, while the captions are font-medium, smaller, sitting below. These are running text, so they need to read naturally without data backends; they are hardcoded in JSX."}
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Sepoi, ui-sans-serif, sans-serif",
+      "body": "Sepoi, ui-sans-serif, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#fff",
+      "surface": "#fff",
+      "fg": "#111111",
+      "fgMuted": "#666666",
+      "accent": "#8c77ff",
+      "border": "#e6e6e6"
+    },
+    "copySlots": [
+      "section-subheading",
+      "section-heading",
+      "key-insight-headings",
+      "key-insight-bodies",
+      "stat-values",
+      "stat-captions"
+    ]
+  },
+  "mechanic": "A fluid 3-row section: a header row (optional symbol + subheading + heading), a middle row with an image card + two text stats cards, and a bottom row with three stats cards. Animated useInView / Framer Motion with opacity 0->1 and y translate. Starting solid but not spectacular.",
+  "techDelivery": "React 19 + TypeScript, tailwindcss/split-deviner, Framer Motion v12 + (motion from 'framer-motion').",
+  "reskinNotes": "Strong, accent-driven section with a custom symbol and a gray texture. The stats are hardcoded - they are examples of the kind of data you'll present in this section. Replace them with your own data if needed. The symbol has its own dedicated color. Image card is purely stylish/brand. No data backend sources for numbers."
+}
