@@ -1,0 +1,25 @@
+{
+  "id": "premier-cta-footer",
+  "role": "landing",
+  "ownSections": [
+    "PremierCtaFooter"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#111111",
+        "fg": "#ffffff",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#2c2c3c"
+      }
+    }
+  },
+  "mechanic": "A combined CTA and footer section with dark bg, links. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind",
+  "reskinNotes": "Blank slate"}
