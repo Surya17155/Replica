@@ -1,0 +1,49 @@
+{
+  "id": "acreage-farming-hero",
+  "role": "hero",
+  "ownSections": [
+    "HeroVideo",
+    "StatsGrid",
+    "LogoMarquee",
+    "ServiceCards"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen looping precision-farming hero background video sitting behind the dark hero headline/nav (cover-cropped, muted autoplay). The captured corpus only retained its poster + animated-gif preview (hero-acreage-farming-poster.png / hero-acreage-farming-preview.gif), not the source mp4, so the actual clip must be supplied; resking with a brand drone/field/aerial farmland loop and keep a matching poster frame as the loading fallback."
+    },
+    {
+      "id": "section-photos",
+      "type": "image",
+      "card": 3,
+      "aspect": "auto",
+      "alpha": false,
+      "notes": "Photographic content imagery for the light sections / service cards (reference repo files 0098888.jpg, 1.jpg, 02604201313.png). Real-world farmland/crop/equipment photos used as cover-cropped card or band backgrounds rather than transparent cut-outs. Supply 3 brand photos; one (02604201313.png) is reused in multiple places in the reference, so a single hero/feature shot can repeat if the brand provides only 2.
+    },
+    {
+      "id": "stats-icons",
+      "type": "image",
+      "card": 4,
+      "aspect": "1:1",
+      "alpha": true,
+      "notes": "Stats grid icon images (corn,wheat,soil,tractor): 64x64 object-contain inverted, 1-1 ratio. Needs transparent backgrounds. These are stand-alone icons in a media query grid; reference photos supplied in the repo (corn.png, wheat.png, soil.png, tractor.png) should be cropped as icons or used only as grid card images with a solid background, as the stats-grid section boxes are text-only. If the reference photos are not supplied, flat svg icons would be acceptable."
+    },
+    {
+      "id": "logo-mark-1",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "primary",
+      "notes": "Logo mark as an inline svg graphic (default-to current-color). Sits inside a large (128x128) rounded box on the LogoMarquee section (scaled down from actual 128px for responsive context), bordered with ring 1. It appears at 4 places (nav, footer, and 2 other logo marks)."
+    }
+  ],
+  "tags": ["agriculture", "farming", "precision-agriculture", "agrotech"],
+  "createdAt": "2024-04-27T00:00:00.000Z"
+}
