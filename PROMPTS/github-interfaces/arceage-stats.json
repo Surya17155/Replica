@@ -1,0 +1,32 @@
+{
+  "id": "arceage-stats",
+  "role": "section",
+  "ownSections": [
+    "Header",
+    "Stats Grid",
+    "Footer"
+  ],
+  "components": {
+    "Header": {
+      "type": "code",
+      "filename": "Header",
+      "promptPurpose": "Design a statistics section header with a title (Our Impact), a subheading, and a short description. Clean and professional. Header should be centered. Soft background.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Stats Grid": {
+      "type": "code",
+      "filename": "StatsGrid",
+      "promptPurpose": "Design a stats/metrics section with 4 key metrics displayed in a grid. Each stat should have a number (large and bold), a label, and possibly an icon. Use a 4-column grid, 2-x-2. The stats should have an animated counter or some visual appeal. Cards or containers with subtle shadow. Background should be dark with accent color accents.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    },
+    "Footer": {
+      "type": "code",
+      "filename": "Footer",
+      "promptPurpose": "Design a simple footer with copyright notice and quick links. Soft background, dark text. Minimal.",
+      "componentType": "ai-code",
+      "approxComplexity": "intermediate"
+    }
+  }
+}
