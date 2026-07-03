@@ -1,0 +1,32 @@
+{
+  "id": "automation-machines-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "background",
+      "card": 1,
+      "gradient": "dark-modern",
+      "notes": "Full-width dark gradient with grid-line pattern overlay"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Automation Machines - Precision Engineering",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Industrial Automation SaaS products",
+    "vibe": "Industrial, precise, trustworthy",
+    "primaryColor": "#0e141c",
+    "accentColor": "#0085ff"
+  }
+}

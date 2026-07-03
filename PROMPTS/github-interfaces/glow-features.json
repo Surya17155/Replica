@@ -1,0 +1,48 @@
+{
+  "id": "glow-features",
+  "role": "features",
+  "ownSections": [
+    "Features Section"
+  ],
+  "slots": [
+    {
+      "id": "feature-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h2",
+      "text": "Glow Features",
+      "fontSize": "2rem",
+      "weight": "bold",
+      "align": "center"
+    },
+    {
+      "id": "feature-grid",
+      "type": "grid",
+      "card": 1,
+      "columns": 3,
+      "items": [
+        {
+          "icon": "zap",
+          "title": "Fast Response",
+          "description": "Average response time of 50ms under load"
+        },
+        {
+          "icon": "lock",
+          "title": "End-to-End Encryption",
+          "description": "All data encrypted at rest and in transit"
+        },
+        {
+          "icon": "bar-chart",
+          "title": "Real-time Analytics",
+          "description": "Dashboards with live data updates"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS feature sections",
+    "vibe": "Modern, clean, professional",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

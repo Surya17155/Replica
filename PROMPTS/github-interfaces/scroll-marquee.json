@@ -1,0 +1,35 @@
+{
+  "id": "scroll-marquee",
+  "role": "marquee",
+  "ownSections": [
+    "Marquee Section"
+  ],
+  "slots": [
+    {
+      "id": "marquee-container",
+      "type": "container",
+      "card": 1,
+      "layout": "full-width",
+      "notes": "Horizontal scrolling marquee container"
+    },
+    {
+      "id": "marquee-items",
+      "type": "list",
+      "card": 1,
+      "direction": "horizontal",
+      "animation": "scroll-left",
+      "items": [
+        { "text": "Product A" },
+        { "text": "Product B" },
+        { "text": "Product C" },
+        { "text": "Product D" }
+      ]
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS landing pages",
+    "vibe": "Dynamic, modern, engaging",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

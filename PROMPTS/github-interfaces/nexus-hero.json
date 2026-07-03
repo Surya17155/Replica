@@ -1,0 +1,32 @@
+{
+  "id": "nexus-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "background",
+      "card": 1,
+      "gradient": "violet-dark",
+      "notes": "Dark violet gradient with abstract waves"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Nexus - Connecting the Dots",
+      "fontSize": "clamp(2.25rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS dark landings, IoT products",
+    "vibe": "Modern, dark, tech oriented",
+    "primaryColor": "#0a121f",
+    "accentColor": "#a855ff"
+  }
+}

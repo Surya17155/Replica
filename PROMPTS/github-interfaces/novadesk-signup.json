@@ -1,0 +1,28 @@
+{
+  "id": "novadesk-signup",
+  "role": "auth",
+  "ownSections": [
+    "Auth Page"
+  ],
+  "slots": [
+    {
+      "id": "signup-form",
+      "type": "form",
+      "card": 1,
+      "fields": [
+        { "name": "Email", "type": "email", "placeholder": "email@example.com" },
+        { "name": "Password", "type": "password", "placeholder": "Enter your password" }
+      ],
+      "button": {
+        "text": "Sign Up",
+        "variant": "primary"
+      }
+    }
+  ],
+  "meta": {
+    "inspiration": "Modern SaaS signup pages",
+    "vibe": "Clean, professional, secure",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}

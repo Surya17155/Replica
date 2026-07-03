@@ -1,0 +1,32 @@
+{
+  "id": "slam-dunk-hero",
+  "role": "hero",
+  "ownSections": [
+    "Hero"
+  ],
+  "slots": [
+    {
+      "id": "hero-background",
+      "type": "background",
+      "card": 1,
+      "gradient": "bright-sports",
+      "notes": "Full-width bright gradient with action blur"
+    },
+    {
+      "id": "hero-heading",
+      "type": "heading",
+      "card": 1,
+      "tag": "h1",
+      "text": "Slam Dunk - the Ultimate Challenge",
+      "fontSize": "clamp(2.5rem, 6vw, 4rem)",
+      "weight": "bold",
+      "tracking": "tight"
+    }
+  ],
+  "meta": {
+    "inspiration": "Sports entertainment, gaming platforms",
+    "vibe": "Energetic, competitive, fun",
+    "primaryColor": "#0c1d24",
+    "accentColor": "#ff4400"
+  }
+}

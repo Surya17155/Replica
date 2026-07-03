@@ -1,0 +1,38 @@
+{
+  "id": "faq-cta",
+  "role": "faq",
+  "ownSections": [
+    "FAQ Section",
+    "CTA Section"
+  ],
+  "slots": [
+    {
+      "id": "faq-items",
+      "type": "list",
+      "card": 1,
+      "items": [
+        { "a": "What is the return policy?" },
+        { "a": "How do I cancel subscription?" },
+        { "a": "Do you offer enterprise plans?" },
+        { "a": "What payment methods do you accept?" }
+      ]
+    },
+    {
+      "id": "cta-section",
+      "type": "cta",
+      "card": 1,
+      "text": "Ready to Get Started?",
+      "button": {
+        "text": "Get Access",
+        "variant": "primary",
+        "link": "/get-started"
+      }
+    }
+  ],
+  "meta": {
+    "inspiration": "SaaS faq sections with bottom CTA",
+    "vibe": "Clean, professional, helpful",
+    "primaryColor": "#ffffff",
+    "accentColor": "#5865f2"
+  }
+}
