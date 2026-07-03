@@ -1,0 +1,389 @@
+{
+  "brainstorming": {
+    "path": "skills-list/agents/skills/brainstorming/GUIDE.md",
+    "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+    "tags": [],
+    "design_types": [
+      "polish"
+    ],
+    "size_bytes": 10435
+  },
+  "design-taste-frontend": {
+    "path": "skills-list/agents/skills/design-taste-frontend/GUIDE.md",
+    "description": "Anti-slop frontend skill for landing pages, portfolios, and redesigns. The agent reads the brief, infers the right design direction, and ships interfaces that do not look templated. Real design systems when applicable, audit-first on redesigns, strict pre-flight check.",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "mobile-app",
+      "portfolio",
+      "brutalist",
+      "minimalist",
+      "redesign",
+      "premium",
+      "design-system",
+      "review",
+      "polish",
+      "glassmorphism",
+      "dark-theme",
+      "motion"
+    ],
+    "size_bytes": 88459
+  },
+  "design-taste-frontend-v1": {
+    "path": "skills-list/agents/skills/design-taste-frontend-v1/GUIDE.md",
+    "description": "The original v1 taste-skill, preserved for projects depending on its exact behavior. The current default is `design-taste-frontend` (v2 experimental), which is a substantial rewrite. Use this v1 install name only if you need exact backward compatibility.",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "mobile-app",
+      "premium",
+      "review",
+      "polish",
+      "glassmorphism",
+      "dark-theme",
+      "motion"
+    ],
+    "size_bytes": 21421
+  },
+  "emil-design-eng": {
+    "path": "skills-list/agents/skills/emil-design-eng/GUIDE.md",
+    "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+    "tags": [],
+    "design_types": [
+      "mobile-app",
+      "review",
+      "polish",
+      "motion"
+    ],
+    "size_bytes": 28014
+  },
+  "frontend-design": {
+    "path": "skills-list/agents/skills/frontend-design/GUIDE.md",
+    "description": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.",
+    "tags": [],
+    "design_types": [
+      "motion"
+    ],
+    "size_bytes": 8315
+  },
+  "gpt-taste": {
+    "path": "skills-list/agents/skills/gpt-taste/GUIDE.md",
+    "description": "Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento grids, strict GSAP ScrollTriggers (pinning, stacking, scrubbing), inline micro-images, and massive section spacing.",
+    "tags": [],
+    "design_types": [
+      "minimalist",
+      "premium",
+      "motion"
+    ],
+    "size_bytes": 7931
+  },
+  "high-end-visual-design": {
+    "path": "skills-list/agents/skills/high-end-visual-design/GUIDE.md",
+    "description": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.",
+    "tags": [],
+    "design_types": [
+      "mobile-app",
+      "portfolio",
+      "premium",
+      "motion"
+    ],
+    "size_bytes": 10659
+  },
+  "image-to-code": {
+    "path": "skills-list/agents/skills/image-to-code/GUIDE.md",
+    "description": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer large, readable, section-specific images instead of tiny compressed boards, generate fresh standalone images for sections or detail views instead of cropping o",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "mobile-app",
+      "portfolio",
+      "minimalist",
+      "redesign",
+      "image-to-code",
+      "premium",
+      "design-system",
+      "polish",
+      "glassmorphism",
+      "dark-theme"
+    ],
+    "size_bytes": 37670
+  },
+  "imagegen-frontend-mobile": {
+    "path": "skills-list/agents/skills/imagegen-frontend-mobile/GUIDE.md",
+    "description": "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comfortably readable text, strong multi-screen consistency, controlled color palettes, non-generic creative direction, textured surfaces, image-led composition, tasteful custom iconography, and clean phone mo",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "mobile-app",
+      "redesign",
+      "premium",
+      "design-system",
+      "polish",
+      "glassmorphism"
+    ],
+    "size_bytes": 41791
+  },
+  "imagegen-frontend-web": {
+    "path": "skills-list/agents/skills/imagegen-frontend-web/GUIDE.md",
+    "description": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE \u2014 generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Never compress multiple sections into one image. Enforces composition variety (not always left-text / right-image), background-image freedom, varied CTAs, varied he",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "portfolio",
+      "minimalist",
+      "premium",
+      "design-system",
+      "polish",
+      "glassmorphism",
+      "dark-theme"
+    ],
+    "size_bytes": 37841
+  },
+  "impeccable": {
+    "path": "skills-list/agents/skills/impeccable/GUIDE.md",
+    "description": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, product UI, app shells, components, forms, settings, onboarding, and empty states. Handles UX review, visual hierarchy, information architecture, cognitive load, acc",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "portfolio",
+      "premium",
+      "design-system",
+      "review",
+      "polish",
+      "glassmorphism",
+      "dark-theme",
+      "motion"
+    ],
+    "size_bytes": 22456
+  },
+  "industrial-brutalist-ui": {
+    "path": "skills-list/agents/skills/industrial-brutalist-ui/GUIDE.md",
+    "description": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+    "tags": [],
+    "design_types": [
+      "brutalist",
+      "design-system",
+      "dark-theme"
+    ],
+    "size_bytes": 8548
+  },
+  "minimalist-ui": {
+    "path": "skills-list/agents/skills/minimalist-ui/GUIDE.md",
+    "description": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "minimalist",
+      "premium",
+      "polish",
+      "glassmorphism",
+      "motion"
+    ],
+    "size_bytes": 7986
+  },
+  "redesign-existing-projects": {
+    "path": "skills-list/agents/skills/redesign-existing-projects/GUIDE.md",
+    "description": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "mobile-app",
+      "redesign",
+      "premium",
+      "review",
+      "polish",
+      "glassmorphism",
+      "dark-theme",
+      "motion"
+    ],
+    "size_bytes": 15238
+  },
+  "stitch-design-taste": {
+    "path": "skills-list/agents/skills/stitch-design-taste/GUIDE.md",
+    "description": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards \u2014 strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "mobile-app",
+      "premium",
+      "design-system",
+      "polish",
+      "motion"
+    ],
+    "size_bytes": 12043
+  },
+  "ui-ux-pro-max": {
+    "path": "skills-list/agents/skills/ui-ux-pro-max/GUIDE.md",
+    "description": "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Pr",
+    "tags": [],
+    "design_types": [
+      "landing-page",
+      "mobile-app",
+      "portfolio",
+      "design-system",
+      "review",
+      "polish",
+      "glassmorphism",
+      "dark-theme",
+      "motion"
+    ],
+    "size_bytes": 45585
+  },
+  "web-design-guidelines": {
+    "path": "skills-list/agents/skills/web-design-guidelines/GUIDE.md",
+    "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+    "tags": [],
+    "design_types": [],
+    "size_bytes": 1231
+  },
+  "threejs-fundamentals": {
+    "path": "skills-list/agents/skills/threejs-fundamentals/GUIDE.md",
+    "description": "Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate systems.",
+    "tags": [
+      "3d",
+      "webgl",
+      "scene-setup"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-geometry": {
+    "path": "skills-list/agents/skills/threejs-geometry/GUIDE.md",
+    "description": "Three.js geometry creation - built-in shapes, BufferGeometry, custom geometry, instancing.",
+    "tags": [
+      "3d",
+      "webgl",
+      "geometry"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-materials": {
+    "path": "skills-list/agents/skills/threejs-materials/GUIDE.md",
+    "description": "Three.js materials - PBR, basic, phong, shader materials, material properties.",
+    "tags": [
+      "3d",
+      "webgl",
+      "materials"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-lighting": {
+    "path": "skills-list/agents/skills/threejs-lighting/GUIDE.md",
+    "description": "Three.js lighting - light types, shadows, environment lighting.",
+    "tags": [
+      "3d",
+      "webgl",
+      "lighting"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-loaders": {
+    "path": "skills-list/agents/skills/threejs-loaders/GUIDE.md",
+    "description": "Three.js asset loading - GLTF, textures, images, models, async patterns.",
+    "tags": [
+      "3d",
+      "webgl",
+      "assets"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-animation": {
+    "path": "skills-list/agents/skills/threejs-animation/GUIDE.md",
+    "description": "Three.js animation - keyframe animation, skeletal animation, morph targets, animation mixing.",
+    "tags": [
+      "3d",
+      "webgl",
+      "animation"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-interaction": {
+    "path": "skills-list/agents/skills/threejs-interaction/GUIDE.md",
+    "description": "Three.js interaction - raycasting, controls, mouse/touch input, object selection.",
+    "tags": [
+      "3d",
+      "webgl",
+      "interaction"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-shaders": {
+    "path": "skills-list/agents/skills/threejs-shaders/GUIDE.md",
+    "description": "Three.js shaders - GLSL, ShaderMaterial, uniforms, custom effects.",
+    "tags": [
+      "3d",
+      "webgl",
+      "shaders"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-postprocessing": {
+    "path": "skills-list/agents/skills/threejs-postprocessing/GUIDE.md",
+    "description": "Three.js post-processing - EffectComposer, bloom, DOF, screen effects.",
+    "tags": [
+      "3d",
+      "webgl",
+      "postprocessing"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  },
+  "threejs-textures": {
+    "path": "skills-list/agents/skills/threejs-textures/GUIDE.md",
+    "description": "Three.js textures - texture types, UV mapping, environment maps, texture settings.",
+    "tags": [
+      "3d",
+      "webgl",
+      "textures"
+    ],
+    "design_types": [
+      "3d",
+      "webgl",
+      "three.js"
+    ],
+    "size_bytes": null
+  }
+}
