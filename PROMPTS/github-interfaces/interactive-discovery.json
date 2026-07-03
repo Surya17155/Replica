@@ -1,0 +1,25 @@
+{
+  "id": "interactive-discovery",
+  "role": "features",
+  "ownSections": [
+    "InteractiveDiscoverySection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, 'Playfair Display', serif",
+        "body": "Playfair Display, Playfair Display, serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0"
+      }
+    }
+  },
+  "mechanic": "An interactive discovery section with hover effects and dynamic content. Framer Motion for animations.",
+  "techDelivery": "React + Tailwind"
+}
