@@ -1,0 +1,25 @@
+{
+  "id": "gateway-portal",
+  "role": "landing",
+  "ownSections": [
+    "GatewayPortalHero"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, Playfair Display, serif",
+        "body": "Playfair Display, Playfair Display, serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0 "
+      }
+    }
+  },
+  "mechanic": "A full-page hero. Clean, professional looking portal landing. Framer Motion useInView for entry.",
+  "techDelivery": "React + Tailwind"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "glassmorphic-feature-tabs",
+  "role": "features",
+  "ownSections": [
+    "GlassmorphicFeatureTabs"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Flexible variable, sans-serif",
+        "body": "Flexible variable, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0 "
+      }
+    }
+  },
+  "mechanic": "A section with tabs and glassmorphic-style feature cards. Framer Motion carousel.",
+  "techDelivery": "React + Tailwind"
+}
