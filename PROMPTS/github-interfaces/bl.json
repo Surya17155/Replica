@@ -1,0 +1,94 @@
+{
+  "id": "bl",
+  "role": "landing",
+  "ownSections": [
+    "BrandHeader",
+    "NavHeader",
+    "MobileMenu",
+    "BotanicalCard",
+    "FeatureCards",
+    "MissionText",
+    "FeedbackForm",
+    "VideoBackdrop"
+  ],
+  "slots": [
+    {
+      "id": "scroll-backdrop-video-sequence",
+      "type": "video",
+      "card": 3,
+      "aspect": "16:9",
+      "alpha": false,
+      "loop": false,
+      "duration": "long-scrub",
+      "notes": "The three fullscreen background videos (v1, v2, v3) that ARE the experience backdrop, composited onto a single full-bleed <canvas> inside a 110%-oversized bg-wrapper. They are NEVER played: each is muted/playsInline/crossorigin and frame-SCRUBBED via currentTime as scroll progress drives it — v1 owns scroll 0-0.333, v2 0.333-0.666, v3 0.666-1.0, each mapped across its full duration, so every video must carry meaningful motion for a third of a 500vh scroll (longer/denser footage scrubs more smoothly; very short clips look steppy). Drawn with object-cover aspect math (centered, cropped to fill), so safe content should sit center; the wrapper also gets a +/-24px cursor parallax translate. Black #000 shows only before frames decode. Replace all three with brand footage; keep them a coherent 3-part sequence (intro -> mid -> resolve)."
+    },
+    {
+      "id": "brand-bloom-mark",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Brand logo mark (the 5-petal 'Bloom' bloom on a 49x48 viewBox, solid white fill baked inline). Reused in TWO places from the same paths: the top-left brand header (~28-44px, beside the wordmark) and the feedback-form card (40x40, above the title). Single-color, alpha so it composites over the dark video. Supply one square brand mark that reads white-on-dark; it tints to fg. NOTE the fill is hardcoded white='#ffffff' inside the SVG (not currentColor), so a non-white brand requires editing the path fill in markup."
+    },
+    {
+      "id": "feature-card-icons",
+      "type": "icon",
+      "card": 3,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "accent",
+      "notes": "The three line-icons at the top of the three glass feature cards (native: a circle, a cross/asterisk star, and a lightning bolt — inline single-path SVGs on a 24x24 viewBox, stroke-width 1.5, fill none). Rendered via currentColor at the accent lavender #CB8DFF, ~36-48px. Supply 3 monochrome stroke glyphs that tint to accent; one per feature card (Neural Synthesis / Ecosystem Remediation / Kinetic Transduction)."
+    },
+    {
+      "id": "cta-arrow-icon",
+      "type": "icon",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The right-pointing long arrow glyph inside the lavender circular CTA button that overhangs the bottom-right of the botanical card (inline 40x24 viewBox path, stroke=currentColor at #fff/fg, stroke-width 1.75, no fill). On hover it translateX(4px). Monochrome stroke icon, alpha; replace with the brand's forward/arrow glyph."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "Instrument Serif, serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace",
+      "accent": "Space Grotesk, ui-sans-serif, system-ui, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#000000",
+      "surface": "rgba(255,255,255,0.16)",
+      "fg": "#ffffff",
+      "fgMuted": "rgba(255,255,255,0.64)",
+      "accent": "#CB8DFF",
+      "accent2": "#059669",
+      "border": "rgba(255,255,255,0.15)"
+    },
+    "copySlots": [
+      "brand-wordmark",
+      "nav-labels",
+      "mobile-menu-labels",
+      "botanical-card-title",
+      "botanical-card-subtext",
+      "cta-aria-label",
+      "feature-card-titles",
+      "feature-card-bodies",
+      "mission-paragraphs",
+      "mission-pill-words",
+      "feedback-title",
+      "feedback-subtext",
+      "feedback-email-placeholder",
+      "feedback-submit-label",
+      "feedback-submitted-label",
+      "feedback-success-message",
+      "loading-text",
+      "error-title",
+      "error-message"
+    ]
+  },
+  "mechanic": "A 500vh scroll-container drives a fixed full-viewport canvas that frame-scrubs three sequential background videos (each owning a third of the scroll) while glassmorphic overlay layers — botanical card, nav, brand header, three feature cards, three mission paragraphs, and a feedback form — are choreographed in and out purely by scroll progress via per-element opacity + translate3d + blur, with a cursor-parallax backdrop and an rAF eased-progress loop.",
+  "techDelivery": "Single self-contained HTML file: vanilla JS in one IIFE (no framework, no build), an inline <style> block (hand-written CSS, no Tailwind), Google Fonts via <link> (Instrument Serif, Manrope, Space Grotesk, JetBrains Mono), three native <video> elements scrubbed onto a <canvas> with an offscreen double-buffer, and a requestAnimationFrame progress loop reading window scroll.",
+  "reskinNotes": "The lavender accent #CB8DFF and its hover #d9a8ff are hardcoded as literals in many CSS rules (CTA circle bg + hover, mission pills, feature-icon color, form button bg/hover, input focus border) rather than a single CSS variable, so retinting the accent means editing every rule; likewise the success states green (#059669 / #34d399) and the error red (#ef4444) are inline. The brand logo SVG fill is baked as white='#ffffff' directly in both <path> sets (header + form), not currentColor, so a non-white brand mark must be hand-edited in markup. Layout is font-metric-dependent on Instrument Serif: the botanical card title is a fixed 72px with a hard width:324px and tuned -0.01em tracking, the mission paragraphs ramp to 3.75rem, and the feature cards are fixed 280x440px — a heavier/wider display face or longer translated copy will rewrap or overflow these fixed boxes. The whole experience also depends on a tall 500vh scroll and is keyframe-tuned to exact progress thresholds (cards 0.13-0.55, mission 0.44-0.98, form 0.93+), so swapping the number of feature cards (3) or mission paragraphs (3) requires re-deriving those JS timing windows. All copy is hardcoded in markup: brand 'Bloom', nav ['Atelier','Collections','Rituals','About','Contact'] (duplicated in the desktop nav AND the mobile menu), the botanical headline with inline <span class=italic> emphasis on 'Silicon'/'Life.', the three feature title+body pairs, three mission paragraphs each wrapping a <span class=mission-pill> word, and the feedback title/sub/placeholder/button/success strings."
+}

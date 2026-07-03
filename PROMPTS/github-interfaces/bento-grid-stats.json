@@ -1,0 +1,69 @@
+{
+  "id": "bento-grid-stats",
+  "role": "features",
+  "ownSections": [
+    "WhyUsBentoGrid"
+  ],
+  "slots": [
+    {
+      "id": "photo-card-background",
+      "type": "image",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": false,
+      "colorRole": "bg",
+      "notes": "Full-bleed background photo for the Photo card (100+). Absolutely positioned, object-cover, rendered at opacity-55 over a black fill with a bg-gradient-to-t from-black/60 via-transparent to-black/30 overlay and white foreground content (logo mark, rating, stat) laid on top, so it must read as a darkenable lifestyle/team image. No fixed ratio: it fills a relative h-full overflow-hidden cell (min-h-[380px]); native placeholder is a Pexels office photo (pexels-photo-3184291)."
+    },
+    {
+      "id": "photo-card-logo-mark",
+      "type": "svg",
+      "card": 1,
+      "aspect": "auto",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "Brand wordmark/logo glyph sitting top-left of the Photo card over the darkened image. Native placeholder is a hand-built mark: a bold 'N' (text-[1.6rem] font-bold text-white) flanked by three small white squares (one 10x10 and two stacked 7x7, the lower at 50% opacity, gap-[3px]). Must render white/monochrome on a dark photo; swap by replacing the inline mark with a brand logo (single-color, transparent)."
+    },
+    {
+      "id": "primary-font",
+      "type": "font",
+      "card": 1,
+      "notes": "The single typeface for every string in the section, set via inline fontFamily: \"'DM Sans', sans-serif\" on the <section>. Carries the eyebrow (text-sm tracking-[0.15em]), the multi-weight headings/stats (font-light, clamp sizing up to ~3rem, tracking-tight leading tight), the small body/caption text (13px leading-[1.7]) and the tiny axis/year labels (10px). Native declaration is DM Sans (Google Fonts, weights 400 + 500). Pick a clean geometric grotesque that holds tight tracking at light weight; large clamp-sized stat numbers are font-metric-sensitive."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "'DM Sans', sans-serif",
+      "body": "'DM Sans', sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#0f0f0f",
+      "surface": "#ffffff",
+      "fg": "#ffffff",
+      "fgMuted": "#777777",
+      "accent": "#000000",
+      "accent2": "#1a1a1a",
+      "border": "rgba(255,255,255,0.3)"
+    },
+    "copySlots": [
+      "eyebrow",
+      "headline-line1",
+      "headline-line2",
+      "headline-line3",
+      "income-stat-value",
+      "income-stat-caption",
+      "income-year-labels",
+      "speed-stat-value",
+      "speed-stat-caption",
+      "text-card-paragraph-1",
+      "text-card-paragraph-2",
+      "projects-stat-value",
+      "projects-stat-caption",
+      "photo-stat-value",
+      "photo-stat-caption",
+      "photo-rating-value"
+    ]
+  },
+  "mechanic": "A six-cell explicit CSS bento grid (md:grid-cols-6 over repeat(10, minmax(46px,auto)) rows; stacked single-column on mobile) of mixed white, dark, and photo-overlay stat cards, each revealed once on scroll-in via Framer Motion useInView with a shared CardMotion wrapper animating opacity 0->1 and scale 0.95->1 (0.65s, ease [0.22,1,0.36,1]) on staggered per-card delays.",
+  "techDelivery": "React 18 + TypeScript component using Tailwind CSS 3 and Framer Motion v12+ (useRef, useInView, motion); no other libraries.",
+  "reskinNotes": "Heavily literal/hardcoded: every color is a Tailwind arbitrary-value class baked into markup, not a token (page bg-[#0f0f0f], card bg-white / bg-[#1a1a1a], muted text-[#666]/[#777]/[#aaa], black fills for dot-chart cells, scatter squares and SVG icon tiles, plus-button borders border-white/30 and border-black/20). The Speed card's concentric-circle diagram, the four black icon tiles (+, lightning emoji &#9889;, &minus;, inner square) and the 5 rating-star SVG paths are inline SVG/markup with stroke/fill colors hardcoded. The Income card's staircase chart is generative (26 columns x 15 cells via a floor(c*0.55) formula), the Projects card's 7 scatter squares are hand-placed percent/pixel positions, and the Photo card's logo mark + rectangle motifs are hand-built divs; reskinning these means editing geometry in code, not assets. All headline lines, stat values/suffixes, captions, year labels (2016-2026) and both body paragraphs are hardcoded in JSX with no data source, and the headline splits across three <br />-separated colored spans (white + two #666) that must be re-segmented by hand. Layout is font-metric-dependent: stat numbers use clamp() sizing at font-light and the explicit gridColumn/gridRow placements plus fixed pixel rows (minmax(46px,auto)) and the Projects description max-w-[210px] mean longer reskin copy can overflow or reflow the grid."
+}

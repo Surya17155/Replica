@@ -1,0 +1,83 @@
+{
+  "id": "bio-digital",
+  "role": "hero",
+  "ownSections": [
+    "Navbar",
+    "BackgroundVideo",
+    "HeroHeadline",
+    "Footer"
+  ],
+  "slots": [
+    {
+      "id": "hero-background-video",
+      "type": "video",
+      "card": 1,
+      "aspect": "16:9",
+      "alpha": false,
+      "loop": true,
+      "duration": "short-loop",
+      "notes": "Fullscreen looping hero background video that fills the entire viewport behind every other layer (absolute inset-0, z-0, object-cover, pointer-events-none). Plays autoPlay muted loop playsInline and fades in with a subtle scale-down on load (opacity 0->1, scale 1.05->1 over 1.8s). It sits under a centered black headline and a bottom footer whose white-to-transparent gradient guarantees text legibility, so supply a seamless cinematic loop that reads as a luxury-tech motion plate and stays light/calm enough behind black centered type. Cropped to cover at any viewport ratio, so keep the subject centered and edge-safe."
+    },
+    {
+      "id": "brand-logo-mark",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The navbar wordmark glyph: a custom inline SVG (40x40 viewBox) of two black rounded rectangles rotated -35deg into a slanted dual-capsule shape, rendered at w-10 h-10 in currentColor (black). It is hand-coded inline in the navbar markup next to the brand name, not loaded as a file — a reskin replaces the inline <rect> geometry. Single-color, inherits text color, needs transparency."
+    },
+    {
+      "id": "adaptive-systems-clover-icon",
+      "type": "svg",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "bg",
+      "notes": "Decorative 4-node clover glyph inside the right-side 'Adaptive Systems' pill: a custom inline SVG (24x24 viewBox) of four filled circles at the cardinal points joined by crosshair lines at 0.6 opacity around a center unfilled circle. It sits inside a black circular button (w-9 h-9, bg-black) so it renders white (text-white) — i.e. it tints to the surface/contrast color against black, not to fg. Inline in markup, single-color, needs transparency."
+    },
+    {
+      "id": "menu-plus-icon",
+      "type": "icon",
+      "card": 1,
+      "aspect": "1:1",
+      "alpha": true,
+      "colorRole": "fg",
+      "notes": "The Plus glyph (lucide-react Plus, size 13, strokeWidth 3) inside the white circle of the black 'Menu' pill button — renders black-on-white. A functional single-color icon-library glyph that inherits currentColor; a reskin can swap the icon set or weight."
+    },
+    {
+      "id": "type-pairing",
+      "type": "font",
+      "card": 2,
+      "notes": "Two Google-font families carry the whole page. DISPLAY = Outfit (weights 300/400/500/600/700) — drives the responsive vw-scaled hero lines (clamp-like text-[7.5vw] / md:5.8vw / lg:4.6vw, font-medium, tracking-tight, leading-[0.9]) and the brand wordmark; the faded first word uses font-light, so the substitute must hold up at very large sizes in both light and medium weights with tight tracking. BODY = Inter (weights 400/500/600) — every UI/pill/footer string in the 11px-21px range. Both loaded via a single Google Fonts @import in index.css and exposed as Tailwind --font-display / --font-sans tokens."
+    }
+  ],
+  "skin": {
+    "fontRoles": {
+      "display": "\"Outfit\", ui-sans-serif, system-ui, sans-serif",
+      "body": "\"Inter\", ui-sans-serif, system-ui, sans-serif"
+    },
+    "colorRoles": {
+      "bg": "#FFFFFF",
+      "surface": "#F4F4F6",
+      "fg": "#000000",
+      "fgMuted": "#6E6E73",
+      "border": "rgba(0, 0, 0, 0.03)"
+    },
+    "copySlots": [
+      "brand-name",
+      "nav-menu-label",
+      "nav-metadata-tags",
+      "nav-adaptive-label",
+      "hero-headline-line1",
+      "hero-headline-line2-faded",
+      "hero-headline-line2-solid",
+      "footer-eyebrow",
+      "footer-body",
+      "footer-tag-labels"
+    ]
+  },
+  "mechanic": "A single non-scrolling fullscreen hero: a looping cover video fades and scales in (1.8s) behind a centered two-line display headline (its faded first word + solid second word), with a fixed pointer-events-none navbar of pill controls dropping in from the top and a bottom white-gradient footer rising in, every element using the same springy [0.16,1,0.3,1] ease on staggered delays.",
+  "techDelivery": "React 19 + Vite 6 + TypeScript single-page component, styled with Tailwind CSS v4 (the @tailwindcss/vite plugin, @import \"tailwindcss\" and an @theme token block — no tailwind.config.js), animated with the motion package (Framer Motion v12+, imported as motion/react) and the lucide-react Plus icon; fonts pulled via a Google Fonts @import in index.css.",
+  "reskinNotes": "Two brand glyphs (the dual-capsule logo and the 4-node clover) are hand-coded inline SVG in the navbar markup, not asset files, so rebranding the marks means rewriting their <rect>/<circle> geometry. The palette is baked as Tailwind arbitrary values rather than tokens: the two grays (#F4F4F6, #EAEAEF) and every hairline border (border-black/[0.03]) are inline literals, and muted text is not a single value but black at assorted opacities (text-black/25 on the faded headline word, /50, /60, /70 across nav and footer) — a reskin must retint all of these by hand, and the design is explicitly locked to a black/white scheme with NO purple/indigo/violet anywhere. All copy is hardcoded in JSX (brand name 'NeuralKinetics' appears twice — wordmark + h1; the two-span headline 'cybernetics' / 'made organic'; the nav tags 'Advanced Bionics'/'Cognitive AI' and 'Adaptive Systems'/'Menu'; and the footer eyebrow, body sentence, and the three tag labels 'Neuromorphic'/'AGI'/'Cybernetics'). Layout is font-metric-dependent: the hero lines are sized in raw vw with tracking-tight and leading-[0.9] tuned to Outfit, so a wider substitute face or a longer brand name will reflow or wrap the centered headline; the footer's white-to-transparent gradient is load-bearing for legibility over the video and must be preserved if the video plate is changed."
+}
