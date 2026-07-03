@@ -1,0 +1,25 @@
+{
+  "id": "quantum-ai-hero",
+  "role": "landing",
+  "ownSections": [
+    "QuantumAIHero"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#121212",
+        "fg": "#ffffff",
+        "fgMuted": "#999",
+        "accent": "#7c3cff",
+        "border": "#2c2c3c"
+      }
+    }
+  },
+  "mechanic": "A full-page hero for a quantum/AI brand. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind",
+  "reskinNotes": "Blank slate"}
