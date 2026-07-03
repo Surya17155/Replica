@@ -1,0 +1,23 @@
+{
+  "id": "cyberpunk-reveal",
+  "role": "features",
+  "ownSections": [
+    "HeroSection"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Monsterrat, 'Courier New', monospace",
+        "body": "'Courier New', Monsterrat, monospace"
+      },
+      "colorRoles": {
+        "bg": "#0e0e0e",
+        "fg": "#00ff00",
+        "fgMuted": "#888",
+        "accent": "#ff004d",
+        "border": "#333"
+      }
+    }
+  }
+}
