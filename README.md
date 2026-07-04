@@ -17,6 +17,7 @@ flowchart LR
     C["📝 Developer Prompt<br/>Hex Codes · Tailwind · Animations"]
     D["⚡ AI Coding Agent<br/>Lovable · Bolt · Cursor · Replit"]
     E["🎨 Live Website<br/>Pixel-perfect Replica"]
+
     A --> B --> C --> D --> E
 ```
 
@@ -42,6 +43,7 @@ flowchart TB
     subgraph Input["📥 Input"]
         S["Screenshot / URL / Description"]
     end
+
     subgraph Process["🧠 Replica Processing Pipeline"]
         direction TB
         A["1. Scope Confirmation<br/>Hero section or full landing page?"]
@@ -51,9 +53,11 @@ flowchart TB
         E["5. Prompt Assembly<br/>Using Reference Templates"]
         F["6. Quality Check<br/>15-point verification"]
     end
+
     subgraph Output["📤 Output"]
         O["Production-Ready Developer Prompt"]
     end
+
     S --> A --> B --> C --> D --> E --> F --> O
 ```
 
@@ -354,6 +358,8 @@ Please open an issue or submit a pull request.
 
 - **GitHub Issues**: [Report a bug](https://github.com/Surya17155/Replica/issues)
 - **Twitter**: [@suryakant_here](https://twitter.com/suryakant_here)
+- **LinkedIn**: [Surya Kant](https://www.linkedin.com/in/suryakant17155/)
+- **Instagram**: [@suryakant.ai](https://instagram.com/suryakant.ai)
 
 ---
 
