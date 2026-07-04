@@ -1,0 +1,25 @@
+{
+  "id": "seo-landing",
+  "role": "landing",
+  "ownSections": [
+    "SeoLendingHero"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0"
+      }
+    }
+  },
+  "mechanic": "A full-page hero for an SEO brand. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind",
+  "reskinNotes": "Blank slate"}
