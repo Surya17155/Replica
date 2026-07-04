@@ -1,0 +1,25 @@
+{
+  "id": "ship-dark-hero",
+  "role": "landing",
+  "ownSections": [
+    "ShipDarkHero"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#121212",
+        "fg": "#ffffff",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#2c2c3c"
+      }
+    }
+  },
+  "mechanic": "A full-page hero with dark bg, logo, headline, body, subtext, CTA button. Framer Motion useInView.",
+  "techDelivery": "React 18 + TypeScript. Tailwind CSS 3. Framer Motion v12.",
+  "reskinNotes": "Blank slate"}
