@@ -1,0 +1,25 @@
+{
+  "id": "ultimate-team-hero",
+  "role": "landing",
+  "ownSections": [
+    "UltimateTeamHero"
+  ],
+  "slots": [],
+  "skin": {
+    "body": {
+      "fontRoles": {
+        "display": "Playfair Display, sans-serif",
+        "body": "Playfair Display, sans-serif"
+      },
+      "colorRoles": {
+        "bg": "#ffffff",
+        "fg": "#333",
+        "fgMuted": "#999",
+        "accent": "#2c77d2",
+        "border": "#e0e0e0"
+      }
+    }
+  },
+  "mechanic": "A full-page hero for a team/organization brand. Framer Motion useInView.",
+  "techDelivery": "React + Tailwind",
+  "reskinNotes": "Blank slate"}
