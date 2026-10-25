@@ -1,53 +1,64 @@
 ---
 name: replica
-description: Use when the user uploads a screenshot of a hero section or landing page (or a URL/description of one) and wants a copy-paste-ready developer prompt to recreate it exactly in a tool like Lovable, Bolt, Replit, or Cursor. Produces prompts with exact hex colors, Tailwind classes, animation timing tuples, and component structure — not vague descriptions.
+description: Use when the user uploads a screenshot of any application screen or landing page (or a set of screens) and wants a deterministic, production-grade Screen Specification (`specs/screen_XX.md`) with explicit CSS, DOM hierarchy, token mappings, and interactive states for AI coding agents (Claude, Antigravity, Copilot), or a copy-paste-ready developer prompt.
 license: MIT
 ---
 
-# Design-to-Prompt — Hero Section & Full Landing Page Generator
+# Replica — Visual Screen Specification & Prompt Generator Engine
 
 ## Overview
 
-This skill turns a UI screenshot (hero section or full landing page) into a complete, copy-paste-ready **developer prompt** at the motionsites.ai level of detail — the kind a senior frontend engineer would write so that an agent (Lovable, Bolt.new, Cursor, Replit, v0, Claude Code) can rebuild the design exactly.
-
-**Output quality is this (never vague):**
-- Every color → hex code
-- Every font → Google Fonts URL + weight + Tailwind alias
-- Every animation → full Framer Motion `initial` / `animate` / `transition` block (delay, duration, ease)
-- Every button → tailwind class string, multi-layer box-shadow, icon markup
-- Every section → full component with file path
-
-**The skill requires BOTH the screenshot AND any hosted asset URLs (images, videos visible in the design) to produce the final prompt.** It guides the user through generating + hosting those assets first, then embeds the URLs inline at the right places in the final output.
+This skill turns visual UI screenshots (from 1 to 100+ screens) into deterministic, machine-readable **Screen Specifications (`specs/screen_XX.md`)** and engineering prompts. It translates pixels into:
+- **Explicit CSS Rulebooks**: Exact CSS properties for layout, spacing, typography, colors, and shadows — never vague descriptions.
+- **Semantic DOM / Component Hierarchy**: HTML5 tree structure with clear class names and roles.
+- **Global Token Alignment**: Maps sampled visual values to `GLOBAL_DESIGN_SYSTEM.md` CSS variables to eliminate cross-screen style drift.
+- **Micro-Interactions & State Matrices**: Explicit rules for `:hover`, `:active`, `:focus-visible`, and transitions.
+- **Asset & Icon Mapping**: Matches visual icons to Lucide/SVG equivalents and records exact micro-copy.
 
 ---
 
-## HOW TO USE THIS SKILL
+## MODES OF OPERATION
 
-When the user uploads an image/design reference:
+1. **Screen Specification Mode (Default & Primary)**:
+   - Input: Screenshot of any screen in an application (`screenshots/screen_XX.png`).
+   - Output: Standardized markdown specification (`specs/screen_XX.md`) following `REFERENCE/spec-output-template-screen.md`.
+   - Consumer: AI coding agents (Claude, Antigravity, GitHub Copilot) consuming the triplet `[GLOBAL_DESIGN_SYSTEM.md + specs/screen_XX.md + screenshot]`.
 
-1. **Ask Hero vs Full Landing** (if not specified)
+1. **Ask Scope or Screen ID** (if not specified; e.g., Hero, Full Landing, or Multi-Screen App Screen #N)
 2. **Ask Brand Context** (if not provided; fall back to screenshot text)
 3. **Run Image Analysis** (silently — internal checklist)
-4. **Publish Asset Inventory** (image prompts + video workflow + URL requests)
-5. **Wait for all asset URLs** before writing final prompt
-6. **Write final code prompt** at motionsites.ai level of detail
+4. **Publish Dual-Spec Outputs**:
+   - **File 1 (`specs/machine/SCREEN_SPEC_XX.md`):** Complete deterministic code-generation contract (HTML/JSX DOM hierarchy, compiled CSS rules, Framer Motion tuples, and responsive breakpoints).
+   - **File 2 (`specs/human/SCREEN_SPEC_XX_READABLE.md`):** Structured human-readable UI & design audit spec:
+     - *Buttons & Interactive Elements Catalog* (every button, link, icon action, visual style, hover/active state, CSS)
+     - *Headers & Typography Catalog* (every `h1`, `h2`, font-family, fluid `clamp()`, weights, colors/gradients)
+     - *CSS System & Visual Tokens* (colors, frosted glass effects, gradients, shadows, borders)
+     - *Layout & Spacing Matrix* (flexbox/grid models, container paddings, alignments)
+     - *Assets, Icons & Media Inventory* (icon names, product stills, logos)
+5. **Publish Code Generator Prompt / Component Implementation** upon user request.
 
 ## DIRECTORY STRUCTURE AND USAGE GUIDE
 
-The skill organizes reference materials into specific folders that the LLM should consult during different phases of prompt generation:
+The skill organizes reference materials into specific folders:
+
+### **GLOBAL DESIGN SYSTEM (`GLOBAL_DESIGN_SYSTEM.md`)**
+The project-wide Single Source of Truth (SSOT). Contains color tokens, typography scales, spacing tokens, and the global AppShell layout.
 
 ### **DIRECTOR FOLDER (`DIRECTOR/`)**
-Use this folder for decision-making and workflow guidance:
-- **When to use**: At the beginning of the process to determine the overall approach
-- **Key files**:
-  - `rules-engine.md`: 7-phase workflow for complex designs (use when unsure about process flow)
-  - `skill-decision-engine.md`: Algorithm for selecting appropriate design patterns
-  - `motion-effects-decision.md` & `scroll-effects-decision.md`: Specific guidance for animations
-  - `headroom-integration.md`: Asymmetric compression doctrine for prompt optimization
-  - `lazy-loading-rule.md`: Token-budget doctrine for managing context
-  - `delegation.md`: Notes on when to delegate vs. handle directly
+Decision-making and workflow guidance:
+- `spec-generation-engine.md`: Core rules for generating deterministic specs across $N$ screens.
+- `rules-engine.md`: 7-phase workflow for complex designs.
+- `skill-decision-engine.md`: Algorithm for selecting appropriate design patterns.
+- `motion-effects-decision.md` & `scroll-effects-decision.md`: Guidance for animations.
 
 ### **REFERENCES FOLDER (`REFERENCE/`)**
+Factual reference guides and templates:
+- `spec-output-template-screen.md`: The mandatory standard schema for screen specifications.
+- `image-analysis-checklist-screen.md`: Step-by-step visual inspection checklist for screens.
+- `css-presets/`: Ready-to-use CSS blocks for glassmorphism, gradients, buttons, etc.
+- `motion-effects/`: Animation specifications (stagger entrance, parallax, magnetic hover, etc.).
+- `aesthetic-cards/`: Style guides per aesthetic.
+- `prompt-output-template-hero.md` / `-landing-page.md`: Output templates for single prompts.
 Use this folder for factual information and style references:
 - **When to use**: During image analysis and when determining specific design properties
 - **Key files**:
@@ -336,9 +347,43 @@ Run ALL of the Hero checklist first, then additionally scan for:
 
 ---
 
-## PART 4 — FINAL PROMPT OUTPUT (Hero Section)
+## PART 3B — SCREEN SPECIFICATION OUTPUT FORMAT (Default for Multi-Screen Systems)
 
-Use this exact structure. Write in second-person imperative ("Build...", "Create...", "Use...").
+When generating a specification for any application screen, adhere strictly to `REFERENCE/spec-output-template-screen.md`. 
+
+The output file must be written to `specs/screen_XX_[name].md` with this exact structure:
+
+```markdown
+# Screen Spec: [Screen Name] (Screen #[ID])
+
+## 1. Screen Metadata & Environment
+- Screen ID, Route, Target Viewports (Desktop/Tablet/Mobile), Parent Shell, Scroll Behavior.
+
+## 2. Component & DOM Hierarchy
+- Semantic HTML5 DOM tree (<main>, <section>, <header>, <aside>, <button>) with clean CSS classes and IDs.
+
+## 3. Explicit CSS Specifications
+- 100% explicit CSS rule blocks for layout, flex/grid, padding, margins, colors, borders, and shadows.
+- Must bind colors and typography to `GLOBAL_DESIGN_SYSTEM.md` CSS custom properties.
+
+## 4. Typography & Design Token Mapping Table
+- Markdown table mapping every UI element to its selector, font family, size (px), weight, line-height, and color.
+
+## 5. Micro-Interactions & State Matrix
+- Table defining Idle, Hover, Active, and Focus states for all buttons, inputs, and interactive cards.
+
+## 6. Assets & Iconography Mapping
+- Lucide React icon names, aspect ratios for media/thumbnails, and exact micro-copy visible on screen.
+
+## 7. Responsive Reflow & Breakpoints
+- Clear rules for Desktop (>1024px), Tablet (768px-1024px), and Mobile (<768px).
+```
+
+---
+
+## PART 4 — SINGLE PROMPT OUTPUT (Hero Section — Legacy Mode)
+
+Use this structure only when specifically requested to output a single text prompt for Bolt/Lovable instead of a screen spec:
 
 ```
 Build a [adjective] hero section for "[Product Name]" using [Tech Stack: React + TypeScript + Vite + Tailwind CSS + Framer Motion + Lucide React].

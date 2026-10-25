@@ -1,5 +1,12 @@
 # PROMPTS — Verified Prompt Library
 
+## Screen Specification Generation Templates
+- [`GENERATE_SCREEN_SPEC.md`](./GENERATE_SCREEN_SPEC.md) — Generates deterministic code-generation contracts (`specs/SCREEN_SPEC_XX.md`)
+- [`GENERATE_SCREEN_SPEC_READABLE.md`](./GENERATE_SCREEN_SPEC_READABLE.md) — Generates human-readable UI & component style audits (`specs/SCREEN_SPEC_XX_READABLE.md`)
+- [`GENERATE_SCREEN_SPEC_BOTH.md`](./GENERATE_SCREEN_SPEC_BOTH.md) — Generates both companion files in mutual alignment
+
+---
+
 **270 verified landing-page/hero prompts** sourced from GitHub catalog.
 Each interface file is a complete prompt JSON ready for any AI coding agent.
 

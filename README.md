@@ -1,64 +1,75 @@
-# Replica
+# Replica — Visual Screen Specification & Code Generation Engine
 
-> **Turn any screenshot or design reference into a precise, copy-paste-ready developer prompt** — with exact hex colors, Tailwind classes, animation specs, and component structure. Ready for Lovable, Bolt, Cursor, Replit, or any AI coding agent.
+> **Transform UI screenshots into deterministic, production-grade Screen Specifications (`specs/screen_XX.md`) and copy-paste-ready developer prompts.** Designed for scaling across any number of screens (1 to 100+) with zero style drift when targeting AI coding agents like Claude, Antigravity, and GitHub Copilot.
 
+[![Branch](https://img.shields.io/badge/branch-vignesh__idea-blue.svg)](https://github.com/Surya17155/Replica/tree/vignesh_idea)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/Surya17155/Replica?style=social)](https://github.com/Surya17155/Replica/stargazers)
 [![GitHub Issues](https://img.shields.io/github/issues/Surya17155/Replica)](https://github.com/Surya17155/Replica/issues)
 
+> [!IMPORTANT]
+> **Team Guide:** For the multi-screen specification architecture and workflow guide (turning screenshots into explicit CSS/DOM specifications for Claude, Antigravity, and Copilot), see [SCREEN_SPEC_README.md](./SCREEN_SPEC_README.md).
+
 ---
 
-## Demo
+## ⚡ The Multi-Screen Triplet Workflow
 
 ```mermaid
 flowchart LR
-    A["🎯 Screenshot / Design<br/>(Pinterest, Dribbble, Figma)"]
-    B["🧠 Replica Skill<br/>Analyzes & Classifies"]
-    C["📝 Developer Prompt<br/>Hex Codes · Tailwind · Animations"]
-    D["⚡ AI Coding Agent<br/>Lovable · Bolt · Cursor · Replit"]
-    E["🎨 Live Website<br/>Pixel-perfect Replica"]
+    A["📸 Screenshot / UI Mocks<br/>(Drop in screenshots/)"]
+    B["🧠 Replica Spec Engine<br/>Analyzes & Maps to Tokens"]
+    C["📋 Explicit Screen Spec<br/>(specs/screen_XX.md)"]
+    D["🤖 AI Coding Agent<br/>(Claude / Antigravity / Copilot)"]
+    E["🚀 Pixel-Perfect Code<br/>(Zero Style Drift)"]
 
-    A --> B --> C --> D --> E
+    A --> B --> C
+    G["🌐 GLOBAL_DESIGN_SYSTEM.md<br/>(Color Tokens, Typography, AppShell)"] -.-> B
+    G --> D
+    C --> D
+    A --> D
+    D --> E
 ```
 
 ---
 
-## What is Replica?
+## What Replica Generates
 
-Replica is an **AI skill file** that acts as a bridge between visual design and code. Upload a screenshot (or describe a design), and Replica's structured knowledge base generates a production-grade developer prompt with:
+1. **Deterministic Screen Specifications (`specs/screen_XX.md`)**:
+   - **Explicit CSS Rulebooks**: Exact CSS properties for layout, spacing, typography, colors, and shadows — never vague descriptions.
+   - **Semantic DOM / Component Hierarchy**: HTML5 tree structure with clear class names and IDs.
+   - **Global Token Alignment**: Maps sampled visual values to `GLOBAL_DESIGN_SYSTEM.md` CSS custom properties.
+   - **Micro-Interactions & State Matrices**: Explicit rules for `:hover`, `:active`, `:focus-visible`, and transitions.
+   - **Asset & Icon Mapping**: Matches visual icons to Lucide/SVG equivalents and records exact micro-copy.
 
-- **Exact hex colors** — no vague "dark background"
-- **Complete Tailwind CSS classes** — mobile-first, responsive
-- **Full animation tuples** — initial state, animate state, duration, delay
-- **Component architecture** — PascalCase names with file paths
-- **Glassmorphism / gradient / shadow CSS** — complete blocks, not descriptions
-- **Asset inventory** — what images/videos you need and where they go
+2. **Automated Spec Validation**:
+   - Built-in validator (`python scripts/spec_validator.py --all`) that ensures specs have explicit CSS, proper sections, and zero ambiguous language.
+
+3. **Developer Prompts (Legacy Mode)**:
+   - Copy-paste prompts tailored for Bolt.new, Lovable, or v0.
 
 ---
 
-## How It Works
+## Project Structure
 
-```mermaid
-flowchart TB
-    subgraph Input["📥 Input"]
-        S["Screenshot / URL / Description"]
-    end
-
-    subgraph Process["🧠 Replica Processing Pipeline"]
-        direction TB
-        A["1. Scope Confirmation<br/>Hero section or full landing page?"]
-        B["2. Aesthetic Classification<br/>glassmorphism · dark-portfolio · fintech-saas<br/>nft-web3 · creative-studio · modern-agency"]
-        C["3. Motion & Effects Analysis<br/>Stagger · Parallax · Magnetic · Scroll-Reveal<br/>Marquee · Typewriter · 3D Tilt · etc."]
-        D["4. Asset Inventory<br/>Images · Videos · Icons · SVGs"]
-        E["5. Prompt Assembly<br/>Using Reference Templates"]
-        F["6. Quality Check<br/>15-point verification"]
-    end
-
-    subgraph Output["📤 Output"]
-        O["Production-Ready Developer Prompt"]
-    end
-
-    S --> A --> B --> C --> D --> E --> F --> O
+```text
+├── GLOBAL_DESIGN_SYSTEM.md       # Tier 1: Master design tokens, typography scale & App Shell
+├── SCREEN_SPEC_README.md         # Comprehensive team architecture guide
+├── screenshots/                  # Store raw visual references (01_screen.png, 02_screen.png, ...)
+│   └── README.md
+├── specs/                        # Generated deterministic screen specifications
+│   ├── 01_youtube_watch_view.md  # Reference verified specification
+│   └── README.md
+├── scripts/
+│   ├── spec_validator.py         # Automated specification validation CLI
+│   └── ...
+├── DIRECTOR/
+│   ├── spec-generation-engine.md # Spec generation rules & quality gate
+│   └── ...
+├── REFERENCE/
+│   ├── spec-output-template-screen.md   # Standard screen spec output schema
+│   ├── image-analysis-checklist-screen.md # Visual decomposition checklist
+│   └── ...
+└── SKILL.md                      # Core AI agent skill definition
 ```
 
 ---
@@ -84,27 +95,44 @@ Or [download the ZIP](https://github.com/Surya17155/Replica/archive/refs/heads/m
 
 | AI Agent | How to Install |
 |----------|---------------|
-| **Claude Code** | Place the `SKILL.md` file in your `.claude/skills/` directory (or upload the ZIP to your agent) |
+| **Google Antigravity** | Integrated in workspace (`.cursor/skills/` or `.agents/skills/`) |
 | **Cursor** | Add to `.cursor/skills/` directory |
+| **Claude Code** | Place the `SKILL.md` file in your `.claude/skills/` directory |
 | **Lovable / Bolt / Replit** | Copy `SKILL.md` content into your project instructions |
 
-### Step 3: Use It
+### Step 3: Fast Screen Spec Generation (Prompts for Antigravity & Cursor)
 
-1. **Upload your screenshot** — from Pinterest, Dribbble, Behance, Figma, or any design source
-2. **Let Replica analyze it** — the skill classifies the aesthetic, identifies motion effects, and catalogs required assets
-3. **Get your prompt** — a precise, copy-paste-ready developer prompt with exact colors, classes, and animation specs
-4. **Paste into your AI coding agent** — and watch it build your design perfectly
+To generate specifications from any screenshot, simply attach or paste your image into **Antigravity** or **Cursor** and use any of these simple 1-line prompts:
 
-### Example Usage
+#### 1. Generate Deterministic Code Contract (`SCREEN_SPEC_XX.md`)
+```text
+Follow PROMPTS/GENERATE_SCREEN_SPEC.md for this screenshot.
+```
+> **Outputs:** Complete DOM tree, explicit CSS rules, interactive `:hover`/`:active` states, design tokens, and responsive media queries.
+
+#### 2. Generate Human-Readable UI & Style Inventory (`SCREEN_SPEC_XX_READABLE.md`)
+```text
+Follow PROMPTS/GENERATE_SCREEN_SPEC_READABLE.md for this screenshot.
+```
+> **Outputs:** Button & action tables, typography hierarchy table with fluid `clamp()`, color palette tokens, layout & spacing matrix, and SVG asset inventory.
+
+#### 3. Generate BOTH Files Together (In Mutual Alignment)
+```text
+Follow PROMPTS/GENERATE_SCREEN_SPEC_BOTH.md for this screenshot.
+```
+> **Outputs:** Both companion files (`specs/SCREEN_SPEC_XX.md` and `specs/SCREEN_SPEC_XX_READABLE.md`) in 100% token and class alignment.
+
+*(Tip for Cursor users: You can also use the `@` mention shortcut: `@GENERATE_SCREEN_SPEC_BOTH.md for this screenshot`)*
+
+### Example Workflow
 
 ```
-User: "I found this hero section on Dribbble [uploads screenshot]"
-Replica: "I can see this is a glassmorphism dark-portfolio hero with:
-  - Floating pill navbar (glass effect, blur-20)
-  - Stagger entrance animation (fade-up, 0.7s each, 0.15s delay between)
-  - Gradient text headline (#FFFFFF → #B600A8)
-  - Multi-layer CTA button with inset shadow
-  Here's your exact prompt..."
+User: [Uploads screenshot of UI] "Follow PROMPTS/GENERATE_SCREEN_SPEC_BOTH.md for this screenshot."
+Antigravity / Cursor:
+  1. Detects screen brand and layout architecture.
+  2. Generates specs/SCREEN_SPEC_03.md (complete CSS & HTML code contract).
+  3. Generates specs/SCREEN_SPEC_03_READABLE.md (human-readable design & token audit).
+  Both files saved directly to specs/ ready for coding agents!
 ```
 
 ---
@@ -190,8 +218,11 @@ Replica/
 │       ├── pinterest-template-01.md through 08.md
 │       └── professional-prompt-nova-hero.md
 │
-├── PROMPTS/                       # 270+ verified prompt library
+├── PROMPTS/                       # Screen spec templates & 270+ verified prompt library
 │   ├── _index.md
+│   ├── GENERATE_SCREEN_SPEC.md         # Template: Deterministic code contract
+│   ├── GENERATE_SCREEN_SPEC_READABLE.md# Template: Human-readable style inventory
+│   ├── GENERATE_SCREEN_SPEC_BOTH.md    # Template: Both specs in mutual alignment
 │   ├── github-catalog/
 │   │   └── catalog.json           # Searchable catalog of all prompts
 │   └── github-interfaces/         # 170+ ready-to-use prompt JSONs
